@@ -52,7 +52,7 @@ export function Matrix({ regulations }) {
               <th scope="col" className="sticky left-0 bg-surface p-3 text-left font-semibold text-fg">{t('regs.colHeader')}</th>
               {TEST_TYPES.map((x) => (
                 <th key={x.slug} scope="col" className="min-w-[92px] border-l border-line p-2 text-left align-bottom text-xs font-semibold text-fg">
-                  <Link to={`/test-turleri/${x.slug}`} className="hover:text-accent hover:underline">{x.title}</Link>
+                  <Link to={`/test-turleri/${x.slug}`} className="hover:text-accent underline underline-offset-2 hover:decoration-2">{x.title}</Link>
                 </th>
               ))}
             </tr>
@@ -61,7 +61,7 @@ export function Matrix({ regulations }) {
             {rows.map((r) => (
               <tr key={r.slug} className="border-t border-line">
                 <th scope="row" className="sticky left-0 bg-surface p-3 text-left font-medium">
-                  <Link to={`/regulasyonlar/${r.slug}`} className="text-accent hover:underline">{r.title}</Link>
+                  <Link to={`/regulasyonlar/${r.slug}`} className="text-accent underline underline-offset-2 hover:decoration-2">{r.title}</Link>
                   <span className="block text-xs font-normal text-muted">{t(`region.${r.region}`)}</span>
                 </th>
                 {TEST_TYPES.map((x) => {
@@ -82,7 +82,7 @@ export function Matrix({ regulations }) {
       <ul className="grid gap-3 lg:hidden">
         {rows.map((r) => (
           <li key={r.slug} className="card p-4">
-            <Link to={`/regulasyonlar/${r.slug}`} className="font-semibold text-accent hover:underline">{r.title}</Link>
+            <Link to={`/regulasyonlar/${r.slug}`} className="font-semibold text-accent underline underline-offset-2 hover:decoration-2">{r.title}</Link>
             <ul className="mt-3 space-y-2">
               {[...(r.testTypes || [])].sort(byLevel).map((x) => (
                 <li key={x.slug} className="flex items-center justify-between gap-3 text-sm">
@@ -236,7 +236,7 @@ export function RegulationDetailPage() {
               return (
                 <li key={x.slug} className="card p-4">
                   <div className="flex flex-wrap items-center justify-between gap-2">
-                    <Link to={`/test-turleri/${x.slug}`} className="font-semibold text-accent hover:underline">{tt.title}</Link>
+                    <Link to={`/test-turleri/${x.slug}`} className="font-semibold text-accent underline underline-offset-2 hover:decoration-2">{tt.title}</Link>
                     <LevelBadge level={x.level} />
                   </div>
                   <p className="mt-1.5 text-sm text-muted">{x.why}</p>

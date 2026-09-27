@@ -49,7 +49,7 @@ export default function PartnerPage() {
                   <p className="mt-3 flex-1 text-muted">{p.summary}</p>
                   <div className="mt-5 flex flex-wrap gap-4 text-sm font-semibold">
                     {guide && (
-                      <Link to={`/test-turleri/${guide.slug}`} className="inline-flex items-center gap-1.5 text-accent hover:underline">
+                      <Link to={`/test-turleri/${guide.slug}`} className="inline-flex items-center gap-1.5 text-accent underline underline-offset-2 hover:decoration-2">
                         <Icon name={guide.icon} className="size-4" /> {t('partner.guide', { title: guide.title })}
                       </Link>
                     )}
@@ -78,7 +78,7 @@ export default function PartnerPage() {
               <h3 className="text-lg font-semibold text-fg">Fimple</h3>
               <p className="mt-2 text-muted">{t('partner.fimpleText')}</p>
             </div>
-            <Link to="/test-turleri/core-banking-testleri" className="inline-flex items-center gap-1.5 font-semibold text-accent hover:underline md:col-span-2">
+            <Link to="/test-turleri/core-banking-testleri" className="inline-flex items-center gap-1.5 font-semibold text-accent underline underline-offset-2 hover:decoration-2 md:col-span-2">
               {t('partner.coreLink')} <ArrowRight className="size-4" aria-hidden="true" />
             </Link>
           </div>

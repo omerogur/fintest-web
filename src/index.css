@@ -2,43 +2,80 @@
 
 @custom-variant dark (&:where([data-theme='dark'], [data-theme='dark'] *));
 
-/* Tema token'ları. Kontrastlar her iki temada WCAG 2.2 AA'yı (metin 4.5:1, UI 3:1) sağlayacak şekilde seçildi. */
+/* Tema token'ları — "Kurumsal Mavi". Kontrastlar her iki temada WCAG 2.2 AA'yı
+   (metin 4.5:1, büyük metin ve arayüz öğeleri 3:1) sağlayacak şekilde seçildi. */
 :root {
   color-scheme: light;
-  --bg: #f6f8fc;
+  --bg: #f5f7fa;
   --surface: #ffffff;
-  --surface-2: #eef2f9;
-  --border: #d5dcea;
-  --text: #0b1a36;
-  --muted: #45536e;
-  --navy: #0b1f44;
-  --navy-2: #13306a;
-  --accent: #0f766e;
-  --accent-strong: #0b5f59;
-  --accent-soft: #e2f4f2;
+  --surface-2: #eef3f9;
+  --border: #cfd8e5;
+  --text: #0a1f33;
+  --muted: #465569;
+  --navy: #0a2540;
+  --navy-2: #123a63;
+  --accent: #1d4ed8;
+  --accent-strong: #1e40af;
+  --accent-soft: #e8effc;
   --on-accent: #ffffff;
   --focus: #b45309;
   --ok: #166534;
-  --warn: #92400e;
+  --warn: #9a3412;
+  --radius: 12px;
+  --shadow: 0 1px 2px rgb(10 31 51 / 0.06), 0 6px 16px -6px rgb(10 31 51 / 0.1);
+  --shadow-hover: 0 2px 4px rgb(10 31 51 / 0.08), 0 12px 28px -8px rgb(10 31 51 / 0.18);
+  /* Açık temada hero ve çağrı bantları açık zeminli; koyu blok yok. */
+  --hero-bg: linear-gradient(180deg, #e7effb 0%, #f5f7fa 100%);
+  --hero-fg: #0a1f33;
+  --hero-muted: #3a4a5f;
+  --hero-accent: #1d4ed8;
+  --hero-panel: #ffffff;
+  --hero-panel-border: #cfd8e5;
+  --hero-photo-opacity: 0;
+  --glow-1: rgb(29 78 216 / 0.14);
+  --glow-2: rgb(96 165 250 / 0.18);
+  --cta-bg: linear-gradient(120deg, #0a2540 0%, #123a63 100%);
+  --cta-fg: #ffffff;
+  --cta-muted: #d6e0ee;
+  --page-header-bg: linear-gradient(180deg, #eaf1fb 0%, #ffffff 100%);
+  --logo-bg: #0a2540;
+  --logo-mark: #93c5fd;
 }
 
 [data-theme='dark'] {
   color-scheme: dark;
-  --bg: #070f22;
-  --surface: #0d1a36;
-  --surface-2: #132449;
-  --border: #25396a;
-  --text: #eef2fb;
-  --muted: #aebad3;
-  --navy: #040a18;
-  --navy-2: #0d1a36;
-  --accent: #2dd4bf;
-  --accent-strong: #5eead4;
-  --accent-soft: #0e3a45;
-  --on-accent: #04201d;
+  --bg: #06111f;
+  --surface: #0c1b2e;
+  --surface-2: #13263f;
+  --border: #2a4466;
+  --text: #eef3fa;
+  --muted: #b1c0d3;
+  --navy: #030b16;
+  --navy-2: #0c1b2e;
+  --accent: #60a5fa;
+  --accent-strong: #93c5fd;
+  --accent-soft: #102a4c;
+  --on-accent: #04142a;
   --focus: #fbbf24;
   --ok: #86efac;
-  --warn: #fcd34d;
+  --warn: #fdba74;
+  --shadow: none;
+  --shadow-hover: 0 0 0 1px #60a5fa;
+  --hero-bg: #030b16;
+  --hero-fg: #ffffff;
+  --hero-muted: #d2dcea;
+  --hero-accent: #93c5fd;
+  --hero-panel: rgb(255 255 255 / 0.06);
+  --hero-panel-border: rgb(255 255 255 / 0.16);
+  --hero-photo-opacity: 0.3;
+  --glow-1: rgb(96 165 250 / 0.3);
+  --glow-2: rgb(29 78 216 / 0.35);
+  --cta-bg: #030b16;
+  --cta-fg: #ffffff;
+  --cta-muted: #cfd9e6;
+  --page-header-bg: #0c1b2e;
+  --logo-bg: #13263f;
+  --logo-mark: #93c5fd;
 }
 
 @theme inline {
@@ -61,6 +98,8 @@
 }
 
 html {
+  /* Yapışkan header odaklanan öğeyi örtmesin (WCAG 2.4.11). */
+  scroll-padding-top: 96px;
   background: var(--bg);
   color: var(--text);
   -webkit-text-size-adjust: 100%;
@@ -133,7 +172,8 @@ select:focus-visible {
 .card {
   background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: 16px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
 }
 
 .btn {
@@ -162,6 +202,41 @@ select:focus-visible {
 }
 .btn-outline:hover {
   border-color: var(--accent);
+}
+
+/* Ana sayfa hero'su: renkler temadan gelir (açıkta aydınlık, koyuda fotoğraflı lacivert). */
+.hero {
+  background: var(--hero-bg);
+  color: var(--hero-fg);
+}
+.hero-photo {
+  opacity: var(--hero-photo-opacity);
+}
+.hero-panel {
+  background: var(--hero-panel);
+  border: 1px solid var(--hero-panel-border);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(8px);
+}
+.hero-outline {
+  border: 1px solid var(--hero-panel-border);
+  background: var(--hero-panel);
+  color: var(--hero-fg);
+}
+.hero-outline:hover {
+  border-color: var(--accent);
+}
+li.card:hover,
+a.card:hover {
+  box-shadow: var(--shadow-hover);
+}
+
+.page-header {
+  background: var(--page-header-bg);
+}
+.cta-band {
+  background: var(--cta-bg);
+  color: var(--cta-fg);
 }
 
 .prose-body p + p {

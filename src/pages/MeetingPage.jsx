@@ -284,7 +284,7 @@ export default function MeetingPage() {
           <div className="card p-5">
             <h2 className="font-semibold text-fg">{t('meeting.prepTitle')}</h2>
             <p className="mt-2 text-sm text-muted">{t('meeting.prepText')}</p>
-            <Link to="/uyum-kontrolu" className="mt-3 inline-block text-sm font-semibold text-accent hover:underline">{t('nav.assessment')} →</Link>
+            <Link to="/uyum-kontrolu" className="mt-3 inline-block text-sm font-semibold text-accent underline underline-offset-2 hover:decoration-2">{t('nav.assessment')} →</Link>
           </div>
         </aside>
       </div>

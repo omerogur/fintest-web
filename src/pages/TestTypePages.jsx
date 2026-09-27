@@ -182,7 +182,7 @@ export function TestTypeDetailPage() {
                 return (
                   <li key={r.slug} className="card p-4">
                     <div className="flex flex-wrap items-center gap-2">
-                      <Link to={`/regulasyonlar/${r.slug}`} className="font-semibold text-accent underline-offset-4 hover:underline">
+                      <Link to={`/regulasyonlar/${r.slug}`} className="font-semibold text-accent underline underline-offset-4 hover:decoration-2">
                         {r.title}
                       </Link>
                       <Tag>{t(`levels.${link.level}.short`)}</Tag>
@@ -195,7 +195,7 @@ export function TestTypeDetailPage() {
                 .filter((x) => !linked.some((l) => l.regulation.slug === x.slug) && regulationBySlug[x.slug])
                 .map((x) => (
                   <li key={x.slug} className="card p-4">
-                    <Link to={`/regulasyonlar/${x.slug}`} className="font-semibold text-accent underline-offset-4 hover:underline">
+                    <Link to={`/regulasyonlar/${x.slug}`} className="font-semibold text-accent underline underline-offset-4 hover:decoration-2">
                       {regulationBySlug[x.slug].title}
                     </Link>
                     <p className="mt-1.5 text-sm text-muted">{x.note}</p>

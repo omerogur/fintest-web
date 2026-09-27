@@ -40,13 +40,13 @@ export function Breadcrumbs({ items }) {
     <nav aria-label={t('common.breadcrumb')} className="text-sm">
       <ol className="flex flex-wrap items-center gap-1 text-muted">
         <li>
-          <Link to="/" className="hover:text-accent hover:underline">{t('common.home')}</Link>
+          <Link to="/" className="hover:text-accent underline underline-offset-2 hover:decoration-2">{t('common.home')}</Link>
         </li>
         {items.map((i) => (
           <li key={i.label} className="flex items-center gap-1">
             <ChevronRight className="size-3.5" aria-hidden="true" />
             {i.to ? (
-              <Link to={i.to} className="hover:text-accent hover:underline">{i.label}</Link>
+              <Link to={i.to} className="hover:text-accent underline underline-offset-2 hover:decoration-2">{i.label}</Link>
             ) : (
               <span aria-current="page" className="text-fg">{i.label}</span>
             )}
@@ -59,7 +59,7 @@ export function Breadcrumbs({ items }) {
 
 export function PageHeader({ crumbs, eyebrow, title, subtitle, image, imageOverlay, children }) {
   return (
-    <div className="border-b border-line bg-surface">
+    <div className="page-header border-b border-line">
       <div className={cn('container-x py-10 sm:py-14', image && 'grid items-center gap-10 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]')}>
         <div className="min-w-0">
           {crumbs && <Breadcrumbs items={crumbs} />}
@@ -178,13 +178,13 @@ export function PartnerBox({ productKey, topic }) {
 export function MeetingCta({ topic = 'diger', title, text }) {
   const { t } = useTranslation();
   return (
-    <section aria-labelledby="meeting-cta" className="no-print grid overflow-hidden rounded-2xl border border-line bg-navy text-white md:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)]">
+    <section aria-labelledby="meeting-cta" className="cta-band no-print grid overflow-hidden rounded-2xl border border-line md:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)]">
       <div className="p-6 sm:p-10">
         <h2 id="meeting-cta" className="h-display text-2xl sm:text-3xl">
           {title || t('cta.title')}
         </h2>
-        <p className="mt-3 max-w-2xl text-white/80">{text || t('cta.text')}</p>
-        <Link to={`/toplanti-talebi?konu=${topic}`} className="btn mt-6 bg-white text-navy hover:bg-white/90">
+        <p className="mt-3 max-w-2xl text-[var(--cta-muted)]">{text || t('cta.text')}</p>
+        <Link to={`/toplanti-talebi?konu=${topic}`} className="btn mt-6 bg-white text-[#0a2540] hover:bg-[#e8effc]">
           <CalendarCheck className="size-4" aria-hidden="true" /> {t('common.requestMeeting')}
         </Link>
       </div>

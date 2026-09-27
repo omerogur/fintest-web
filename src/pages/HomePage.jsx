@@ -24,37 +24,38 @@ export default function HomePage() {
 
   return (
     <>
-      <section aria-labelledby="hero-title" className="relative overflow-hidden bg-navy text-white">
-        <img src={PAGE_IMAGES.home} alt="" decoding="async" className="absolute inset-0 size-full object-cover opacity-30" />
-        <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-r from-navy via-navy/85 to-navy/40" />
+      <section aria-labelledby="hero-title" className="hero relative overflow-hidden border-b border-line">
+        {/* Fotoğraf yalnızca koyu temada görünür; açık tema sade ve aydınlık kalır. */}
+        <img src={PAGE_IMAGES.home} alt="" decoding="async" className="hero-photo absolute inset-0 size-full object-cover" />
+        <div aria-hidden="true" className="absolute inset-0 hidden bg-gradient-to-r from-navy via-navy/85 to-navy/40 dark:block" />
         <div
           aria-hidden="true"
-          className="absolute inset-0 opacity-40"
-          style={{ background: 'radial-gradient(ellipse at 80% 0%, rgba(45,212,191,0.35), transparent 55%), radial-gradient(ellipse at 0% 100%, rgba(59,91,219,0.35), transparent 50%)' }}
+          className="absolute inset-0"
+          style={{ background: 'radial-gradient(ellipse at 85% 0%, var(--glow-1), transparent 55%), radial-gradient(ellipse at 0% 100%, var(--glow-2), transparent 50%)' }}
         />
         <div className="container-x relative grid items-center gap-12 py-16 sm:py-24 lg:grid-cols-[minmax(0,1.25fr)_minmax(0,1fr)]">
           <div>
-            <p className="text-sm font-semibold text-teal-300">{t('home.eyebrow')}</p>
+            <p className="text-sm font-semibold text-[var(--hero-accent)]">{t('home.eyebrow')}</p>
             <h1 id="hero-title" tabIndex={-1} className="h-display mt-4 max-w-4xl text-4xl outline-none sm:text-6xl">
               {t('home.title')}
             </h1>
-            <p className="mt-6 max-w-2xl text-lg text-white/85">{t('home.lead')}</p>
+            <p className="mt-6 max-w-2xl text-lg text-[var(--hero-muted)]">{t('home.lead')}</p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Link to="/test-turleri" className="btn bg-white text-navy hover:bg-white/90">
+              <Link to="/test-turleri" className="btn btn-primary">
                 {t('home.ctaTests')} <ArrowRight className="size-4" aria-hidden="true" />
               </Link>
-              <Link to="/regulasyonlar" className="btn border border-white/40 text-white hover:bg-white/10">
+              <Link to="/regulasyonlar" className="btn hero-outline">
                 <Scale className="size-4" aria-hidden="true" /> {t('home.ctaRegs')}
               </Link>
             </div>
-            <p className="mt-6 flex items-center gap-2 text-sm text-white/75">
+            <p className="mt-6 flex items-center gap-2 text-sm text-[var(--hero-muted)]">
               <Search className="size-4" aria-hidden="true" />
-              {t('home.searchHintBefore')} <kbd className="rounded border border-white/40 px-1.5">/</kbd> {t('home.searchHintAfter')}
+              {t('home.searchHintBefore')} <kbd className="rounded border border-[var(--hero-panel-border)] px-1.5">/</kbd> {t('home.searchHintAfter')}
             </p>
           </div>
-          <nav aria-label={t('home.featured')} className="rounded-2xl border border-white/15 bg-white/[0.06] p-5 backdrop-blur sm:p-6">
-            <p className="text-sm font-semibold text-white">{t('home.featured')}</p>
-            <ul className="mt-4 divide-y divide-white/10">
+          <nav aria-label={t('home.featured')} className="hero-panel rounded-2xl p-5 sm:p-6">
+            <p className="text-sm font-semibold">{t('home.featured')}</p>
+            <ul className="mt-4 divide-y divide-[var(--hero-panel-border)]">
               {FEATURED.map((slug) => {
                 const r = regulationBySlug[slug];
                 if (!r) return null;
@@ -62,10 +63,10 @@ export default function HomePage() {
                   <li key={slug}>
                     <Link to={`/regulasyonlar/${slug}`} className="group flex items-center gap-4 py-3">
                       <span className="min-w-0 flex-1">
-                        <span className="block font-semibold text-white group-hover:underline">{r.title}</span>
-                        <span className="block truncate text-sm text-white/75">{r.fullTitle}</span>
+                        <span className="block font-semibold group-hover:underline">{r.title}</span>
+                        <span className="block truncate text-sm text-[var(--hero-muted)]">{r.fullTitle}</span>
                       </span>
-                      <span className="flex-shrink-0 rounded-md bg-white/10 px-2 py-1 text-xs text-white">
+                      <span className="flex-shrink-0 rounded-md bg-accent-soft px-2 py-1 text-xs font-semibold text-accent">
                         {t('home.testCount', { count: r.testTypes?.length || 0 })}
                       </span>
                     </Link>
@@ -127,7 +128,7 @@ export default function HomePage() {
               <h2 id="tests-title" className="h-display text-3xl text-fg">{t('home.testsTitle')}</h2>
               <p className="mt-2 max-w-2xl text-muted">{t('home.testsLead')}</p>
             </div>
-            <Link to="/test-turleri" className="font-semibold text-accent hover:underline">{t('nav.seeAll')}</Link>
+            <Link to="/test-turleri" className="font-semibold text-accent underline underline-offset-2 hover:decoration-2">{t('nav.seeAll')}</Link>
           </div>
           <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {TEST_TYPES.map((x) => (
@@ -179,7 +180,7 @@ export default function HomePage() {
           <h2 id="matrix-title" className="h-display text-3xl text-fg">{t('home.matrixTitle')}</h2>
           <p className="mt-2 mb-6 max-w-2xl text-muted">{t('home.matrixLead')}</p>
           <Matrix regulations={regs} />
-          <Link to="/regulasyonlar#matris" className="mt-4 inline-block font-semibold text-accent hover:underline">{t('home.matrixFull')}</Link>
+          <Link to="/regulasyonlar#matris" className="mt-4 inline-block font-semibold text-accent underline underline-offset-2 hover:decoration-2">{t('home.matrixFull')}</Link>
         </section>
 
         <section aria-labelledby="method-title" className="card grid gap-8 p-6 sm:p-10 lg:grid-cols-2">
@@ -208,7 +209,7 @@ export default function HomePage() {
             <div>
               <h2 id="faq-home" className="h-display text-3xl text-fg">{t('faq.title')}</h2>
               <p className="mt-2 text-muted">{t('faq.subtitle')}</p>
-              <Link to="/sss" className="mt-4 inline-block font-semibold text-accent hover:underline">{t('home.faqAll', { count: FAQ.length })}</Link>
+              <Link to="/sss" className="mt-4 inline-block font-semibold text-accent underline underline-offset-2 hover:decoration-2">{t('home.faqAll', { count: FAQ.length })}</Link>
             </div>
             <FaqList items={FAQ.slice(0, 4)} headingLevel="h3" />
           </section>

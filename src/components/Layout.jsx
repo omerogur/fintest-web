@@ -10,13 +10,19 @@ import { Link } from './L';
 
 // Sayfa değişince odağı ana içeriğe taşır; ekran okuyucu yeni sayfanın başlığını okur.
 // Adreste #bölüm varsa (ilk açılışta da) o bölüme gider; SSS sorusuysa açar.
+// Yalnızca dil öneki değiştiyse (aynı sayfa, başka dil) kaydırma ve odak yerinde kalır.
 function useRouteFocus(mainRef, ready) {
   const { pathname, hash } = useLocation();
   const first = useRef(true);
+  const prev = useRef(null);
   useEffect(() => {
     if (!ready) return;
     const initial = first.current;
     first.current = false;
+    const key = pathname.replace(/^\/[a-z]{2}(?=\/|$)/, '') + hash;
+    const languageOnly = prev.current === key;
+    prev.current = key;
+    if (languageOnly) return;
     if (hash) {
       const el = document.getElementById(decodeURIComponent(hash.slice(1)));
       if (el) {
@@ -189,8 +195,17 @@ export default function Layout() {
   const ready = valid && loadedLng === lng && i18n.language === lng;
   useRouteFocus(mainRef, ready);
 
+  // İlk sayfa hazır olunca diğer dillerin içeriği arka planda yüklenir; dil değişimi anında olur.
+  useEffect(() => {
+    if (!ready) return undefined;
+    const id = setTimeout(() => {
+      LANGUAGES.filter((l) => l.code !== lng).forEach((l) => loadContent(l.code, uiSearchIndex(i18n.getFixedT(l.code))));
+    }, 1500);
+    return () => clearTimeout(id);
+  }, [ready, lng, i18n]);
+
   if (!valid) return <Navigate to={`/${DEFAULT_LANG}${pathname}${search}${hash}`} replace />;
-  if (i18n.language !== lng || loadedLng !== lng) return null;
+  if (!loadedLng) return null;
 
   return (
     <>

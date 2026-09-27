@@ -3,7 +3,7 @@ import { useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSearchParams } from 'react-router-dom';
 import { Link } from '../components/L';
-import { MeetingCta, PageHeader, Tag, usePageTitle } from '../components/blocks';
+import { MeetingCta, PageHeader, usePageTitle } from '../components/blocks';
 import { PAGE_IMAGES } from '../config/images';
 import { useContent } from '../content';
 import { CHANNELS, INITIATIVES, ORG_TYPES, REGIONS, assess, readAnswers, writeAnswers } from '../lib/assessment';
@@ -150,7 +150,7 @@ export default function AssessmentPage() {
                   <ul className="mt-3 space-y-2">
                     {result.regulations.map(({ slug, reasons }) => (
                       <li key={slug} className="rounded-xl border border-line p-3">
-                        <Link to={`/regulasyonlar/${slug}`} className="font-semibold text-accent hover:underline">{regulationBySlug[slug].title}</Link>
+                        <Link to={`/regulasyonlar/${slug}`} className="font-semibold text-accent underline underline-offset-2 hover:decoration-2">{regulationBySlug[slug].title}</Link>
                         <p className="mt-0.5 text-sm text-muted">{reasons.map(reasonText).join(' · ')}</p>
                       </li>
                     ))}
@@ -162,10 +162,17 @@ export default function AssessmentPage() {
                     {result.testTypes.map(({ slug, level, reasons }) => (
                       <li key={slug} className="flex items-start justify-between gap-3 rounded-xl border border-line p-3">
                         <div className="min-w-0">
-                          <Link to={`/test-turleri/${slug}`} className="font-semibold text-fg hover:text-accent hover:underline">{testTypeBySlug[slug]?.title}</Link>
+                          <Link to={`/test-turleri/${slug}`} className="font-semibold text-fg hover:text-accent underline underline-offset-2 hover:decoration-2">{testTypeBySlug[slug]?.title}</Link>
                           <p className="mt-0.5 line-clamp-2 text-sm text-muted">{reasons.slice(0, 3).map(reasonText).join(' · ')}</p>
                         </div>
-                        <Tag className={cn(level === 'required' && 'border-accent bg-accent text-on-accent')}>{t(`levels.${level}.short`)}</Tag>
+                        <span
+                          className={cn(
+                            'inline-flex flex-shrink-0 items-center rounded-md border px-2 py-0.5 text-xs font-semibold',
+                            level === 'required' ? 'border-accent bg-accent text-on-accent' : 'border-line bg-surface-2 text-fg',
+                          )}
+                        >
+                          {t(`levels.${level}.short`)}
+                        </span>
                       </li>
                     ))}
                   </ul>

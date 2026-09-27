@@ -65,6 +65,7 @@ function LanguageMenu({ className, align = 'right' }) {
   const { pathname, search, hash } = useLocation();
   const [open, setOpen] = useState(false);
   const ref = useRef(null);
+  const buttonRef = useRef(null);
   const rest = pathname.replace(/^\/[a-z]{2}(?=\/|$)/, '');
   const current = LANGUAGES.find((l) => l.code === i18n.language) || LANGUAGES[0];
 
@@ -74,7 +75,7 @@ function LanguageMenu({ className, align = 'right' }) {
     const onKey = (e) => {
       if (e.key === 'Escape') {
         setOpen(false);
-        ref.current?.querySelector('button')?.focus();
+        buttonRef.current?.focus();
       }
     };
     const onClick = (e) => !ref.current?.contains(e.target) && setOpen(false);
@@ -91,6 +92,7 @@ function LanguageMenu({ className, align = 'right' }) {
       <button
         type="button"
         aria-expanded={open}
+        ref={buttonRef}
         aria-controls="lang-menu"
         aria-label={`${t('nav.language')}: ${current.label}`}
         onClick={() => setOpen((o) => !o)}
@@ -111,7 +113,10 @@ function LanguageMenu({ className, align = 'right' }) {
                   lang={l.code}
                   hrefLang={l.code}
                   aria-current={active ? 'true' : undefined}
-                  onClick={() => setOpen(false)}
+                  onClick={() => {
+                    setOpen(false);
+                    setTimeout(() => buttonRef.current?.focus({ preventScroll: true }), 0);
+                  }}
                   className={cn(
                     'flex items-center gap-3 rounded-lg px-3 py-2.5 text-[15px] hover:bg-surface-2',
                     active ? 'font-semibold text-accent' : 'text-fg',
@@ -238,10 +243,14 @@ export default function Header() {
   }, []);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-line bg-surface/95 backdrop-blur">
+    <header className="sticky top-0 z-40 border-b border-line bg-surface/95 shadow-[var(--shadow)] backdrop-blur">
       <div className="container-x flex h-[72px] max-w-[1440px] items-center gap-4">
         <Link to="/" className="flex flex-shrink-0 items-center gap-2.5 rounded-lg" aria-label={t('nav.homeLabel', { name: siteName })}>
-          <img src="/favicon.svg" alt="" className="size-8" />
+          <svg viewBox="0 0 32 32" className="size-8" aria-hidden="true" focusable="false">
+            <rect width="32" height="32" rx="8" fill="var(--logo-bg)" />
+            <path d="M9 22V10h10M9 16h7" stroke="var(--logo-mark)" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+            <circle cx="23" cy="21" r="3" fill="var(--logo-mark)" />
+          </svg>
           <span className="font-display text-lg font-bold tracking-tight whitespace-nowrap text-fg">{siteName}</span>
         </Link>
 

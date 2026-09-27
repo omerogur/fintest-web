@@ -52,8 +52,8 @@ export function GlossaryPage() {
             const firstOfLetter = !q && (i === 0 || list[i - 1].term[0].toLocaleUpperCase() !== letter);
             return (
               <div key={g.id} id={g.id} className="card scroll-mt-24 p-5" tabIndex={-1}>
-                {firstOfLetter && <span id={`harf-${letter}`} className="scroll-mt-24" />}
                 <dt>
+                  {firstOfLetter && <span id={`harf-${letter}`} className="scroll-mt-24" />}
                   <span className="text-lg font-semibold text-fg">{g.term}</span>
                   {g.expansion && <span className="ml-2 text-sm text-muted">{g.expansion}</span>}
                 </dt>
@@ -61,12 +61,12 @@ export function GlossaryPage() {
                 {(g.testTypes?.length > 0 || g.regulations?.length > 0) && (
                   <dd className="mt-3 flex flex-wrap gap-1.5">
                     {g.testTypes?.filter((s) => testTypeBySlug[s]).map((s) => (
-                      <Link key={s} to={`/test-turleri/${s}`} className="rounded-md border border-line bg-surface-2 px-2 py-0.5 text-xs font-medium text-fg hover:border-accent">
+                      <Link key={s} to={`/test-turleri/${s}`} className="inline-flex min-h-7 items-center rounded-md border border-line bg-surface-2 px-2.5 text-xs font-medium text-fg hover:border-accent">
                         {testTypeBySlug[s].title}
                       </Link>
                     ))}
                     {g.regulations?.filter((s) => regulationBySlug[s]).map((s) => (
-                      <Link key={s} to={`/regulasyonlar/${s}`} className="rounded-md border border-line bg-surface-2 px-2 py-0.5 text-xs font-medium text-fg hover:border-accent">
+                      <Link key={s} to={`/regulasyonlar/${s}`} className="inline-flex min-h-7 items-center rounded-md border border-line bg-surface-2 px-2.5 text-xs font-medium text-fg hover:border-accent">
                         {regulationBySlug[s].title}
                       </Link>
                     ))}
@@ -107,7 +107,7 @@ export function FaqList({ items, headingLevel = 'h2' }) {
             {f.links?.length > 0 && (
               <div className="mt-4 flex flex-wrap gap-2">
                 {f.links.map(linkFor).filter(Boolean).map((l) => (
-                  <Link key={l.to} to={l.to} className="text-sm font-semibold text-accent hover:underline">
+                  <Link key={l.to} to={l.to} className="text-sm font-semibold text-accent underline underline-offset-2 hover:decoration-2">
                     {l.label} →
                   </Link>
                 ))}
