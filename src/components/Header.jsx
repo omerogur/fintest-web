@@ -239,14 +239,14 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-40 border-b border-line bg-surface/95 backdrop-blur">
-      <div className="container-x flex h-16 items-center gap-4">
-        <Link to="/" className="flex items-center gap-2.5 rounded-lg" aria-label={t('nav.homeLabel', { name: siteName })}>
+      <div className="container-x flex h-[72px] max-w-[1440px] items-center gap-4">
+        <Link to="/" className="flex flex-shrink-0 items-center gap-2.5 rounded-lg" aria-label={t('nav.homeLabel', { name: siteName })}>
           <img src="/favicon.svg" alt="" className="size-8" />
           <span className="font-display text-lg font-bold tracking-tight whitespace-nowrap text-fg">{siteName}</span>
         </Link>
 
-        <nav aria-label={t('nav.mainMenu')} className="ml-2 hidden xl:block">
-          <ul className="flex items-center">
+        <nav aria-label={t('nav.mainMenu')} className="ml-8 hidden xl:block 2xl:ml-12">
+          <ul className="flex items-center gap-1 2xl:gap-2">
             {nav.map((item) =>
               item.items ? (
                 <Dropdown key={item.to} item={item} />
@@ -266,15 +266,16 @@ export default function Header() {
           </ul>
         </nav>
 
-        <div className="ml-auto flex items-center gap-2">
+        <div className="ml-auto flex items-center gap-2.5 pl-6">
           <button
             type="button"
             onClick={() => setSearchOpen(true)}
-            className="flex min-h-11 items-center gap-2 rounded-lg border border-line bg-surface px-3 text-sm text-muted hover:border-accent"
+            aria-label={t('nav.search')}
+            className="flex min-h-11 min-w-11 items-center justify-center gap-2 rounded-lg border border-line bg-surface px-3 text-sm text-muted hover:border-accent"
           >
             <Search className="size-4" aria-hidden="true" />
-            <span className="hidden sm:inline">{t('nav.search')}</span>
-            <kbd className="hidden rounded border border-line px-1.5 text-xs md:inline">/</kbd>
+            <span className="hidden 2xl:inline">{t('nav.search')}</span>
+            <kbd className="hidden rounded border border-line px-1.5 text-xs 2xl:inline">/</kbd>
           </button>
           <LanguageMenu className="hidden sm:block" />
           <button
@@ -285,6 +286,7 @@ export default function Header() {
           >
             {theme === 'dark' ? <Sun className="size-5" aria-hidden="true" /> : <Moon className="size-5" aria-hidden="true" />}
           </button>
+          <span className="mx-1 hidden h-7 w-px bg-line md:block" aria-hidden="true" />
           <Link to="/toplanti-talebi" className="btn btn-primary hidden whitespace-nowrap md:inline-flex">
             {t('nav.meeting')}
           </Link>
