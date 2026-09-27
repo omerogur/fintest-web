@@ -1,4 +1,4 @@
-import { ArrowRight, Scale, Search } from 'lucide-react';
+import { ArrowRight, ClipboardCheck, Handshake, Scale, Search } from 'lucide-react';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import Icon from '../components/Icon';
@@ -9,13 +9,14 @@ import { SITE } from '../config/site.config';
 import { useContent } from '../content';
 import { cn } from '../lib/cn';
 import { Matrix } from './RegulationPages';
+import { FaqList } from './ResourcePages';
 import { TestTypeCard } from './TestTypePages';
 
 const FEATURED = ['dora', 'psd2', 'bddk-bilgi-sistemleri', 'wcag-22', 'acik-bankacilik-ohvps'];
 
 export default function HomePage() {
   const { t } = useTranslation();
-  const { METHODOLOGY, REGULATIONS, TEST_TYPES, regulationBySlug } = useContent();
+  const { METHODOLOGY, REGULATIONS, TEST_TYPES, FAQ, regulationBySlug } = useContent();
   usePageTitle(null);
   const [region, setRegion] = useState('intl');
   const why = t('home.why', { returnObjects: true });
@@ -99,6 +100,27 @@ export default function HomePage() {
           </div>
         </section>
 
+        <section aria-labelledby="assess-teaser" className="grid items-center gap-8 overflow-hidden rounded-2xl border border-accent/40 bg-accent-soft p-6 sm:p-10 lg:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)]">
+          <div>
+            <p className="flex items-center gap-2 text-sm font-semibold text-accent">
+              <ClipboardCheck className="size-4" aria-hidden="true" /> {t('home.assessEyebrow')}
+            </p>
+            <h2 id="assess-teaser" className="h-display mt-2 text-3xl text-fg">{t('home.assessTitle')}</h2>
+            <p className="mt-3 max-w-2xl text-fg">{t('home.assessText')}</p>
+            <Link to="/uyum-kontrolu" className="btn btn-primary mt-6">
+              {t('home.assessCta')} <ArrowRight className="size-4" aria-hidden="true" />
+            </Link>
+          </div>
+          <ol className="grid gap-2">
+            {t('home.assessSteps', { returnObjects: true }).map((s, i) => (
+              <li key={s} className="flex items-center gap-3 rounded-xl border border-line bg-surface p-3">
+                <span className="grid size-8 flex-shrink-0 place-items-center rounded-full bg-accent text-sm font-bold text-on-accent" aria-hidden="true">{i + 1}</span>
+                <span className="text-fg">{s}</span>
+              </li>
+            ))}
+          </ol>
+        </section>
+
         <section aria-labelledby="tests-title">
           <div className="flex flex-wrap items-end justify-between gap-4">
             <div>
@@ -179,6 +201,31 @@ export default function HomePage() {
               </li>
             ))}
           </ul>
+        </section>
+
+        {FAQ.length > 0 && (
+          <section aria-labelledby="faq-home" className="grid gap-8 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)]">
+            <div>
+              <h2 id="faq-home" className="h-display text-3xl text-fg">{t('faq.title')}</h2>
+              <p className="mt-2 text-muted">{t('faq.subtitle')}</p>
+              <Link to="/sss" className="mt-4 inline-block font-semibold text-accent hover:underline">{t('home.faqAll', { count: FAQ.length })}</Link>
+            </div>
+            <FaqList items={FAQ.slice(0, 4)} headingLevel="h3" />
+          </section>
+        )}
+
+        <section aria-labelledby="partner-home" className="card flex flex-col gap-6 p-6 sm:flex-row sm:items-center sm:p-8">
+          <span className="grid size-14 flex-shrink-0 place-items-center rounded-2xl bg-accent text-on-accent">
+            <Handshake className="size-7" aria-hidden="true" />
+          </span>
+          <div className="min-w-0 flex-1">
+            <p className="text-sm font-semibold text-accent">{t('partner.eyebrow')}</p>
+            <h2 id="partner-home" className="mt-1 text-xl font-semibold text-fg">{SITE.partner.name}</h2>
+            <p className="mt-2 line-clamp-3 text-muted">{t('site.partnerSummary')}</p>
+          </div>
+          <Link to="/cozum-ortagi" className="btn btn-outline flex-shrink-0">
+            {t('home.partnerCta')} <ArrowRight className="size-4" aria-hidden="true" />
+          </Link>
         </section>
 
         <MeetingCta

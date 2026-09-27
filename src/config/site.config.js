@@ -1,6 +1,11 @@
 // Dile bağlı olmayan site bilgileri. Metinler (ürün açıklamaları, sloganlar, konu adları)
 // her dil için src/locales/<dil>/common.json dosyasında.
 export const SITE = {
+  // Yayındaki adres (ör. https://fintest.example.com). Boşsa tarayıcıdaki adres kullanılır; site haritası için gereklidir.
+  siteUrl: '',
+  // Sunum modu: false iken robots.txt taramayı kapatır ve site haritası üretilmez. Yayına alırken true yapın.
+  indexing: false,
+
   partner: {
     name: 'RabbitQA',
     url: 'https://rabbitqa.com',

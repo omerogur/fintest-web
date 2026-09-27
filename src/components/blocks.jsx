@@ -6,13 +6,32 @@ import { SITE } from '../config/site.config';
 import { cn } from '../lib/cn';
 import { Link } from './L';
 
-export function usePageTitle(title) {
-  const { t } = useTranslation();
+const setMeta = (attr, key, value) => {
+  let el = document.head.querySelector(`meta[${attr}="${key}"]`);
+  if (!el) {
+    el = document.createElement('meta');
+    el.setAttribute(attr, key);
+    document.head.appendChild(el);
+  }
+  el.setAttribute('content', value);
+};
+
+// Sayfa başlığı + arama motoru / paylaşım önizlemesi etiketleri.
+export function usePageTitle(title, description) {
+  const { t, i18n } = useTranslation();
   const name = t('site.name');
   const fallback = t('site.defaultTitle');
+  const desc = description || t('site.metaDescription');
   useEffect(() => {
-    document.title = title ? `${title} | ${name}` : `${name} — ${fallback}`;
-  }, [title, name, fallback]);
+    const full = title ? `${title} | ${name}` : `${name} — ${fallback}`;
+    document.title = full;
+    setMeta('name', 'description', desc);
+    setMeta('property', 'og:title', full);
+    setMeta('property', 'og:description', desc);
+    setMeta('property', 'og:site_name', name);
+    setMeta('property', 'og:locale', { tr: 'tr_TR', en: 'en_GB', de: 'de_DE' }[i18n.language] || 'tr_TR');
+    setMeta('name', 'twitter:card', 'summary_large_image');
+  }, [title, name, fallback, desc, i18n.language]);
 }
 
 export function Breadcrumbs({ items }) {

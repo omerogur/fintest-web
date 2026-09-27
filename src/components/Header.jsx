@@ -26,7 +26,18 @@ function useNav() {
           { label: t('nav.matrix'), to: '/regulasyonlar#matris', group: 'matrix' },
         ],
       },
-      { label: t('nav.approach'), to: '/test-yaklasimi' },
+      {
+        label: t('nav.resources'),
+        to: '/test-yaklasimi',
+        match: ['/test-yaklasimi', '/sozluk', '/sss'],
+        seeAll: false,
+        items: [
+          { label: t('nav.approach'), to: '/test-yaklasimi' },
+          { label: t('glossary.title'), to: '/sozluk' },
+          { label: t('faq.title'), to: '/sss' },
+        ],
+      },
+      { label: t('nav.assessment'), to: '/uyum-kontrolu' },
       { label: t('nav.partner'), to: '/cozum-ortagi' },
     ],
     [t, TEST_TYPES, REGULATIONS],
@@ -125,8 +136,8 @@ function Dropdown({ item }) {
   const ref = useRef(null);
   const { pathname } = useLocation();
   const lp = useLangPath();
-  const active = pathname.startsWith(lp(item.to));
-  const id = `menu-${item.to.slice(1)}`;
+  const active = (item.match || [item.to]).some((p) => pathname.startsWith(lp(p)));
+  const id = `menu-${item.label.replace(/\W+/g, '-')}`;
 
   useEffect(() => setOpen(false), [pathname]);
   useEffect(() => {
@@ -172,9 +183,11 @@ function Dropdown({ item }) {
       </button>
       {open && (
         <div id={id} className={cn('card absolute top-full left-0 z-50 mt-2 p-3 shadow-xl', grouped.length > 1 ? 'w-[520px]' : 'w-[340px]')}>
-          <Link to={item.to} className="mb-2 block rounded-lg px-3 py-2 text-sm font-semibold text-accent hover:bg-surface-2">
-            {t('nav.seeAll')}
-          </Link>
+          {item.seeAll !== false && (
+            <Link to={item.to} className="mb-2 block rounded-lg px-3 py-2 text-sm font-semibold text-accent hover:bg-surface-2">
+              {t('nav.seeAll')}
+            </Link>
+          )}
           <div className={cn('grid gap-3', grouped.length > 1 && 'grid-cols-2')}>
             {grouped.map((g) => (
               <div key={g.title || 'all'}>

@@ -6,6 +6,7 @@ import { cn } from '../lib/cn';
 import { useLangNavigate } from './L';
 
 const QUICK_LINKS = [
+  { key: 'assess', href: '/uyum-kontrolu' },
   { key: 'tests', href: '/test-turleri' },
   { key: 'matrix', href: '/regulasyonlar#matris' },
   { key: 'checklist', href: '/test-yaklasimi#kontrol-listesi' },

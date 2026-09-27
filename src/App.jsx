@@ -9,6 +9,8 @@ import HomePage from './pages/HomePage';
 import MeetingPage from './pages/MeetingPage';
 import MethodologyPage from './pages/MethodologyPage';
 import PartnerPage from './pages/PartnerPage';
+import AssessmentPage from './pages/AssessmentPage';
+import { FaqPage, GlossaryPage, LegalPage } from './pages/ResourcePages';
 import { RegulationDetailPage, RegulationsPage } from './pages/RegulationPages';
 import { TestTypeDetailPage, TestTypesPage } from './pages/TestTypePages';
 
@@ -44,6 +46,11 @@ export default function App() {
           <Route path="test-yaklasimi" element={<MethodologyPage />} />
           <Route path="cozum-ortagi" element={<PartnerPage />} />
           <Route path="toplanti-talebi" element={<MeetingPage />} />
+          <Route path="uyum-kontrolu" element={<AssessmentPage />} />
+          <Route path="sozluk" element={<GlossaryPage />} />
+          <Route path="sss" element={<FaqPage />} />
+          <Route path="erisilebilirlik-beyani" element={<LegalPage doc="accessibility" />} />
+          <Route path="gizlilik" element={<LegalPage doc="privacy" />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>

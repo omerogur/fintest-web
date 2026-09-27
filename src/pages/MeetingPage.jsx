@@ -2,6 +2,7 @@ import { CircleCheck, Mail } from 'lucide-react';
 import { useMemo, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSearchParams } from 'react-router-dom';
+import { Link } from '../components/L';
 import { PageHeader, usePageTitle } from '../components/blocks';
 import { PAGE_IMAGES } from '../config/images';
 import { SITE, TOPIC_IDS } from '../config/site.config';
@@ -145,7 +146,7 @@ export default function MeetingPage() {
         subtitle={t('meeting.subtitle', { partner: SITE.partner.name })}
         image={PAGE_IMAGES.meeting}
       />
-      <div className="container-x max-w-3xl py-12">
+      <div className="container-x grid gap-8 py-12 lg:grid-cols-[minmax(0,1fr)_320px]">
         <form noValidate onSubmit={onSubmit} className="card flex flex-col gap-6 p-6 sm:p-8">
           {errorList.length > 0 && (
             <div ref={summaryRef} tabIndex={-1} role="alert" className="rounded-xl border-2 border-warn bg-surface-2 p-4">
@@ -263,6 +264,29 @@ export default function MeetingPage() {
             </button>
           </div>
         </form>
+        <aside aria-labelledby="next-steps" className="flex flex-col gap-4 lg:sticky lg:top-24 lg:self-start">
+          <div className="card p-5">
+            <h2 id="next-steps" className="font-semibold text-fg">{t('meeting.nextTitle')}</h2>
+            <ol className="mt-4 space-y-3">
+              {t('meeting.nextSteps', { returnObjects: true }).map((s, i) => (
+                <li key={s} className="flex gap-3 text-sm text-fg">
+                  <span className="grid size-6 flex-shrink-0 place-items-center rounded-full bg-accent-soft text-xs font-bold text-accent" aria-hidden="true">{i + 1}</span>
+                  <span>{s}</span>
+                </li>
+              ))}
+            </ol>
+          </div>
+          <div className="card p-5">
+            <h2 className="font-semibold text-fg">{t('meeting.directTitle')}</h2>
+            <p className="mt-2 text-sm text-muted">{t('meeting.directText')}</p>
+            <a href={`mailto:${SITE.contactEmail}`} className="mt-3 inline-block font-semibold break-all text-accent underline">{SITE.contactEmail}</a>
+          </div>
+          <div className="card p-5">
+            <h2 className="font-semibold text-fg">{t('meeting.prepTitle')}</h2>
+            <p className="mt-2 text-sm text-muted">{t('meeting.prepText')}</p>
+            <Link to="/uyum-kontrolu" className="mt-3 inline-block text-sm font-semibold text-accent hover:underline">{t('nav.assessment')} →</Link>
+          </div>
+        </aside>
       </div>
     </>
   );

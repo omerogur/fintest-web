@@ -77,11 +77,15 @@
     "homeLabel": "{{name}} ana sayfa",
     "skip": "İçeriğe atla",
     "language": "Dil",
-    "guide": "Rehber"
+    "guide": "Rehber",
+    "resources": "Kaynaklar",
+    "assessment": "Uyum Kontrolü"
   },
   "footer": {
     "disclaimer": "Bu sitedeki içerik bilgilendirme amaçlıdır, hukuki görüş değildir. Regülasyonların güncel metnine resmi kaynaklardan başvurun. Son gözden geçirme: {{date}}.",
-    "partner": "Çözüm ortağı:"
+    "partner": "Çözüm ortağı:",
+    "accessibility": "Erişilebilirlik beyanı",
+    "privacy": "Gizlilik ve KVKK"
   },
   "common": {
     "home": "Ana sayfa",
@@ -90,20 +94,36 @@
     "requestMeeting": "Bu konuda toplantı talep et",
     "onThisPage": "Bu sayfada",
     "pageContents": "Sayfa içeriği",
-    "next": "Sonraki test türü"
+    "next": "Sonraki test türü",
+    "backToTop": "Sayfanın başına dön",
+    "print": "Yazdır / PDF"
   },
-  "region": { "intl": "Uluslararası", "tr": "Türkiye" },
+  "region": {
+    "intl": "Uluslararası",
+    "tr": "Türkiye"
+  },
   "kind": {
     "regulation": "Regülasyon",
     "standard": "Standart",
     "framework": "Çerçeve",
     "testType": "Test türü",
-    "guide": "Rehber"
+    "guide": "Rehber",
+    "term": "Sözlük",
+    "faq": "SSS"
   },
   "levels": {
-    "required": { "label": "Açıkça istenir", "short": "Zorunlu" },
-    "expected": { "label": "Beklentiyi karşılamanın olağan yolu", "short": "Beklenen" },
-    "supporting": { "label": "Destekleyici", "short": "Destekleyici" }
+    "required": {
+      "label": "Açıkça istenir",
+      "short": "Zorunlu"
+    },
+    "expected": {
+      "label": "Beklentiyi karşılamanın olağan yolu",
+      "short": "Beklenen"
+    },
+    "supporting": {
+      "label": "Destekleyici",
+      "short": "Destekleyici"
+    }
   },
   "partnerBox": {
     "eyebrow": "Çözüm Ortağı önerisi · {{kind}}",
@@ -128,13 +148,23 @@
     "close": "Aramayı kapat",
     "minChars": "Aramak için en az {{count}} karakter yazın.",
     "popular": "Sık aranan",
-    "suggested": ["DORA", "PSD2", "BDDK", "Yük testi", "WCAG", "Mambu", "Sızma testi", "Test verisi"],
+    "suggested": [
+      "DORA",
+      "PSD2",
+      "BDDK",
+      "Yük testi",
+      "WCAG",
+      "Mambu",
+      "Sızma testi",
+      "Test verisi"
+    ],
     "quick": "Hızlı erişim",
     "quickLinks": {
       "tests": "Tüm test türleri",
       "matrix": "Regülasyon → test türü tablosu",
       "checklist": "Sürüm öncesi kontrol listesi",
-      "meeting": "Toplantı talebi"
+      "meeting": "Toplantı talebi",
+      "assess": "Uyum kontrolü aracı"
     },
     "noResults": "“{{query}}” için sonuç bulunamadı",
     "tryOther": "Farklı bir terim deneyin; örneğin “DORA” veya “performans”.",
@@ -179,7 +209,19 @@
     "methodTitle": "Önerilen test yaklaşımı",
     "methodCta": "Metodolojiyi okuyun",
     "ctaTitle": "Regülatif uyumluluk danışmanlığı için toplantı talep edin",
-    "ctaText": "PSD2, DORA, BDDK, WCAG 2.2 veya core banking testleri: {{partner}} uzmanlarıyla kurumunuzun ihtiyaçlarını birlikte değerlendirin."
+    "ctaText": "PSD2, DORA, BDDK, WCAG 2.2 veya core banking testleri: {{partner}} uzmanlarıyla kurumunuzun ihtiyaçlarını birlikte değerlendirin.",
+    "assessEyebrow": "Ücretsiz ön değerlendirme",
+    "assessTitle": "Kurumunuz için hangi regülasyonlar ve testler öne çıkıyor?",
+    "assessText": "Kurum tipinizi, faaliyet bölgenizi ve kanallarınızı seçin; ilgili regülasyonları ve önerilen test türlerini gerekçeleriyle birlikte görün. Sonucu paylaşabilir veya yazdırabilirsiniz.",
+    "assessCta": "Uyum kontrolünü başlat",
+    "assessSteps": [
+      "Kurum tipini seçin",
+      "Faaliyet bölgesini belirtin",
+      "Kanal ve projeleri işaretleyin",
+      "Size özel listeyi görün"
+    ],
+    "faqAll": "Tüm soruları gör ({{count}}) →",
+    "partnerCta": "Çözüm ortağını tanıyın"
   },
   "testTypes": {
     "title": "Test Türleri Rehberi",
@@ -236,7 +278,12 @@
     "pipelineLabel": "CI/CD aşamalarına göre testler",
     "riskTitle": "Örnek risk değerlendirmesi",
     "riskCaption": "Bankacılık iş alanlarına göre örnek risk değerlendirmesi",
-    "cols": { "area": "İş alanı", "impact": "Etki", "likelihood": "Olasılık", "focus": "Test odağı" },
+    "cols": {
+      "area": "İş alanı",
+      "impact": "Etki",
+      "likelihood": "Olasılık",
+      "focus": "Test odağı"
+    },
     "checklistTitle": "Sürüm öncesi kontrol listesi",
     "checklistText": "Canlıya çıkış kararından önce gözden geçirilecek başlıklar. İşaretler yalnızca bu sayfada tutulur, hiçbir yere gönderilmez.",
     "checked": "{{done}} / {{total}} madde işaretlendi",
@@ -311,11 +358,117 @@
       "topics": "İlgilenilen konular",
       "consent": "KVKK aydınlatma metnini okudum ve onaylıyorum.",
       "subjectLabel": "Konu"
-    }
+    },
+    "nextTitle": "Sonra ne olur?",
+    "nextSteps": [
+      "Talebiniz ve seçtiğiniz konular incelenir.",
+      "Size uygun bir görüşme zamanı önerilir.",
+      "Görüşmede mevcut test süreçleriniz ve regülatif beklentileriniz birlikte değerlendirilir."
+    ],
+    "directTitle": "Doğrudan e-posta",
+    "directText": "Form yerine doğrudan yazmayı tercih ederseniz:",
+    "prepTitle": "Görüşmeye hazırlık",
+    "prepText": "Uyum kontrolü aracıyla kurumunuz için öne çıkan regülasyon ve test türlerini önceden görebilir, sonucu görüşmeye getirebilirsiniz."
   },
   "notFound": {
     "title": "Sayfa bulunamadı",
     "text": "Aradığınız sayfa taşınmış ya da kaldırılmış olabilir.",
     "back": "Ana sayfaya dön"
+  },
+  "glossary": {
+    "title": "Terimler Sözlüğü",
+    "subtitle": "Bankacılıkta test ve uyum dünyasında sık geçen kısaltma ve terimlerin kısa açıklamaları.",
+    "filter": "Sözlükte filtrele",
+    "count": "{{count}} terim",
+    "letters": "Harfe göre git",
+    "none": "Eşleşen terim bulunamadı."
+  },
+  "faq": {
+    "title": "Sık Sorulan Sorular",
+    "subtitle": "Banka ve fintech BT, QA ve uyum ekiplerinin en sık sorduğu sorulara kısa yanıtlar.",
+    "ctaTitle": "Sorunuzun yanıtını bulamadınız mı?"
+  },
+  "legal": {
+    "updated": "Son güncelleme: {{date}}"
+  },
+  "assess": {
+    "crumb": "Uyum Kontrolü",
+    "eyebrow": "Ön değerlendirme aracı",
+    "title": "Uyum ve test ön değerlendirmesi",
+    "subtitle": "Dört soruyu yanıtlayın; kurumunuz için öne çıkan regülasyonları ve önerilen test türlerini gerekçeleriyle görün.",
+    "q": "Soru {{n}}",
+    "orgTitle": "Kurumunuzun tipi nedir?",
+    "org": {
+      "bank": {
+        "label": "Banka",
+        "hint": "Mevduat bankası, katılım bankası veya dijital banka"
+      },
+      "payment": {
+        "label": "Ödeme / e-para kuruluşu",
+        "hint": "Lisanslı ödeme hizmeti sağlayıcı veya elektronik para kuruluşu"
+      },
+      "fintech": {
+        "label": "Fintech / teknoloji sağlayıcı",
+        "hint": "Bankalara veya ödeme kuruluşlarına yazılım ve BİT hizmeti sunan şirket"
+      }
+    },
+    "regionTitle": "Nerede faaliyet gösteriyorsunuz?",
+    "region": {
+      "tr": "Türkiye",
+      "eu": "Avrupa Birliği",
+      "both": "Türkiye ve AB"
+    },
+    "channelsTitle": "Hangi kanal ve hizmetleri sunuyorsunuz?",
+    "multi": "Birden fazla seçebilirsiniz.",
+    "channel": {
+      "mobile": "Mobil bankacılık / mobil uygulama",
+      "web": "İnternet bankacılığı / web kanalı",
+      "openApi": "Açık bankacılık API’leri",
+      "cards": "Kart işlemleri (kart verisi işleme)",
+      "payments": "Ödeme ve transfer işlemleri (EFT, FAST, SEPA vb.)"
+    },
+    "initiativesTitle": "Gündeminizde neler var?",
+    "initiative": {
+      "coreMigration": "Core banking geçişi veya yeni dijital bankacılık altyapısı",
+      "thirdParty": "Kritik hizmetlerde dış hizmet / bulut sağlayıcı kullanımı",
+      "frequentReleases": "Sık sürüm çıkarma ve regresyon yükü"
+    },
+    "disclaimer": "Bu araç genel kurallara dayalı bir ön değerlendirmedir; hukuki görüş değildir. Kurumunuza uygulanan yükümlülükleri resmi metinler ve uyum ekibinizle doğrulayın.",
+    "resultTitle": "Sonuç",
+    "empty": "Sonucu görmek için kurum tipinizi ve faaliyet bölgenizi seçin.",
+    "regsTitle": "Öne çıkan regülasyonlar ({{count}})",
+    "testsTitle": "Önerilen test türleri ({{count}})",
+    "cta": "Bu sonuçla toplantı talep et",
+    "copy": "Bağlantıyı kopyala",
+    "copied": "Bağlantı kopyalandı",
+    "reset": "Sıfırla",
+    "reason": {
+      "trBank": "Türkiye’de faaliyet gösteren banka",
+      "trPayment": "Türkiye’de ödeme / e-para kuruluşu",
+      "trOpenBanking": "Türkiye’de açık bankacılık API’si sunuluyor",
+      "trData": "Türkiye’de kişisel veri işleniyor",
+      "trAccessibility": "Türkiye’de dijital müşteri kanalları",
+      "euPayments": "AB’de ödeme hizmetleri",
+      "euDora": "AB finans kuruluşu",
+      "euIctProvider": "AB finans kuruluşlarına BİT hizmeti",
+      "euData": "AB’de kişisel veri işleniyor",
+      "euEaa": "AB’de tüketiciye yönelik dijital bankacılık",
+      "channelsWcag": "Web / mobil kanallar",
+      "cards": "Kart verisi işleniyor",
+      "payments": "Ödeme mesajlaşması",
+      "thirdParty": "Dış hizmet alımı",
+      "baseline": "Temel bilgi güvenliği ve kalite uygulaması",
+      "fromReg": "{{title}} beklentisi",
+      "channel": {
+        "mobile": "Mobil kanal",
+        "web": "Web ve mobil erişilebilirlik",
+        "openApi": "Açık bankacılık API’leri",
+        "cards": "Kart verisi güvenliği"
+      },
+      "initiative": {
+        "coreMigration": "Core banking geçişi",
+        "frequentReleases": "Sık sürüm ve regresyon"
+      }
+    }
   }
 }

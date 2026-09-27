@@ -77,11 +77,15 @@
     "homeLabel": "{{name}} home",
     "skip": "Skip to content",
     "language": "Language",
-    "guide": "Guide"
+    "guide": "Guide",
+    "resources": "Resources",
+    "assessment": "Compliance Check"
   },
   "footer": {
     "disclaimer": "The content on this site is for information only and is not legal advice. Always refer to the current official text of each regulation. Last reviewed: {{date}}.",
-    "partner": "Solution partner:"
+    "partner": "Solution partner:",
+    "accessibility": "Accessibility statement",
+    "privacy": "Privacy notice"
   },
   "common": {
     "home": "Home",
@@ -90,20 +94,36 @@
     "requestMeeting": "Request a meeting on this topic",
     "onThisPage": "On this page",
     "pageContents": "Page contents",
-    "next": "Next test type"
+    "next": "Next test type",
+    "backToTop": "Back to top",
+    "print": "Print / PDF"
   },
-  "region": { "intl": "International", "tr": "Türkiye" },
+  "region": {
+    "intl": "International",
+    "tr": "Türkiye"
+  },
   "kind": {
     "regulation": "Regulation",
     "standard": "Standard",
     "framework": "Framework",
     "testType": "Test type",
-    "guide": "Guide"
+    "guide": "Guide",
+    "term": "Glossary",
+    "faq": "FAQ"
   },
   "levels": {
-    "required": { "label": "Explicitly required", "short": "Required" },
-    "expected": { "label": "The usual way to meet the expectation", "short": "Expected" },
-    "supporting": { "label": "Supporting", "short": "Supporting" }
+    "required": {
+      "label": "Explicitly required",
+      "short": "Required"
+    },
+    "expected": {
+      "label": "The usual way to meet the expectation",
+      "short": "Expected"
+    },
+    "supporting": {
+      "label": "Supporting",
+      "short": "Supporting"
+    }
   },
   "partnerBox": {
     "eyebrow": "Solution Partner recommendation · {{kind}}",
@@ -128,13 +148,23 @@
     "close": "Close search",
     "minChars": "Type at least {{count}} characters to search.",
     "popular": "Popular searches",
-    "suggested": ["DORA", "PSD2", "BDDK", "Load testing", "WCAG", "Mambu", "Penetration testing", "Test data"],
+    "suggested": [
+      "DORA",
+      "PSD2",
+      "BDDK",
+      "Load testing",
+      "WCAG",
+      "Mambu",
+      "Penetration testing",
+      "Test data"
+    ],
     "quick": "Quick access",
     "quickLinks": {
       "tests": "All test types",
       "matrix": "Regulation → test type matrix",
       "checklist": "Pre-release checklist",
-      "meeting": "Meeting request"
+      "meeting": "Meeting request",
+      "assess": "Compliance check tool"
     },
     "noResults": "No results for “{{query}}”",
     "tryOther": "Try a different term, for example “DORA” or “performance”.",
@@ -179,7 +209,19 @@
     "methodTitle": "Recommended testing approach",
     "methodCta": "Read the methodology",
     "ctaTitle": "Request a meeting on regulatory compliance testing",
-    "ctaText": "PSD2, DORA, BDDK, WCAG 2.2 or core banking testing: review your organisation’s needs together with {{partner}} specialists."
+    "ctaText": "PSD2, DORA, BDDK, WCAG 2.2 or core banking testing: review your organisation’s needs together with {{partner}} specialists.",
+    "assessEyebrow": "Free preliminary assessment",
+    "assessTitle": "Which regulations and tests matter most for your organisation?",
+    "assessText": "Select your organisation type, region and channels to see the relevant regulations and recommended test types, with the reasons behind each. You can share or print the result.",
+    "assessCta": "Start the compliance check",
+    "assessSteps": [
+      "Choose your organisation type",
+      "Select your region",
+      "Tick your channels and projects",
+      "See your tailored list"
+    ],
+    "faqAll": "See all questions ({{count}}) →",
+    "partnerCta": "Meet the solution partner"
   },
   "testTypes": {
     "title": "Test Types Guide",
@@ -236,7 +278,12 @@
     "pipelineLabel": "Tests by CI/CD stage",
     "riskTitle": "Example risk assessment",
     "riskCaption": "Example risk assessment by banking business area",
-    "cols": { "area": "Business area", "impact": "Impact", "likelihood": "Likelihood", "focus": "Test focus" },
+    "cols": {
+      "area": "Business area",
+      "impact": "Impact",
+      "likelihood": "Likelihood",
+      "focus": "Test focus"
+    },
     "checklistTitle": "Pre-release checklist",
     "checklistText": "Items to review before the go-live decision. Checkmarks are kept only on this page and are not sent anywhere.",
     "checked": "{{done}} / {{total}} items checked",
@@ -311,11 +358,117 @@
       "topics": "Topics of interest",
       "consent": "I have read and accept the privacy notice (KVKK).",
       "subjectLabel": "Subject"
-    }
+    },
+    "nextTitle": "What happens next?",
+    "nextSteps": [
+      "Your request and selected topics are reviewed.",
+      "A suitable meeting time is proposed.",
+      "In the meeting, your current testing processes and regulatory expectations are reviewed together."
+    ],
+    "directTitle": "Email us directly",
+    "directText": "If you prefer to write instead of using the form:",
+    "prepTitle": "Preparing for the meeting",
+    "prepText": "Use the compliance check tool to see the regulations and test types most relevant to your organisation in advance, and bring the result to the meeting."
   },
   "notFound": {
     "title": "Page not found",
     "text": "The page you are looking for may have been moved or removed.",
     "back": "Back to home"
+  },
+  "glossary": {
+    "title": "Glossary",
+    "subtitle": "Short explanations of abbreviations and terms that come up often in banking testing and compliance.",
+    "filter": "Filter the glossary",
+    "count": "{{count}} terms",
+    "letters": "Jump to letter",
+    "none": "No matching terms found."
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Short answers to the questions IT, QA and compliance teams at banks and fintechs ask most often.",
+    "ctaTitle": "Didn’t find your answer?"
+  },
+  "legal": {
+    "updated": "Last updated: {{date}}"
+  },
+  "assess": {
+    "crumb": "Compliance Check",
+    "eyebrow": "Preliminary assessment tool",
+    "title": "Compliance and testing pre-assessment",
+    "subtitle": "Answer four questions to see the regulations that matter most for your organisation and the recommended test types, with reasons.",
+    "q": "Question {{n}}",
+    "orgTitle": "What type of organisation are you?",
+    "org": {
+      "bank": {
+        "label": "Bank",
+        "hint": "Deposit bank, participation bank or digital bank"
+      },
+      "payment": {
+        "label": "Payment / e-money institution",
+        "hint": "Licensed payment service provider or electronic money institution"
+      },
+      "fintech": {
+        "label": "Fintech / technology provider",
+        "hint": "Company providing software and ICT services to banks or payment institutions"
+      }
+    },
+    "regionTitle": "Where do you operate?",
+    "region": {
+      "tr": "Türkiye",
+      "eu": "European Union",
+      "both": "Türkiye and the EU"
+    },
+    "channelsTitle": "Which channels and services do you offer?",
+    "multi": "You can select more than one.",
+    "channel": {
+      "mobile": "Mobile banking / mobile app",
+      "web": "Internet banking / web channel",
+      "openApi": "Open banking APIs",
+      "cards": "Card transactions (processing card data)",
+      "payments": "Payments and transfers (EFT, FAST, SEPA etc.)"
+    },
+    "initiativesTitle": "What is on your agenda?",
+    "initiative": {
+      "coreMigration": "Core banking migration or a new digital banking platform",
+      "thirdParty": "Using outsourcing / cloud providers for critical services",
+      "frequentReleases": "Frequent releases and a growing regression burden"
+    },
+    "disclaimer": "This tool is a preliminary assessment based on general rules; it is not legal advice. Confirm the obligations that apply to your organisation with the official texts and your compliance team.",
+    "resultTitle": "Result",
+    "empty": "Select your organisation type and region to see the result.",
+    "regsTitle": "Key regulations ({{count}})",
+    "testsTitle": "Recommended test types ({{count}})",
+    "cta": "Request a meeting with this result",
+    "copy": "Copy link",
+    "copied": "Link copied",
+    "reset": "Reset",
+    "reason": {
+      "trBank": "Bank operating in Türkiye",
+      "trPayment": "Payment / e-money institution in Türkiye",
+      "trOpenBanking": "Open banking APIs offered in Türkiye",
+      "trData": "Personal data processed in Türkiye",
+      "trAccessibility": "Digital customer channels in Türkiye",
+      "euPayments": "Payment services in the EU",
+      "euDora": "EU financial entity",
+      "euIctProvider": "ICT services to EU financial entities",
+      "euData": "Personal data processed in the EU",
+      "euEaa": "Consumer digital banking in the EU",
+      "channelsWcag": "Web / mobile channels",
+      "cards": "Card data processed",
+      "payments": "Payment messaging",
+      "thirdParty": "Outsourcing",
+      "baseline": "Baseline information security and quality practice",
+      "fromReg": "Expected under {{title}}",
+      "channel": {
+        "mobile": "Mobile channel",
+        "web": "Web and mobile accessibility",
+        "openApi": "Open banking APIs",
+        "cards": "Card data security"
+      },
+      "initiative": {
+        "coreMigration": "Core banking migration",
+        "frequentReleases": "Frequent releases and regression"
+      }
+    }
   }
 }

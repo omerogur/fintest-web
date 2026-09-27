@@ -1,4 +1,4 @@
-import { ArrowRight, CircleCheck, TriangleAlert } from 'lucide-react';
+import { ArrowRight, CircleCheck, Printer, TriangleAlert } from 'lucide-react';
 import { useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Navigate, useParams } from 'react-router-dom';
@@ -119,7 +119,7 @@ export function TestTypeDetailPage() {
   const lp = useLangPath();
   const { TEST_TYPES, testTypeBySlug, regulationBySlug, regulationsForTestType } = useContent();
   const item = testTypeBySlug[slug];
-  usePageTitle(item?.title);
+  usePageTitle(item?.title, item?.summary);
   if (!item) return <Navigate to={lp('/test-turleri')} replace />;
 
   const linked = regulationsForTestType(item.slug);
@@ -140,9 +140,14 @@ export function TestTypeDetailPage() {
         image={TEST_TYPE_IMAGES[item.slug]}
         imageOverlay={OVERLAYS[item.slug]}
       >
-        <Link to={`/toplanti-talebi?konu=${item.topic}`} className="btn btn-primary no-print mt-6">
-          {t('common.requestMeeting')}
-        </Link>
+        <div className="no-print mt-6 flex flex-wrap gap-3">
+          <Link to={`/toplanti-talebi?konu=${item.topic}`} className="btn btn-primary">
+            {t('common.requestMeeting')}
+          </Link>
+          <button type="button" onClick={() => window.print()} className="btn btn-outline">
+            <Printer className="size-4" aria-hidden="true" /> {t('common.print')}
+          </button>
+        </div>
       </PageHeader>
 
       <div className="container-x grid gap-10 py-12 lg:grid-cols-[220px_minmax(0,1fr)]">

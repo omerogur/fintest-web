@@ -77,11 +77,15 @@
     "homeLabel": "{{name}} Startseite",
     "skip": "Zum Inhalt springen",
     "language": "Sprache",
-    "guide": "Leitfaden"
+    "guide": "Leitfaden",
+    "resources": "Ressourcen",
+    "assessment": "Compliance-Check"
   },
   "footer": {
     "disclaimer": "Die Inhalte dieser Website dienen ausschließlich der Information und stellen keine Rechtsberatung dar. Maßgeblich ist stets der aktuelle amtliche Text der jeweiligen Regelung. Zuletzt geprüft: {{date}}.",
-    "partner": "Lösungspartner:"
+    "partner": "Lösungspartner:",
+    "accessibility": "Erklärung zur Barrierefreiheit",
+    "privacy": "Datenschutzerklärung"
   },
   "common": {
     "home": "Startseite",
@@ -90,7 +94,9 @@
     "requestMeeting": "Termin zu diesem Thema anfragen",
     "onThisPage": "Auf dieser Seite",
     "pageContents": "Seiteninhalt",
-    "next": "Nächste Testart"
+    "next": "Nächste Testart",
+    "backToTop": "Zurück nach oben",
+    "print": "Drucken / PDF"
   },
   "region": {
     "intl": "International",
@@ -101,7 +107,9 @@
     "standard": "Standard",
     "framework": "Rahmenwerk",
     "testType": "Testart",
-    "guide": "Leitfaden"
+    "guide": "Leitfaden",
+    "term": "Glossar",
+    "faq": "FAQ"
   },
   "levels": {
     "required": {
@@ -155,7 +163,8 @@
       "tests": "Alle Testarten",
       "matrix": "Regulierung → Testarten-Matrix",
       "checklist": "Checkliste vor dem Release",
-      "meeting": "Terminanfrage"
+      "meeting": "Terminanfrage",
+      "assess": "Compliance-Check"
     },
     "noResults": "Keine Ergebnisse für „{{query}}“",
     "tryOther": "Versuchen Sie einen anderen Begriff, z. B. „DORA“ oder „Performance“.",
@@ -200,7 +209,19 @@
     "methodTitle": "Empfohlenes Testvorgehen",
     "methodCta": "Methodik lesen",
     "ctaTitle": "Termin zur Beratung über regulatorische Compliance-Tests anfragen",
-    "ctaText": "PSD2, DORA, BDDK, WCAG 2.2 oder Core-Banking-Tests: Bewerten Sie den Bedarf Ihres Hauses gemeinsam mit Fachleuten von {{partner}}."
+    "ctaText": "PSD2, DORA, BDDK, WCAG 2.2 oder Core-Banking-Tests: Bewerten Sie den Bedarf Ihres Hauses gemeinsam mit Fachleuten von {{partner}}.",
+    "assessEyebrow": "Kostenlose Ersteinschätzung",
+    "assessTitle": "Welche Regelwerke und Tests sind für Ihr Haus besonders relevant?",
+    "assessText": "Wählen Sie Institutstyp, Region und Kanäle und sehen Sie die relevanten Regelwerke und empfohlenen Testarten samt Begründung. Das Ergebnis können Sie teilen oder drucken.",
+    "assessCta": "Compliance-Check starten",
+    "assessSteps": [
+      "Institutstyp wählen",
+      "Region angeben",
+      "Kanäle und Vorhaben markieren",
+      "Ihre individuelle Liste ansehen"
+    ],
+    "faqAll": "Alle Fragen anzeigen ({{count}}) →",
+    "partnerCta": "Lösungspartner kennenlernen"
   },
   "testTypes": {
     "title": "Leitfaden Testarten",
@@ -337,11 +358,117 @@
       "topics": "Themen von Interesse",
       "consent": "Ich habe den Datenschutzhinweis (KVKK) gelesen und akzeptiert.",
       "subjectLabel": "Betreff"
-    }
+    },
+    "nextTitle": "Wie geht es weiter?",
+    "nextSteps": [
+      "Ihre Anfrage und die gewählten Themen werden geprüft.",
+      "Wir schlagen Ihnen einen passenden Termin vor.",
+      "Im Gespräch bewerten wir gemeinsam Ihre aktuellen Testprozesse und regulatorischen Erwartungen."
+    ],
+    "directTitle": "Direkt per E-Mail",
+    "directText": "Wenn Sie lieber direkt schreiben möchten:",
+    "prepTitle": "Vorbereitung auf das Gespräch",
+    "prepText": "Mit dem Compliance-Check sehen Sie vorab die für Ihr Haus relevanten Regelwerke und Testarten und können das Ergebnis ins Gespräch mitbringen."
   },
   "notFound": {
     "title": "Seite nicht gefunden",
     "text": "Die gesuchte Seite wurde möglicherweise verschoben oder entfernt.",
     "back": "Zur Startseite"
+  },
+  "glossary": {
+    "title": "Glossar",
+    "subtitle": "Kurze Erklärungen zu Abkürzungen und Begriffen, die beim Testen und in der Compliance im Banking häufig vorkommen.",
+    "filter": "Glossar filtern",
+    "count": "{{count}} Begriffe",
+    "letters": "Zum Buchstaben springen",
+    "none": "Keine passenden Begriffe gefunden."
+  },
+  "faq": {
+    "title": "Häufig gestellte Fragen",
+    "subtitle": "Kurze Antworten auf die Fragen, die IT-, QA- und Compliance-Teams in Banken und Fintechs am häufigsten stellen.",
+    "ctaTitle": "Keine Antwort gefunden?"
+  },
+  "legal": {
+    "updated": "Zuletzt aktualisiert: {{date}}"
+  },
+  "assess": {
+    "crumb": "Compliance-Check",
+    "eyebrow": "Werkzeug zur Ersteinschätzung",
+    "title": "Ersteinschätzung zu Compliance und Tests",
+    "subtitle": "Beantworten Sie vier Fragen und sehen Sie die für Ihr Haus relevanten Regelwerke und empfohlenen Testarten mit Begründung.",
+    "q": "Frage {{n}}",
+    "orgTitle": "Welcher Institutstyp trifft auf Sie zu?",
+    "org": {
+      "bank": {
+        "label": "Bank",
+        "hint": "Einlagenbank, Beteiligungsbank oder Digitalbank"
+      },
+      "payment": {
+        "label": "Zahlungs- / E-Geld-Institut",
+        "hint": "Zugelassener Zahlungsdienstleister oder E-Geld-Institut"
+      },
+      "fintech": {
+        "label": "Fintech / Technologieanbieter",
+        "hint": "Unternehmen, das Banken oder Zahlungsinstituten Software und IKT-Dienste bereitstellt"
+      }
+    },
+    "regionTitle": "Wo sind Sie tätig?",
+    "region": {
+      "tr": "Türkei",
+      "eu": "Europäische Union",
+      "both": "Türkei und EU"
+    },
+    "channelsTitle": "Welche Kanäle und Dienste bieten Sie an?",
+    "multi": "Mehrfachauswahl möglich.",
+    "channel": {
+      "mobile": "Mobile Banking / mobile App",
+      "web": "Online-Banking / Webkanal",
+      "openApi": "Open-Banking-APIs",
+      "cards": "Kartentransaktionen (Verarbeitung von Kartendaten)",
+      "payments": "Zahlungen und Überweisungen (EFT, FAST, SEPA usw.)"
+    },
+    "initiativesTitle": "Was steht bei Ihnen an?",
+    "initiative": {
+      "coreMigration": "Core-Banking-Migration oder neue digitale Bankplattform",
+      "thirdParty": "Auslagerung / Cloud-Anbieter für kritische Dienste",
+      "frequentReleases": "Häufige Releases und wachsender Regressionsaufwand"
+    },
+    "disclaimer": "Dieses Werkzeug liefert eine Ersteinschätzung auf Basis allgemeiner Regeln und ist keine Rechtsberatung. Prüfen Sie die für Ihr Haus geltenden Pflichten anhand der amtlichen Texte und mit Ihrem Compliance-Team.",
+    "resultTitle": "Ergebnis",
+    "empty": "Wählen Sie Institutstyp und Region, um das Ergebnis zu sehen.",
+    "regsTitle": "Relevante Regelwerke ({{count}})",
+    "testsTitle": "Empfohlene Testarten ({{count}})",
+    "cta": "Termin mit diesem Ergebnis anfragen",
+    "copy": "Link kopieren",
+    "copied": "Link kopiert",
+    "reset": "Zurücksetzen",
+    "reason": {
+      "trBank": "In der Türkei tätige Bank",
+      "trPayment": "Zahlungs- / E-Geld-Institut in der Türkei",
+      "trOpenBanking": "Open-Banking-APIs in der Türkei",
+      "trData": "Verarbeitung personenbezogener Daten in der Türkei",
+      "trAccessibility": "Digitale Kundenkanäle in der Türkei",
+      "euPayments": "Zahlungsdienste in der EU",
+      "euDora": "Finanzunternehmen in der EU",
+      "euIctProvider": "IKT-Dienste für EU-Finanzunternehmen",
+      "euData": "Verarbeitung personenbezogener Daten in der EU",
+      "euEaa": "Digitales Privatkundengeschäft in der EU",
+      "channelsWcag": "Web- / Mobile-Kanäle",
+      "cards": "Verarbeitung von Kartendaten",
+      "payments": "Zahlungsnachrichten",
+      "thirdParty": "Auslagerung",
+      "baseline": "Grundlegende Informationssicherheit und Qualitätspraxis",
+      "fromReg": "Erwartung aus {{title}}",
+      "channel": {
+        "mobile": "Mobiler Kanal",
+        "web": "Barrierefreiheit Web und Mobile",
+        "openApi": "Open-Banking-APIs",
+        "cards": "Sicherheit von Kartendaten"
+      },
+      "initiative": {
+        "coreMigration": "Core-Banking-Migration",
+        "frequentReleases": "Häufige Releases und Regression"
+      }
+    }
   }
 }

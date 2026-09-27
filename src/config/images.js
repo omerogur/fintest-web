@@ -27,4 +27,7 @@ export const PAGE_IMAGES = {
   partnerCore: '/images/bankacilik.webp',
   meeting: '/images/toplanti.webp',
   cta: '/images/el-sikisma.webp',
+  assessment: '/images/uyum-kontrolu.webp',
+  glossary: '/images/regulasyonlar.webp',
+  faq: '/images/sss.webp',
 };

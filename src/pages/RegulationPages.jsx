@@ -1,4 +1,4 @@
-import { Circle, CircleCheck, Minus } from 'lucide-react';
+import { Circle, CircleCheck, Minus, Printer } from 'lucide-react';
 import { useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Navigate, useParams } from 'react-router-dom';
@@ -192,7 +192,7 @@ export function RegulationDetailPage() {
   const lp = useLangPath();
   const { regulationBySlug, testTypeBySlug } = useContent();
   const r = regulationBySlug[slug];
-  usePageTitle(r?.title);
+  usePageTitle(r?.title, r?.summary);
   if (!r) return <Navigate to={lp('/regulasyonlar')} replace />;
   const tests = [...(r.testTypes || [])].sort(byLevel);
 
@@ -216,6 +216,9 @@ export function RegulationDetailPage() {
             ))}
           </dl>
         )}
+        <button type="button" onClick={() => window.print()} className="btn btn-outline no-print mt-6">
+          <Printer className="size-4" aria-hidden="true" /> {t('common.print')}
+        </button>
       </PageHeader>
 
       <div className="container-x flex max-w-5xl flex-col gap-14 py-12">
