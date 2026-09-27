@@ -1,0 +1,193 @@
+import { ArrowRight, Scale, Search } from 'lucide-react';
+import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import Icon from '../components/Icon';
+import { Link } from '../components/L';
+import { MeetingCta, Photo, Tag, usePageTitle } from '../components/blocks';
+import { PAGE_IMAGES } from '../config/images';
+import { SITE } from '../config/site.config';
+import { useContent } from '../content';
+import { cn } from '../lib/cn';
+import { Matrix } from './RegulationPages';
+import { TestTypeCard } from './TestTypePages';
+
+const FEATURED = ['dora', 'psd2', 'bddk-bilgi-sistemleri', 'wcag-22', 'acik-bankacilik-ohvps'];
+
+export default function HomePage() {
+  const { t } = useTranslation();
+  const { METHODOLOGY, REGULATIONS, TEST_TYPES, regulationBySlug } = useContent();
+  usePageTitle(null);
+  const [region, setRegion] = useState('intl');
+  const why = t('home.why', { returnObjects: true });
+  const regs = REGULATIONS.filter((r) => r.region === region);
+
+  return (
+    <>
+      <section aria-labelledby="hero-title" className="relative overflow-hidden bg-navy text-white">
+        <img src={PAGE_IMAGES.home} alt="" decoding="async" className="absolute inset-0 size-full object-cover opacity-30" />
+        <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-r from-navy via-navy/85 to-navy/40" />
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 opacity-40"
+          style={{ background: 'radial-gradient(ellipse at 80% 0%, rgba(45,212,191,0.35), transparent 55%), radial-gradient(ellipse at 0% 100%, rgba(59,91,219,0.35), transparent 50%)' }}
+        />
+        <div className="container-x relative grid items-center gap-12 py-16 sm:py-24 lg:grid-cols-[minmax(0,1.25fr)_minmax(0,1fr)]">
+          <div>
+            <p className="text-sm font-semibold text-teal-300">{t('home.eyebrow')}</p>
+            <h1 id="hero-title" tabIndex={-1} className="h-display mt-4 max-w-4xl text-4xl outline-none sm:text-6xl">
+              {t('home.title')}
+            </h1>
+            <p className="mt-6 max-w-2xl text-lg text-white/85">{t('home.lead')}</p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Link to="/test-turleri" className="btn bg-white text-navy hover:bg-white/90">
+                {t('home.ctaTests')} <ArrowRight className="size-4" aria-hidden="true" />
+              </Link>
+              <Link to="/regulasyonlar" className="btn border border-white/40 text-white hover:bg-white/10">
+                <Scale className="size-4" aria-hidden="true" /> {t('home.ctaRegs')}
+              </Link>
+            </div>
+            <p className="mt-6 flex items-center gap-2 text-sm text-white/75">
+              <Search className="size-4" aria-hidden="true" />
+              {t('home.searchHintBefore')} <kbd className="rounded border border-white/40 px-1.5">/</kbd> {t('home.searchHintAfter')}
+            </p>
+          </div>
+          <nav aria-label={t('home.featured')} className="rounded-2xl border border-white/15 bg-white/[0.06] p-5 backdrop-blur sm:p-6">
+            <p className="text-sm font-semibold text-white">{t('home.featured')}</p>
+            <ul className="mt-4 divide-y divide-white/10">
+              {FEATURED.map((slug) => {
+                const r = regulationBySlug[slug];
+                if (!r) return null;
+                return (
+                  <li key={slug}>
+                    <Link to={`/regulasyonlar/${slug}`} className="group flex items-center gap-4 py-3">
+                      <span className="min-w-0 flex-1">
+                        <span className="block font-semibold text-white group-hover:underline">{r.title}</span>
+                        <span className="block truncate text-sm text-white/75">{r.fullTitle}</span>
+                      </span>
+                      <span className="flex-shrink-0 rounded-md bg-white/10 px-2 py-1 text-xs text-white">
+                        {t('home.testCount', { count: r.testTypes?.length || 0 })}
+                      </span>
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+          </nav>
+        </div>
+      </section>
+
+      <div className="container-x flex flex-col gap-20 py-16">
+        <section aria-labelledby="why-title">
+          <div className="grid items-stretch gap-6 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
+            <Photo src={PAGE_IMAGES.homeWhy} className="min-h-64" />
+            <div>
+              <h2 id="why-title" className="h-display text-3xl text-fg">{t('home.whyTitle')}</h2>
+              <ul className="mt-6 flex flex-col gap-3">
+                {why.map((w, i) => (
+                  <li key={w.title} className="card flex gap-4 p-5">
+                    <span className="grid size-9 flex-shrink-0 place-items-center rounded-full bg-accent-soft font-bold text-accent" aria-hidden="true">
+                      {i + 1}
+                    </span>
+                    <div>
+                      <h3 className="text-lg font-semibold text-fg">{w.title}</h3>
+                      <p className="mt-1 text-muted">{w.text}</p>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section aria-labelledby="tests-title">
+          <div className="flex flex-wrap items-end justify-between gap-4">
+            <div>
+              <h2 id="tests-title" className="h-display text-3xl text-fg">{t('home.testsTitle')}</h2>
+              <p className="mt-2 max-w-2xl text-muted">{t('home.testsLead')}</p>
+            </div>
+            <Link to="/test-turleri" className="font-semibold text-accent hover:underline">{t('nav.seeAll')}</Link>
+          </div>
+          <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {TEST_TYPES.map((x) => (
+              <TestTypeCard key={x.slug} item={x} />
+            ))}
+          </ul>
+        </section>
+
+        <section aria-labelledby="regs-title">
+          <div className="flex flex-wrap items-end justify-between gap-4">
+            <div>
+              <h2 id="regs-title" className="h-display text-3xl text-fg">{t('home.regsTitle')}</h2>
+              <p className="mt-2 max-w-2xl text-muted">{t('home.regsLead')}</p>
+            </div>
+            <div role="group" aria-label={t('home.regionGroup')} className="flex gap-2">
+              {[
+                ['intl', t('region.intl')],
+                ['tr', t('region.tr')],
+              ].map(([v, l]) => (
+                <button
+                  key={v}
+                  type="button"
+                  aria-pressed={region === v}
+                  onClick={() => setRegion(v)}
+                  className={cn(
+                    'min-h-11 rounded-lg border px-4 text-sm font-semibold',
+                    region === v ? 'border-accent bg-accent text-on-accent' : 'border-line bg-surface text-fg hover:border-accent',
+                  )}
+                >
+                  {l}
+                </button>
+              ))}
+            </div>
+          </div>
+          <ul className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
+            {regs.map((r) => (
+              <li key={r.slug} className="card relative p-4 hover:border-accent">
+                <Tag>{t(`kind.${r.kind}`)}</Tag>
+                <h3 className="mt-2 font-semibold text-fg">
+                  <Link to={`/regulasyonlar/${r.slug}`} className="after:absolute after:inset-0 after:rounded-2xl">{r.title}</Link>
+                </h3>
+                <p className="mt-1 line-clamp-3 text-sm text-muted">{r.summary}</p>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        <section aria-labelledby="matrix-title">
+          <h2 id="matrix-title" className="h-display text-3xl text-fg">{t('home.matrixTitle')}</h2>
+          <p className="mt-2 mb-6 max-w-2xl text-muted">{t('home.matrixLead')}</p>
+          <Matrix regulations={regs} />
+          <Link to="/regulasyonlar#matris" className="mt-4 inline-block font-semibold text-accent hover:underline">{t('home.matrixFull')}</Link>
+        </section>
+
+        <section aria-labelledby="method-title" className="card grid gap-8 p-6 sm:p-10 lg:grid-cols-2">
+          <div>
+            <h2 id="method-title" className="h-display text-3xl text-fg">{t('home.methodTitle')}</h2>
+            <p className="mt-3 text-muted">{METHODOLOGY.intro?.[0]}</p>
+            <Link to="/test-yaklasimi" className="btn btn-outline mt-6">
+              {t('home.methodCta')} <ArrowRight className="size-4" aria-hidden="true" />
+            </Link>
+          </div>
+          <ul className="grid gap-3 sm:grid-cols-2">
+            {METHODOLOGY.pillars?.map((p) => (
+              <li key={p.id} className="rounded-xl border border-line bg-surface-2 p-4">
+                <Icon name={p.icon} className="size-5 text-accent" />
+                <h3 className="mt-2 font-semibold text-fg">
+                  <Link to={`/test-yaklasimi#${p.id}`} className="hover:underline">{p.title}</Link>
+                </h3>
+                <p className="mt-1 text-sm text-muted">{p.summary}</p>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        <MeetingCta
+          topic="diger"
+          title={t('home.ctaTitle')}
+          text={t('home.ctaText', { partner: SITE.partner.name })}
+        />
+      </div>
+    </>
+  );
+}
+

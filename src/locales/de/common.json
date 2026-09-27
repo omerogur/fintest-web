@@ -1,0 +1,347 @@
+{
+  "site": {
+    "name": "FinTest Leitfaden",
+    "tagline": "Leitfaden für Softwaretests, Standards und Regulierung im Banking und Fintech",
+    "defaultTitle": "Testen und Qualität im Bankwesen",
+    "metaDescription": "Leitfaden zu Testarten, Standards, Regulierung und Testvorgehen für Banken und Fintech-Unternehmen.",
+    "lastReviewed": "September 2026",
+    "partnerSummary": "RabbitQA ist eine Test- und Qualitätsplattform, die den Qualitätsprozess von Banken und Fintechs – von der Anforderung bis zur Produktion – mit KI-gestützten Agenten steuert. Sie wird gemeinsam mit der praktischen Testerfahrung des Virgosol-Teams aus Bankprojekten angeboten.",
+    "clientNote": "Die in Deutschland tätige Akbank AG ist ein Beispiel für ein Institut, das Mambu als digitale Bankplattform einsetzt."
+  },
+  "products": {
+    "ddos": {
+      "name": "DDoSphere",
+      "kind": "DDoS-Resilienztests",
+      "summary": "Eine cloudbasierte DDoS-Testplattform. Sie erzeugt SYN/ACK/UDP/ICMP- sowie HTTP(S)-GET/POST-Flood-Szenarien kontrolliert aus verschiedenen geografischen Standorten und mit definierten Intensitätsstufen, überwacht den Test live, berichtet die Ergebnisse und macht die Resilienz mit dem DRR-Score vergleichbar."
+    },
+    "performance": {
+      "name": "RabbitQA Loadmance",
+      "kind": "Performance- und Lasttests",
+      "summary": "Erstellt Lastszenarien für Webkanäle und APIs: HTTP-Szenario-Builder, Import aus JMeter und Postman, Hochlaufpläne für virtuelle Nutzer und geplante Läufe. Antwortzeiten, Fehlerraten und Kapazitätsgrenzen werden sichtbar."
+    },
+    "automation": {
+      "name": "RabbitQA AutoRunner",
+      "kind": "Testautomatisierung",
+      "summary": "Steuert Web-, Mobile-, API-, Desktop- und POS-Automatisierung an einem Ort. Arbeitet mit bestehenden Frameworks wie Gauge, Cucumber, Postman, Robot, JUnit und TestNG und bietet geplante sowie CI-ausgelöste Läufe, Tracking instabiler (flaky) Tests und vom Team freigegebenes Self-Healing. Der KI-Agent kann Szenarien aus einem in natürlicher Sprache formulierten Ziel erzeugen."
+    },
+    "mobilehub": {
+      "name": "RabbitQA MobileHub",
+      "kind": "Tests mobiler Anwendungen",
+      "summary": "Ermöglicht den browserbasierten Fernzugriff auf echte iOS- und Android-Geräte. Netzwerkverkehr, Geräteperformance und Barrierefreiheitsprüfung stehen in Live-Sitzungen auf demselben Bildschirm; jede Sitzung wird als Aufzeichnung und Bericht gespeichert."
+    },
+    "analyzer": {
+      "name": "RabbitQA Analyzer",
+      "kind": "Anforderungs- und Testanalyse",
+      "summary": "Bewertet Anforderungsdokumente nach Mehrdeutigkeit, Vollständigkeit und Testbarkeit, macht Lücken vor Entwicklungsbeginn sichtbar und gibt der Testabdeckung eine messbare Grundlage."
+    },
+    "accessibility": {
+      "name": "RabbitQA Barrierefreiheitstests",
+      "kind": "Barrierefreiheitstests (WCAG 2.2)",
+      "summary": "Prüft Bank-Websites und mobile Apps nach WCAG 2.2: automatisierte Scans, Batch-Läufe, Befunde mit Element-Screenshots, KI-gestützte Korrekturvorschläge und Übergabe an Ihr Issue-Tracking. Die automatisierte Prüfung wird durch Expertenprüfungen mit Screenreadern ergänzt."
+    },
+    "corebanking": {
+      "name": "Core-Banking-Testexpertise",
+      "kind": "Tests für Mambu- und Fimple-Plattformen",
+      "summary": "Parametrische Produkt-, Integrations-, Migrations- und Regressionstests auf Mambu- und Fimple-basierten digitalen Bankplattformen. Unser Team verfügt über Testerfahrung aus produktiven Bankprojekten auf Mambu."
+    }
+  },
+  "topics": {
+    "psd2": "PSD2 / SCA",
+    "dora": "DORA",
+    "bddk": "BDDK",
+    "wcag": "WCAG 2.2 / Barrierefreiheit",
+    "performans": "Performancetests",
+    "ddos": "DDoS-Tests",
+    "otomasyon": "Testautomatisierung",
+    "mobil": "Mobile Tests",
+    "corebanking": "Core Banking – Mambu / Fimple",
+    "diger": "Sonstiges"
+  },
+  "nav": {
+    "testTypes": "Testarten",
+    "regulations": "Regulierung",
+    "regulationsFull": "Standards & Regulierung",
+    "approach": "Testvorgehen",
+    "partner": "Lösungspartner",
+    "meeting": "Termin anfragen",
+    "meetingPage": "Terminanfrage",
+    "seeAll": "Alle anzeigen →",
+    "matrix": "Regulierung → Testarten-Matrix",
+    "mainMenu": "Hauptmenü",
+    "mobileMenu": "Mobiles Menü",
+    "openMenu": "Menü öffnen",
+    "closeMenu": "Menü schließen",
+    "search": "Suchen",
+    "toLight": "Zum hellen Design wechseln",
+    "toDark": "Zum dunklen Design wechseln",
+    "homeLabel": "{{name}} Startseite",
+    "skip": "Zum Inhalt springen",
+    "language": "Sprache",
+    "guide": "Leitfaden"
+  },
+  "footer": {
+    "disclaimer": "Die Inhalte dieser Website dienen ausschließlich der Information und stellen keine Rechtsberatung dar. Maßgeblich ist stets der aktuelle amtliche Text der jeweiligen Regelung. Zuletzt geprüft: {{date}}.",
+    "partner": "Lösungspartner:"
+  },
+  "common": {
+    "home": "Startseite",
+    "breadcrumb": "Brotkrumennavigation",
+    "newTab": "(öffnet in einem neuen Tab)",
+    "requestMeeting": "Termin zu diesem Thema anfragen",
+    "onThisPage": "Auf dieser Seite",
+    "pageContents": "Seiteninhalt",
+    "next": "Nächste Testart"
+  },
+  "region": {
+    "intl": "International",
+    "tr": "Türkei"
+  },
+  "kind": {
+    "regulation": "Regulierung",
+    "standard": "Standard",
+    "framework": "Rahmenwerk",
+    "testType": "Testart",
+    "guide": "Leitfaden"
+  },
+  "levels": {
+    "required": {
+      "label": "Ausdrücklich gefordert",
+      "short": "Pflicht"
+    },
+    "expected": {
+      "label": "Üblicher Weg zur Erfüllung der Erwartung",
+      "short": "Erwartet"
+    },
+    "supporting": {
+      "label": "Unterstützend",
+      "short": "Unterstützend"
+    }
+  },
+  "partnerBox": {
+    "eyebrow": "Empfehlung des Lösungspartners · {{kind}}",
+    "title": "Eine Lösung, die diesen Prozess erleichtert: {{name}}",
+    "about": "Über {{name}}",
+    "note": "Lösungspartner: {{name}}. Dieser Kasten dient der Werbung; der Rest der Seite ist unabhängiger Informationsinhalt."
+  },
+  "cta": {
+    "title": "Sprechen Sie mit Fachleuten zu diesem Thema",
+    "text": "Lassen Sie uns Ihre aktuellen Testprozesse und regulatorischen Erwartungen gemeinsam bewerten."
+  },
+  "source": {
+    "title": "Aktuellen Text heranziehen",
+    "text": "Diese Seite dient der allgemeinen Information und ist keine Rechtsberatung. Maßgeblich für den genauen Umfang Ihrer Pflichten ist die amtliche Quelle"
+  },
+  "search": {
+    "title": "Website durchsuchen",
+    "label": "Suche",
+    "results": "Suchergebnisse",
+    "placeholder": "Testarten, Regulierung oder Begriffe suchen",
+    "clear": "Leeren",
+    "close": "Suche schließen",
+    "minChars": "Geben Sie mindestens {{count}} Zeichen ein.",
+    "popular": "Häufig gesucht",
+    "suggested": [
+      "DORA",
+      "PSD2",
+      "BDDK",
+      "Lasttest",
+      "WCAG",
+      "Mambu",
+      "Penetrationstest",
+      "Testdaten"
+    ],
+    "quick": "Schnellzugriff",
+    "quickLinks": {
+      "tests": "Alle Testarten",
+      "matrix": "Regulierung → Testarten-Matrix",
+      "checklist": "Checkliste vor dem Release",
+      "meeting": "Terminanfrage"
+    },
+    "noResults": "Keine Ergebnisse für „{{query}}“",
+    "tryOther": "Versuchen Sie einen anderen Begriff, z. B. „DORA“ oder „Performance“.",
+    "navigate": "navigieren",
+    "open": "öffnen",
+    "closeHint": "schließen",
+    "count": "{{count}} Ergebnisse"
+  },
+  "home": {
+    "eyebrow": "Test- und Qualitätsleitfaden für Banking und Fintech",
+    "title": "Im Banking ist Qualität gelebte Compliance.",
+    "lead": "Welche Testarten sind warum nötig, was verlangt welcher Standard und welches Testvorgehen ist sinnvoll? Eine neutrale, praxisnahe Referenz für IT-Leitung, QA-Teams und Compliance.",
+    "ctaTests": "Testarten ansehen",
+    "ctaRegs": "Regulierung",
+    "searchHintBefore": "Drücken Sie",
+    "searchHintAfter": "– so finden Sie schnell, was Sie suchen.",
+    "featured": "Schwerpunktthemen",
+    "testCount": "{{count}} Testarten",
+    "whyTitle": "Warum sind Qualität und Compliance so entscheidend?",
+    "why": [
+      {
+        "title": "Ausfälle treffen die Kundschaft unmittelbar",
+        "text": "Mobile und Online-Banking sind für die meisten Kundinnen und Kunden der einzige Kontaktpunkt zur Bank. Ein langsamer Zahlungsbildschirm oder ein nicht erreichbarer Kanal ist zugleich ein operativer, reputativer und regulatorischer Vorfall."
+      },
+      {
+        "title": "Compliance wird durch Testnachweise belegt",
+        "text": "Regelwerke wie DORA, BDDK und PCI DSS erwarten, dass Resilienz und Sicherheit regelmäßig getestet und die Ergebnisse dokumentiert werden. Der Testprozess ist die Quelle der Nachweise, die bei Prüfungen vorgelegt werden."
+      },
+      {
+        "title": "Das Veränderungstempo steigt",
+        "text": "Open-Banking-APIs, cloudbasierte Core-Banking-Plattformen und häufige Releases machen jedes sichere Release von einem systematischen Testvorgehen abhängig."
+      }
+    ],
+    "testsTitle": "Testarten",
+    "testsLead": "Jede Testart folgt derselben Vorlage: warum sie kritisch ist, welches Risiko sie verhindert, welche Regelwerke betroffen sind und wie sie umgesetzt wird.",
+    "regsTitle": "Standards und Regulierung",
+    "regsLead": "Geltungsbereich, Erwartungen und die Testarten, mit denen sie nachgewiesen werden.",
+    "regionGroup": "Region",
+    "matrixTitle": "Regulierung → erforderliche Testart",
+    "matrixLead": "Welches Regelwerk rückt welche Testaktivität in den Fokus? Die Links in den Zellen führen zum jeweiligen Leitfaden.",
+    "matrixFull": "Vollständige Matrix anzeigen →",
+    "methodTitle": "Empfohlenes Testvorgehen",
+    "methodCta": "Methodik lesen",
+    "ctaTitle": "Termin zur Beratung über regulatorische Compliance-Tests anfragen",
+    "ctaText": "PSD2, DORA, BDDK, WCAG 2.2 oder Core-Banking-Tests: Bewerten Sie den Bedarf Ihres Hauses gemeinsam mit Fachleuten von {{partner}}."
+  },
+  "testTypes": {
+    "title": "Leitfaden Testarten",
+    "eyebrow": "Leitfaden",
+    "subtitle": "Für Banking- und Fintech-Systeme erläutern wir mit einer einheitlichen Vorlage, warum jede Testart nötig ist, welche Risiken sie verhindert und mit welchen Regelwerken sie zusammenhängt.",
+    "filterLabel": "Nach Regelwerk filtern",
+    "all": "Alle Testarten",
+    "count": "{{count}} Testarten angezeigt",
+    "relatedRegs": "Zugehörige Regelwerke:",
+    "detailEyebrow": "Testart · {{alt}}",
+    "toc": {
+      "what": "Was und warum",
+      "risks": "Verhinderte Risiken",
+      "regs": "Zugehörige Regelwerke",
+      "approach": "Empfohlenes Vorgehen",
+      "tools": "Werkzeuge und Methoden",
+      "practices": "Best Practices"
+    },
+    "whatTitle": "Was ist das, und warum ist es im Banking kritisch?",
+    "risksTitle": "Welche Risiken werden verhindert?",
+    "regsTitle": "Zugehörige Standards und Regelwerke",
+    "approachTitle": "Empfohlenes Testvorgehen",
+    "toolsTitle": "Kategorien von Werkzeugen und Methoden",
+    "practicesTitle": "Best Practices und häufige Fehler",
+    "best": "Best Practices",
+    "mistakes": "Häufige Fehler",
+    "step": "Schritt {{n}}: "
+  },
+  "regs": {
+    "title": "Standards und Regulierung",
+    "eyebrow": "Compliance-Leitfaden",
+    "subtitle": "Wir fassen den Geltungsbereich jedes Regelwerks zusammen, was es von Banken erwartet und mit welchen Testarten es nachgewiesen werden kann. Die Inhalte dienen der Information; maßgeblich ist der amtliche Text.",
+    "region": "Region",
+    "kind": "Art",
+    "all": "Alle",
+    "results": "{{count}} Ergebnisse",
+    "matrixTitle": "Regulierung → erforderliche Testarten (Matrix)",
+    "matrixText": "Die Matrix zeigt, welche Testarten zur Erfüllung der Erwartungen des jeweiligen Regelwerks im Vordergrund stehen. „Pflicht“ kennzeichnet Fälle, in denen das Regelwerk die betreffende Testaktivität ausdrücklich verlangt; für institutsspezifische Pflichten ziehen Sie den amtlichen Text und Ihr Compliance-Team heran.",
+    "legend": "Legende",
+    "caption": "Erforderliche Testarten nach Regelwerk und Standard",
+    "colHeader": "Regelwerk / Standard",
+    "noRelation": "Kein Bezug",
+    "scope": "Geltungsbereich",
+    "expects": "Erwartungen an Banken und Zahlungsinstitute",
+    "tests": "Mit welchen Testarten wird es nachgewiesen?",
+    "ctaTitle": "Wie spiegeln Sie {{title}}-Compliance in Ihren Tests wider?"
+  },
+  "method": {
+    "crumb": "Testvorgehen",
+    "eyebrow": "Methodik",
+    "title": "Ein durchgängiges Testvorgehen für Banken",
+    "subtitle": "Risikobasierte Priorisierung, frühes Testen (Shift-Left), in CI/CD integrierte Automatisierung und kontrollierte Testdaten: die vier Grundpfeiler nachhaltiger Qualität.",
+    "stage": "Phase {{n}}",
+    "pipelineLabel": "Tests nach CI/CD-Phase",
+    "riskTitle": "Beispielhafte Risikobewertung",
+    "riskCaption": "Beispielhafte Risikobewertung nach Geschäftsbereich",
+    "cols": {
+      "area": "Geschäftsbereich",
+      "impact": "Auswirkung",
+      "likelihood": "Wahrscheinlichkeit",
+      "focus": "Testfokus"
+    },
+    "checklistTitle": "Checkliste vor dem Release",
+    "checklistText": "Punkte, die vor der Go-live-Entscheidung zu prüfen sind. Die Häkchen werden nur auf dieser Seite gespeichert und nirgendwohin gesendet.",
+    "checked": "{{done}} / {{total}} Punkte abgehakt",
+    "print": "Drucken",
+    "clear": "Zurücksetzen",
+    "related": "Zugehörige Testarten",
+    "ctaTitle": "Lassen Sie uns Ihre Teststrategie gemeinsam bewerten"
+  },
+  "partner": {
+    "crumb": "Lösungspartner",
+    "pageTitle": "Unser Lösungspartner",
+    "eyebrow": "Lösungspartner (Solution Partner)",
+    "request": "Termin anfragen",
+    "expertiseTitle": "Kompetenzfelder",
+    "expertise": [
+      "Risikobasierte Teststrategie und compliance-orientierte Testplanung für Bank- und Zahlungssysteme",
+      "Planung, Durchführung und Reporting von Performance-, Last- und DDoS-Resilienztests",
+      "Integration von Web-, Mobile- und API-Automatisierung in CI/CD-Pipelines",
+      "Mobile-Banking-Tests auf echten Geräten und Barrierefreiheitsprüfungen nach WCAG 2.2",
+      "Produkt-, Integrations- und Migrationstests auf Mambu- und Fimple-basierten digitalen Bankplattformen",
+      "Analyse der Anforderungsqualität und Qualitätskennzahlen, die an das Management berichtet werden können"
+    ],
+    "solutionsTitle": "Lösungen",
+    "guide": "Leitfaden: {{title}}",
+    "productSite": "Produktwebsite",
+    "coreTitle": "Core-Banking-Erfahrung: Mambu und Fimple",
+    "mambuText": "Eine cloudnative, API-first SaaS-Bankplattform. Produkte werden per Konfiguration statt per Code definiert, und die Plattform erhält häufig neue Releases – das macht parametrische Produkttests und kontinuierliche Regression entscheidend. Unser Team verfügt über Testerfahrung aus produktiven Bankprojekten auf Mambu.",
+    "fimpleText": "Eine cloudbasierte digitale Bankplattform mit Ursprung in der Türkei. Aufgrund ihres modularen Aufbaus stehen Integrations-, Konfigurations- und Upgrade-Tests im Mittelpunkt des Qualitätsprozesses der Institute, die sie nutzen.",
+    "coreLink": "Leitfaden Core-Banking-Tests lesen",
+    "ctaTitle": "Sprechen wir über den Testbedarf Ihres Hauses"
+  },
+  "meeting": {
+    "crumb": "Terminanfrage",
+    "eyebrow": "Kontakt",
+    "title": "Termin anfragen",
+    "subtitle": "Füllen Sie das Formular aus, um mit Fachleuten von {{partner}} über regulatorische Compliance-Tests und Ihre Testprozesse zu sprechen.",
+    "requiredNote": "kennzeichnet Pflichtfelder.",
+    "fields": {
+      "adSoyad": "Vor- und Nachname",
+      "kurum": "Unternehmen",
+      "unvan": "Position",
+      "eposta": "E-Mail",
+      "telefon": "Telefon",
+      "tarih": "Bevorzugter Termin"
+    },
+    "topicsLegend": "Themen von Interesse",
+    "topicsHint": "(Mehrfachauswahl möglich)",
+    "message": "Ihre Nachricht",
+    "messageHint": "Beschreiben Sie kurz Ihre aktuelle Situation und Ihre Erwartungen. Höchstens 2000 Zeichen.",
+    "kvkkTitle": "Datenschutzhinweis (KVKK)",
+    "kvkkText": "Die in diesem Formular angegebenen Daten (Name, Unternehmen, Position, E-Mail und Telefon) werden von {{partner}} gemäß dem türkischen Datenschutzgesetz Nr. 6698 (KVKK) verarbeitet, um Ihre Terminanfrage zu prüfen und mit Ihnen Kontakt aufzunehmen. Ihre Daten werden zu keinem anderen Zweck verwendet und nicht an Dritte weitergegeben. Zur Ausübung Ihrer Rechte nach Artikel 11 des Gesetzes wenden Sie sich an {{email}}.",
+    "kvkkConsent": "Ich habe den Datenschutzhinweis gelesen und willige in die Verarbeitung meiner personenbezogenen Daten zu diesem Zweck ein.",
+    "errors": {
+      "summary": "{{count}} Felder müssen korrigiert werden:",
+      "required": "{{field}} ist ein Pflichtfeld.",
+      "email": "Geben Sie eine gültige E-Mail-Adresse ein (z. B. vorname.nachname@unternehmen.de).",
+      "topics": "Wählen Sie mindestens ein Thema aus.",
+      "kvkk": "Bitte bestätigen Sie den Datenschutzhinweis, um fortzufahren."
+    },
+    "noteApi": "Ihre Anfrage wird direkt an unser Team übermittelt.",
+    "noteMail": "Wenn Sie auf Senden klicken, öffnet Ihr E-Mail-Programm einen vorbereiteten Entwurf an {{email}}.",
+    "submit": "Terminanfrage senden",
+    "doneTitle": "Ihre Anfrage ist bereit",
+    "doneApi": "Ihre Anfrage wurde übermittelt. Wir melden uns in Kürze bei Ihnen.",
+    "doneMail": "In Ihrem E-Mail-Programm wurde ein vorbereiteter Entwurf an {{email}} geöffnet. Sie müssen ihn nur noch absenden.",
+    "doneFallback": "Falls sich der Entwurf nicht geöffnet hat, verwenden Sie den Link unten oder kopieren Sie den Text in eine E-Mail.",
+    "openDraft": "E-Mail-Entwurf öffnen",
+    "bodyLabel": "E-Mail-Text",
+    "mail": {
+      "subject": "Terminanfrage: {{topics}} — {{org}}",
+      "general": "Allgemein",
+      "topics": "Themen von Interesse",
+      "consent": "Ich habe den Datenschutzhinweis (KVKK) gelesen und akzeptiert.",
+      "subjectLabel": "Betreff"
+    }
+  },
+  "notFound": {
+    "title": "Seite nicht gefunden",
+    "text": "Die gesuchte Seite wurde möglicherweise verschoben oder entfernt.",
+    "back": "Zur Startseite"
+  }
+}

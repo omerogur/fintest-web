@@ -1,0 +1,321 @@
+{
+  "site": {
+    "name": "FinTest Guide",
+    "tagline": "Software testing, standards and regulation guide for banking and fintech",
+    "defaultTitle": "Testing and Quality in Banking",
+    "metaDescription": "A guide to software testing types, standards, regulations and testing approach for banks and fintech companies.",
+    "lastReviewed": "September 2026",
+    "partnerSummary": "RabbitQA is a testing and quality platform that runs the quality process of banks and fintechs, from requirements to production, with AI-assisted agents. It is delivered together with the Virgosol team’s hands-on testing experience in banking projects.",
+    "clientNote": "Akbank AG, operating in Germany, is an example of an institution that runs Mambu as its digital banking platform."
+  },
+  "products": {
+    "ddos": {
+      "name": "DDoSphere",
+      "kind": "DDoS resilience testing",
+      "summary": "A cloud-based DDoS testing platform. It generates SYN/ACK/UDP/ICMP and HTTP(S) GET/POST flood scenarios from multiple geographic locations at defined severity levels in a controlled way, monitors the test live, reports the results and makes resilience comparable with its DRR score."
+    },
+    "performance": {
+      "name": "RabbitQA Loadmance",
+      "kind": "Performance and load testing",
+      "summary": "Builds load scenarios for web channels and APIs: an HTTP scenario builder, JMeter and Postman import, virtual-user ramp-up plans and scheduled runs. It makes response times, error rates and capacity limits visible."
+    },
+    "automation": {
+      "name": "RabbitQA AutoRunner",
+      "kind": "Test automation",
+      "summary": "Runs web, mobile, API, desktop and POS automation from one place. It works with existing frameworks such as Gauge, Cucumber, Postman, Robot, JUnit and TestNG, and offers scheduled and CI-triggered runs, flaky-test tracking and team-approved self-healing. Its AI agent can generate scenarios from a goal written in plain language."
+    },
+    "mobilehub": {
+      "name": "RabbitQA MobileHub",
+      "kind": "Mobile application testing",
+      "summary": "Gives remote, browser-based access to real iOS and Android devices. Network traffic, device performance and accessibility checks sit on the same screen during live sessions, and every session is kept as a recording and a report."
+    },
+    "analyzer": {
+      "name": "RabbitQA Analyzer",
+      "kind": "Requirements and test analysis",
+      "summary": "Scores requirement documents for ambiguity, completeness and testability, surfaces gaps before development starts and gives test coverage a measurable foundation."
+    },
+    "accessibility": {
+      "name": "RabbitQA Accessibility Testing",
+      "kind": "Accessibility testing (WCAG 2.2)",
+      "summary": "Audits bank websites and mobile apps against WCAG 2.2: automated scans, batch runs, findings with element screenshots, AI-assisted fix suggestions and export to your issue tracker. Automated checks are completed by expert review with screen readers."
+    },
+    "corebanking": {
+      "name": "Core Banking Testing Expertise",
+      "kind": "Mambu and Fimple platform testing",
+      "summary": "Parametric product, integration, migration and regression testing on Mambu- and Fimple-based digital banking platforms. Our team has testing experience in live banking projects running on Mambu."
+    }
+  },
+  "topics": {
+    "psd2": "PSD2 / SCA",
+    "dora": "DORA",
+    "bddk": "BDDK",
+    "wcag": "WCAG 2.2 / Accessibility",
+    "performans": "Performance testing",
+    "ddos": "DDoS testing",
+    "otomasyon": "Test automation",
+    "mobil": "Mobile testing",
+    "corebanking": "Core Banking – Mambu / Fimple",
+    "diger": "Other"
+  },
+  "nav": {
+    "testTypes": "Test Types",
+    "regulations": "Regulations",
+    "regulationsFull": "Standards & Regulations",
+    "approach": "Testing Approach",
+    "partner": "Solution Partner",
+    "meeting": "Request a Meeting",
+    "meetingPage": "Meeting Request",
+    "seeAll": "See all →",
+    "matrix": "Regulation → Test Type Matrix",
+    "mainMenu": "Main menu",
+    "mobileMenu": "Mobile menu",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "search": "Search",
+    "toLight": "Switch to light theme",
+    "toDark": "Switch to dark theme",
+    "homeLabel": "{{name}} home",
+    "skip": "Skip to content",
+    "language": "Language",
+    "guide": "Guide"
+  },
+  "footer": {
+    "disclaimer": "The content on this site is for information only and is not legal advice. Always refer to the current official text of each regulation. Last reviewed: {{date}}.",
+    "partner": "Solution partner:"
+  },
+  "common": {
+    "home": "Home",
+    "breadcrumb": "Breadcrumb",
+    "newTab": "(opens in a new tab)",
+    "requestMeeting": "Request a meeting on this topic",
+    "onThisPage": "On this page",
+    "pageContents": "Page contents",
+    "next": "Next test type"
+  },
+  "region": { "intl": "International", "tr": "Türkiye" },
+  "kind": {
+    "regulation": "Regulation",
+    "standard": "Standard",
+    "framework": "Framework",
+    "testType": "Test type",
+    "guide": "Guide"
+  },
+  "levels": {
+    "required": { "label": "Explicitly required", "short": "Required" },
+    "expected": { "label": "The usual way to meet the expectation", "short": "Expected" },
+    "supporting": { "label": "Supporting", "short": "Supporting" }
+  },
+  "partnerBox": {
+    "eyebrow": "Solution Partner recommendation · {{kind}}",
+    "title": "A solution that makes this easier: {{name}}",
+    "about": "About {{name}}",
+    "note": "Solution partner: {{name}}. This box is promotional; the rest of the page is independent informational content."
+  },
+  "cta": {
+    "title": "Talk to specialists about this topic",
+    "text": "Let’s review your current testing processes and regulatory expectations together."
+  },
+  "source": {
+    "title": "Refer to the current text",
+    "text": "This page is for general information and is not legal advice. Use the official source as the basis for the exact scope of your obligations"
+  },
+  "search": {
+    "title": "Search the site",
+    "label": "Search",
+    "results": "Search results",
+    "placeholder": "Search test types, regulations or terms",
+    "clear": "Clear",
+    "close": "Close search",
+    "minChars": "Type at least {{count}} characters to search.",
+    "popular": "Popular searches",
+    "suggested": ["DORA", "PSD2", "BDDK", "Load testing", "WCAG", "Mambu", "Penetration testing", "Test data"],
+    "quick": "Quick access",
+    "quickLinks": {
+      "tests": "All test types",
+      "matrix": "Regulation → test type matrix",
+      "checklist": "Pre-release checklist",
+      "meeting": "Meeting request"
+    },
+    "noResults": "No results for “{{query}}”",
+    "tryOther": "Try a different term, for example “DORA” or “performance”.",
+    "navigate": "navigate",
+    "open": "open",
+    "closeHint": "close",
+    "count": "{{count}} results"
+  },
+  "home": {
+    "eyebrow": "Testing & quality guide for banking and fintech",
+    "title": "In banking, quality is compliance.",
+    "lead": "Which test types are needed and why, what each standard asks for, and which testing approach to follow: an impartial, practical reference for IT leaders, QA teams and compliance functions.",
+    "ctaTests": "Explore test types",
+    "ctaRegs": "Regulations",
+    "searchHintBefore": "Press",
+    "searchHintAfter": "to find what you need quickly.",
+    "featured": "Featured topics",
+    "testCount": "{{count}} test types",
+    "whyTitle": "Why are quality and compliance so critical?",
+    "why": [
+      {
+        "title": "Outages hit customers directly",
+        "text": "Mobile and internet banking is the only touchpoint with the bank for most customers. A slow payment screen or an unavailable channel is an operational, reputational and regulatory incident at the same time."
+      },
+      {
+        "title": "Compliance is shown through test evidence",
+        "text": "Regulations such as DORA, BDDK and PCI DSS expect resilience and security to be tested regularly and the results documented. The testing process is the source of the evidence presented in an audit."
+      },
+      {
+        "title": "The pace of change is increasing",
+        "text": "Open banking APIs, cloud-based core banking platforms and frequent release cycles make every safe release dependent on a systematic testing approach."
+      }
+    ],
+    "testsTitle": "Test types",
+    "testsLead": "Every test type follows the same template: why it is critical, which risk it prevents, which regulations it relates to and how to apply it.",
+    "regsTitle": "Standards and regulations",
+    "regsLead": "Scope, expectations and the test types that verify them.",
+    "regionGroup": "Region",
+    "matrixTitle": "Regulation → required test type",
+    "matrixLead": "Which regulation puts which testing activity in focus? Links in the cells take you to the relevant guide.",
+    "matrixFull": "View the full matrix →",
+    "methodTitle": "Recommended testing approach",
+    "methodCta": "Read the methodology",
+    "ctaTitle": "Request a meeting on regulatory compliance testing",
+    "ctaText": "PSD2, DORA, BDDK, WCAG 2.2 or core banking testing: review your organisation’s needs together with {{partner}} specialists."
+  },
+  "testTypes": {
+    "title": "Test Types Guide",
+    "eyebrow": "Guide",
+    "subtitle": "For banking and fintech systems, we explain with one template why each test type is needed, which risks it prevents and which regulations it relates to.",
+    "filterLabel": "Filter by regulation",
+    "all": "All test types",
+    "count": "Showing {{count}} test types",
+    "relatedRegs": "Related regulations:",
+    "detailEyebrow": "Test type · {{alt}}",
+    "toc": {
+      "what": "What it is and why",
+      "risks": "Risks it prevents",
+      "regs": "Related regulations",
+      "approach": "Recommended approach",
+      "tools": "Tools and methods",
+      "practices": "Best practices"
+    },
+    "whatTitle": "What is it, and why is it critical in banking?",
+    "risksTitle": "Which risks does it prevent?",
+    "regsTitle": "Related standards and regulations",
+    "approachTitle": "Recommended testing approach",
+    "toolsTitle": "Tool and method categories",
+    "practicesTitle": "Best practices and common mistakes",
+    "best": "Best practices",
+    "mistakes": "Common mistakes",
+    "step": "Step {{n}}: "
+  },
+  "regs": {
+    "title": "Standards and Regulations",
+    "eyebrow": "Compliance guide",
+    "subtitle": "We summarise the scope of each regulation, what it expects from banks and which test types can verify it. This content is informational; the official text prevails.",
+    "region": "Region",
+    "kind": "Type",
+    "all": "All",
+    "results": "{{count}} results",
+    "matrixTitle": "Regulation → Required Test Type Matrix",
+    "matrixText": "The matrix shows which test types stand out for meeting each regulation’s expectations. “Required” marks cases where the regulation explicitly asks for that testing activity; for obligations specific to your organisation, refer to the official text and your compliance team.",
+    "legend": "Matrix legend",
+    "caption": "Required test types by regulation and standard",
+    "colHeader": "Regulation / Standard",
+    "noRelation": "No relation",
+    "scope": "Scope",
+    "expects": "What banks and payment institutions are expected to do",
+    "tests": "Which test types verify it?",
+    "ctaTitle": "How do you reflect {{title}} compliance in your testing?"
+  },
+  "method": {
+    "crumb": "Testing Approach",
+    "eyebrow": "Methodology",
+    "title": "An end-to-end testing approach for banks",
+    "subtitle": "Risk-based prioritisation, early testing (shift-left), automation built into CI/CD and controlled test data: the four cornerstones of sustainable quality.",
+    "stage": "Stage {{n}}",
+    "pipelineLabel": "Tests by CI/CD stage",
+    "riskTitle": "Example risk assessment",
+    "riskCaption": "Example risk assessment by banking business area",
+    "cols": { "area": "Business area", "impact": "Impact", "likelihood": "Likelihood", "focus": "Test focus" },
+    "checklistTitle": "Pre-release checklist",
+    "checklistText": "Items to review before the go-live decision. Checkmarks are kept only on this page and are not sent anywhere.",
+    "checked": "{{done}} / {{total}} items checked",
+    "print": "Print",
+    "clear": "Clear",
+    "related": "Related test types",
+    "ctaTitle": "Let’s review your test strategy together"
+  },
+  "partner": {
+    "crumb": "Solution Partner",
+    "pageTitle": "Our Solution Partner",
+    "eyebrow": "Solution Partner",
+    "request": "Request a meeting",
+    "expertiseTitle": "Areas of expertise",
+    "expertise": [
+      "Risk-based test strategy and compliance-focused test planning for banking and payment systems",
+      "Planning, running and reporting performance, load and DDoS resilience tests",
+      "Integrating web, mobile and API automation into CI/CD pipelines",
+      "Mobile banking testing on real devices and WCAG 2.2 accessibility audits",
+      "Product, integration and migration testing on Mambu- and Fimple-based digital banking platforms",
+      "Requirement quality analysis and quality metrics that can be reported to management"
+    ],
+    "solutionsTitle": "Solutions",
+    "guide": "Guide: {{title}}",
+    "productSite": "Product website",
+    "coreTitle": "Core banking experience: Mambu and Fimple",
+    "mambuText": "A cloud-native, API-first SaaS banking platform. Products are defined through configuration rather than code and the platform is released frequently, which makes parametric product testing and continuous regression critical. Our team has testing experience in live banking projects running on Mambu.",
+    "fimpleText": "A cloud-based digital banking platform originating in Türkiye. Because of its modular design, integration, configuration and upgrade testing sit at the centre of the quality process for institutions that use it.",
+    "coreLink": "Read the core banking testing guide",
+    "ctaTitle": "Let’s talk about your organisation’s testing needs"
+  },
+  "meeting": {
+    "crumb": "Meeting Request",
+    "eyebrow": "Contact",
+    "title": "Request a meeting",
+    "subtitle": "Fill in the form to talk to {{partner}} specialists about regulatory compliance testing and your testing processes.",
+    "requiredNote": "marks required fields.",
+    "fields": {
+      "adSoyad": "Full name",
+      "kurum": "Organisation",
+      "unvan": "Job title",
+      "eposta": "Email",
+      "telefon": "Phone",
+      "tarih": "Preferred meeting date"
+    },
+    "topicsLegend": "Topics of interest",
+    "topicsHint": "(you can select more than one)",
+    "message": "Your message",
+    "messageHint": "Briefly describe your current situation and expectations. Up to 2000 characters.",
+    "kvkkTitle": "Privacy notice (KVKK)",
+    "kvkkText": "The name, organisation, job title, email and phone details you share in this form are processed by {{partner}} under Turkish Personal Data Protection Law No. 6698 (KVKK) to assess your meeting request and to contact you. Your data is not used for any other purpose and is not shared with third parties. To exercise your rights under Article 11 of the Law, you can contact {{email}}.",
+    "kvkkConsent": "I have read the privacy notice and consent to my personal data being processed for this purpose.",
+    "errors": {
+      "summary": "{{count}} fields need correcting:",
+      "required": "{{field}} is required.",
+      "email": "Enter a valid email address (e.g. name.surname@company.com).",
+      "topics": "Select at least one topic.",
+      "kvkk": "Please accept the privacy notice to continue."
+    },
+    "noteApi": "Your request goes directly to our team.",
+    "noteMail": "When you press Send, your email app opens a ready-made draft addressed to {{email}}.",
+    "submit": "Send meeting request",
+    "doneTitle": "Your request is ready",
+    "doneApi": "Your request has been sent. We will get back to you shortly.",
+    "doneMail": "A ready-made draft addressed to {{email}} has opened in your email app. Just confirm the draft to send it.",
+    "doneFallback": "If the draft did not open, use the link below or copy the text and send it by email.",
+    "openDraft": "Open email draft",
+    "bodyLabel": "Email text",
+    "mail": {
+      "subject": "Meeting request: {{topics}} — {{org}}",
+      "general": "General",
+      "topics": "Topics of interest",
+      "consent": "I have read and accept the privacy notice (KVKK).",
+      "subjectLabel": "Subject"
+    }
+  },
+  "notFound": {
+    "title": "Page not found",
+    "text": "The page you are looking for may have been moved or removed.",
+    "back": "Back to home"
+  }
+}

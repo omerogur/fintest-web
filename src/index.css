@@ -1,0 +1,233 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:where([data-theme='dark'], [data-theme='dark'] *));
+
+/* Tema token'ları. Kontrastlar her iki temada WCAG 2.2 AA'yı (metin 4.5:1, UI 3:1) sağlayacak şekilde seçildi. */
+:root {
+  color-scheme: light;
+  --bg: #f6f8fc;
+  --surface: #ffffff;
+  --surface-2: #eef2f9;
+  --border: #d5dcea;
+  --text: #0b1a36;
+  --muted: #45536e;
+  --navy: #0b1f44;
+  --navy-2: #13306a;
+  --accent: #0f766e;
+  --accent-strong: #0b5f59;
+  --accent-soft: #e2f4f2;
+  --on-accent: #ffffff;
+  --focus: #b45309;
+  --ok: #166534;
+  --warn: #92400e;
+}
+
+[data-theme='dark'] {
+  color-scheme: dark;
+  --bg: #070f22;
+  --surface: #0d1a36;
+  --surface-2: #132449;
+  --border: #25396a;
+  --text: #eef2fb;
+  --muted: #aebad3;
+  --navy: #040a18;
+  --navy-2: #0d1a36;
+  --accent: #2dd4bf;
+  --accent-strong: #5eead4;
+  --accent-soft: #0e3a45;
+  --on-accent: #04201d;
+  --focus: #fbbf24;
+  --ok: #86efac;
+  --warn: #fcd34d;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-line: var(--border);
+  --color-fg: var(--text);
+  --color-muted: var(--muted);
+  --color-navy: var(--navy);
+  --color-navy-2: var(--navy-2);
+  --color-accent: var(--accent);
+  --color-accent-strong: var(--accent-strong);
+  --color-accent-soft: var(--accent-soft);
+  --color-on-accent: var(--on-accent);
+  --color-ok: var(--ok);
+  --color-warn: var(--warn);
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Inter Tight', 'Inter', ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+  background: var(--bg);
+  color: var(--text);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--bg);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+
+/* Yalnızca ekran okuyucu için programatik odak alan öğeler (sayfa başlığı, bölümler) çerçeve göstermez. */
+[tabindex='-1']:focus {
+  outline: none;
+}
+
+/* Form alanlarında çerçeve alanın kendi sınırına oturur; komşu öğelere veya kutu dışına taşmaz. */
+input:not([type='checkbox']):not([type='radio']):not(.focus-inset):focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline-width: 2px;
+  outline-offset: -1px;
+  border-color: var(--focus);
+}
+
+/* Kenarlıksız alanlar (ör. arama) odağı kapsayıcısında gösterir. */
+.focus-inset:focus-visible {
+  outline: none;
+}
+.focus-within-ring:focus-within {
+  box-shadow: inset 0 -3px 0 var(--focus);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.container-x {
+  width: 100%;
+  max-width: 1280px;
+  margin-inline: auto;
+  padding-inline: 16px;
+}
+@media (min-width: 640px) {
+  .container-x {
+    padding-inline: 24px;
+  }
+}
+
+.h-display {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  text-wrap: balance;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 0 18px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 15px;
+  transition: background-color 0.15s, border-color 0.15s;
+}
+.btn-primary {
+  background: var(--accent);
+  color: var(--on-accent);
+}
+.btn-primary:hover {
+  background: var(--accent-strong);
+}
+.btn-outline {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+}
+.btn-outline:hover {
+  border-color: var(--accent);
+}
+
+.prose-body p + p {
+  margin-top: 0.9em;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media print {
+  header,
+  footer,
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: #fff;
+    color: #000;
+  }
+}
+
+/* DDoS saldırı haritası animasyonu (AttackArcs). Hareket azaltma tercihinde statik kalır. */
+.attack-arc {
+  stroke-dasharray: 18 82;
+  stroke-dashoffset: 100;
+  animation: attack-flow 2.4s linear infinite;
+}
+.attack-source {
+  animation: attack-blink 2.4s ease-in-out infinite;
+}
+.attack-ring {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: attack-pulse 2s ease-out infinite;
+}
+.attack-glow {
+  animation: attack-blink 1.2s ease-in-out infinite;
+}
+@keyframes attack-flow {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes attack-blink {
+  0%, 100% { opacity: 0.35; }
+  50% { opacity: 1; }
+}
+@keyframes attack-pulse {
+  from { transform: scale(1); opacity: 0.9; }
+  to { transform: scale(5); opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .attack-arc {
+    stroke-dasharray: none;
+    stroke-dashoffset: 0;
+  }
+  .attack-ring {
+    display: none;
+  }
+}

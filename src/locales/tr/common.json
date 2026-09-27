@@ -1,0 +1,321 @@
+{
+  "site": {
+    "name": "FinTest Rehberi",
+    "tagline": "Bankacılık ve fintech için yazılım testi, standartlar ve regülasyon rehberi",
+    "defaultTitle": "Bankacılıkta Test ve Kalite",
+    "metaDescription": "Bankalar ve fintech şirketleri için yazılım testi türleri, standartlar, regülasyonlar ve test yaklaşımı rehberi.",
+    "lastReviewed": "Eylül 2026",
+    "partnerSummary": "RabbitQA; bankacılık ve fintech kurumlarının gereksinimden canlıya kadar kalite süreçlerini yapay zekâ destekli ajanlarla yöneten bir test ve kalite platformudur. Virgosol ekibinin bankacılık projelerindeki test deneyimiyle birlikte sunulur.",
+    "clientNote": "Almanya’da faaliyet gösteren Akbank AG, dijital bankacılık altyapısı olarak Mambu’yu kullanan kurumlara bir örnektir."
+  },
+  "products": {
+    "ddos": {
+      "name": "DDoSphere",
+      "kind": "DDoS dayanıklılık testi",
+      "summary": "Bulut tabanlı DDoS test platformu. SYN/ACK/UDP/ICMP ve HTTP(S) GET/POST flood senaryolarını farklı coğrafi konumlardan, tanımlı şiddet seviyeleriyle kontrollü biçimde üretir; testi canlı izler, sonuçları raporlar ve DRR skoru ile dayanıklılığı karşılaştırılabilir hale getirir."
+    },
+    "performance": {
+      "name": "RabbitQA Loadmance",
+      "kind": "Performans ve yük testi",
+      "summary": "Web kanalları ve API’ler için yük senaryoları kurar: HTTP senaryo oluşturucu, JMeter ve Postman içe aktarma, sanal kullanıcı artış planı ve zamanlanmış koşular. Yanıt süresi, hata oranı ve kapasite sınırlarını görünür kılar."
+    },
+    "automation": {
+      "name": "RabbitQA AutoRunner",
+      "kind": "Test otomasyonu",
+      "summary": "Web, mobil, API, masaüstü ve POS otomasyonunu tek yerden yönetir. Gauge, Cucumber, Postman, Robot, JUnit ve TestNG gibi mevcut altyapılarla çalışır; zamanlanmış ve CI tetiklemeli koşular, kararsız (flaky) test takibi ve ekip onaylı kendini onarma (self-healing) sunar. Yapay zekâ ajanı, doğal dilde yazılan hedeften senaryo üretebilir."
+    },
+    "mobilehub": {
+      "name": "RabbitQA MobileHub",
+      "kind": "Mobil uygulama testi",
+      "summary": "Gerçek iOS ve Android cihazlara tarayıcı üzerinden uzaktan erişim sağlar. Canlı test oturumlarında ağ trafiği, cihaz performansı ve erişilebilirlik denetimi aynı ekranda; her oturum kayıt ve rapor olarak saklanır."
+    },
+    "analyzer": {
+      "name": "RabbitQA Analyzer",
+      "kind": "Gereksinim ve test analizi",
+      "summary": "Gereksinim dokümanlarını belirsizlik, eksiklik ve test edilebilirlik açısından puanlar; boşlukları geliştirme başlamadan görünür kılar ve test kapsamının ölçülebilir bir temelden kurulmasını sağlar."
+    },
+    "accessibility": {
+      "name": "RabbitQA Erişilebilirlik Testi",
+      "kind": "Erişilebilirlik testi (WCAG 2.2)",
+      "summary": "Banka web sitelerini ve mobil uygulamalarını WCAG 2.2 ölçütlerine göre denetler: otomatik taramalar, toplu koşular, öğe ekran görüntüleriyle bulgular, yapay zekâ destekli düzeltme önerileri ve iş takip sistemine aktarım. Otomatik denetim, ekran okuyucularla yapılan uzman kontrolüyle tamamlanır."
+    },
+    "corebanking": {
+      "name": "Core Banking Test Uzmanlığı",
+      "kind": "Mambu ve Fimple altyapı testleri",
+      "summary": "Mambu ve Fimple tabanlı dijital bankacılık altyapılarında parametrik ürün, entegrasyon, migrasyon ve regresyon testleri. Ekibimiz Mambu altyapısı üzerinde canlı bankacılık projelerinde test deneyimine sahiptir."
+    }
+  },
+  "topics": {
+    "psd2": "PSD2 / SCA",
+    "dora": "DORA",
+    "bddk": "BDDK",
+    "wcag": "WCAG 2.2 / Erişilebilirlik",
+    "performans": "Performans testi",
+    "ddos": "DDoS testi",
+    "otomasyon": "Test otomasyonu",
+    "mobil": "Mobil test",
+    "corebanking": "Core Banking – Mambu / Fimple",
+    "diger": "Diğer"
+  },
+  "nav": {
+    "testTypes": "Test Türleri",
+    "regulations": "Regülasyonlar",
+    "regulationsFull": "Standartlar & Regülasyonlar",
+    "approach": "Test Yaklaşımı",
+    "partner": "Çözüm Ortağı",
+    "meeting": "Toplantı Talep Et",
+    "meetingPage": "Toplantı Talebi",
+    "seeAll": "Tümünü gör →",
+    "matrix": "Regülasyon → Test Türü Tablosu",
+    "mainMenu": "Ana menü",
+    "mobileMenu": "Mobil menü",
+    "openMenu": "Menüyü aç",
+    "closeMenu": "Menüyü kapat",
+    "search": "Ara",
+    "toLight": "Açık temaya geç",
+    "toDark": "Koyu temaya geç",
+    "homeLabel": "{{name}} ana sayfa",
+    "skip": "İçeriğe atla",
+    "language": "Dil",
+    "guide": "Rehber"
+  },
+  "footer": {
+    "disclaimer": "Bu sitedeki içerik bilgilendirme amaçlıdır, hukuki görüş değildir. Regülasyonların güncel metnine resmi kaynaklardan başvurun. Son gözden geçirme: {{date}}.",
+    "partner": "Çözüm ortağı:"
+  },
+  "common": {
+    "home": "Ana sayfa",
+    "breadcrumb": "Konum",
+    "newTab": "(yeni sekmede açılır)",
+    "requestMeeting": "Bu konuda toplantı talep et",
+    "onThisPage": "Bu sayfada",
+    "pageContents": "Sayfa içeriği",
+    "next": "Sonraki test türü"
+  },
+  "region": { "intl": "Uluslararası", "tr": "Türkiye" },
+  "kind": {
+    "regulation": "Regülasyon",
+    "standard": "Standart",
+    "framework": "Çerçeve",
+    "testType": "Test türü",
+    "guide": "Rehber"
+  },
+  "levels": {
+    "required": { "label": "Açıkça istenir", "short": "Zorunlu" },
+    "expected": { "label": "Beklentiyi karşılamanın olağan yolu", "short": "Beklenen" },
+    "supporting": { "label": "Destekleyici", "short": "Destekleyici" }
+  },
+  "partnerBox": {
+    "eyebrow": "Çözüm Ortağı önerisi · {{kind}}",
+    "title": "Bu süreci kolaylaştıran çözüm: {{name}}",
+    "about": "{{name}} hakkında",
+    "note": "Çözüm ortağı: {{name}}. Bu kutu tanıtım amaçlıdır; sayfanın geri kalanı bağımsız bilgilendirme içeriğidir."
+  },
+  "cta": {
+    "title": "Bu konuda uzmanlarla görüşün",
+    "text": "Kurumunuzun mevcut test süreçlerini ve regülatif beklentileri birlikte değerlendirelim."
+  },
+  "source": {
+    "title": "Güncel metne başvurun",
+    "text": "Bu sayfa genel bilgilendirme amaçlıdır ve hukuki görüş değildir. Yükümlülüklerin kesin kapsamı için resmi kaynağı esas alın"
+  },
+  "search": {
+    "title": "Sitede ara",
+    "label": "Arama",
+    "results": "Arama sonuçları",
+    "placeholder": "Test türü, regülasyon veya terim ara",
+    "clear": "Temizle",
+    "close": "Aramayı kapat",
+    "minChars": "Aramak için en az {{count}} karakter yazın.",
+    "popular": "Sık aranan",
+    "suggested": ["DORA", "PSD2", "BDDK", "Yük testi", "WCAG", "Mambu", "Sızma testi", "Test verisi"],
+    "quick": "Hızlı erişim",
+    "quickLinks": {
+      "tests": "Tüm test türleri",
+      "matrix": "Regülasyon → test türü tablosu",
+      "checklist": "Sürüm öncesi kontrol listesi",
+      "meeting": "Toplantı talebi"
+    },
+    "noResults": "“{{query}}” için sonuç bulunamadı",
+    "tryOther": "Farklı bir terim deneyin; örneğin “DORA” veya “performans”.",
+    "navigate": "gezin",
+    "open": "aç",
+    "closeHint": "kapat",
+    "count": "{{count}} sonuç"
+  },
+  "home": {
+    "eyebrow": "Bankacılık ve fintech için test & kalite rehberi",
+    "title": "Bankacılıkta kalite, uyumun kendisidir.",
+    "lead": "Hangi test türü neden gerekli, hangi standart ne istiyor, nasıl bir test yaklaşımı izlenmeli? BT yöneticileri, QA ekipleri ve uyum birimleri için tarafsız ve uygulanabilir bir başvuru kaynağı.",
+    "ctaTests": "Test türlerini inceleyin",
+    "ctaRegs": "Regülasyonlar",
+    "searchHintBefore": "Aradığınızı hızlıca bulmak için",
+    "searchHintAfter": "tuşuna basın.",
+    "featured": "Öne çıkan konular",
+    "testCount": "{{count}} test türü",
+    "whyTitle": "Kalite ve uyum neden bu kadar kritik?",
+    "why": [
+      {
+        "title": "Kesinti doğrudan müşteriye yansır",
+        "text": "Mobil ve internet bankacılığı çoğu müşterinin bankayla tek temas noktasıdır. Yavaşlayan bir ödeme ekranı ya da erişilemeyen bir kanal, aynı anda operasyonel, itibari ve regülatif bir olaydır."
+      },
+      {
+        "title": "Uyum, test kanıtıyla gösterilir",
+        "text": "DORA, BDDK ve PCI DSS gibi düzenlemeler dayanıklılığın ve güvenliğin düzenli olarak test edilmesini, sonuçların belgelenmesini bekler. Test süreci, denetimde sunulan kanıtın kaynağıdır."
+      },
+      {
+        "title": "Değişim hızı artıyor",
+        "text": "Açık bankacılık API’leri, bulut tabanlı core banking altyapıları ve sık sürüm döngüleri, her değişikliğin güvenle yayına alınmasını sistematik bir test yaklaşımına bağlar."
+      }
+    ],
+    "testsTitle": "Test türleri",
+    "testsLead": "Her test türü aynı şablonla: neden kritik, hangi riski önler, hangi regülasyonla ilişkili, nasıl uygulanır.",
+    "regsTitle": "Standartlar ve regülasyonlar",
+    "regsLead": "Kapsamı, beklentileri ve doğrulandığı test türleri.",
+    "regionGroup": "Bölge seçimi",
+    "matrixTitle": "Regülasyon → gerekli test türü",
+    "matrixLead": "Hangi düzenleme hangi test faaliyetini öne çıkarıyor? Hücrelerdeki bağlantılar ilgili rehbere götürür.",
+    "matrixFull": "Tam tabloyu görüntüle →",
+    "methodTitle": "Önerilen test yaklaşımı",
+    "methodCta": "Metodolojiyi okuyun",
+    "ctaTitle": "Regülatif uyumluluk danışmanlığı için toplantı talep edin",
+    "ctaText": "PSD2, DORA, BDDK, WCAG 2.2 veya core banking testleri: {{partner}} uzmanlarıyla kurumunuzun ihtiyaçlarını birlikte değerlendirin."
+  },
+  "testTypes": {
+    "title": "Test Türleri Rehberi",
+    "eyebrow": "Rehber",
+    "subtitle": "Bankacılık ve fintech sistemlerinde hangi test türünün neden gerekli olduğunu, hangi riskleri önlediğini ve hangi regülasyonlarla ilişkili olduğunu tek şablonla anlatıyoruz.",
+    "filterLabel": "Regülasyona göre filtrele",
+    "all": "Tüm test türleri",
+    "count": "{{count}} test türü listeleniyor",
+    "relatedRegs": "İlgili regülasyonlar:",
+    "detailEyebrow": "Test türü · {{alt}}",
+    "toc": {
+      "what": "Nedir, neden kritik?",
+      "risks": "Önlediği riskler",
+      "regs": "İlgili regülasyonlar",
+      "approach": "Önerilen yaklaşım",
+      "tools": "Araç ve yöntemler",
+      "practices": "En iyi uygulamalar"
+    },
+    "whatTitle": "Nedir, bankacılıkta neden kritiktir?",
+    "risksTitle": "Hangi riskleri önler?",
+    "regsTitle": "İlgili standart ve regülasyonlar",
+    "approachTitle": "Önerilen test yaklaşımı",
+    "toolsTitle": "Kullanılabilecek araç ve yöntem kategorileri",
+    "practicesTitle": "En iyi uygulamalar ve sık yapılan hatalar",
+    "best": "En iyi uygulamalar",
+    "mistakes": "Sık yapılan hatalar",
+    "step": "Adım {{n}}: "
+  },
+  "regs": {
+    "title": "Standartlar ve Regülasyonlar",
+    "eyebrow": "Uyum rehberi",
+    "subtitle": "Her düzenlemenin kapsamını, bankalardan ne beklediğini ve hangi test türleriyle doğrulanabileceğini özetliyoruz. İçerik bilgilendirme amaçlıdır; resmi metin esastır.",
+    "region": "Bölge",
+    "kind": "Tür",
+    "all": "Tümü",
+    "results": "{{count}} sonuç",
+    "matrixTitle": "Regülasyon → Gerekli Test Türü Tablosu",
+    "matrixText": "Tablo, her düzenlemenin beklentilerini karşılamak için hangi test türlerinin öne çıktığını gösterir. “Zorunlu” işareti, düzenlemenin ilgili test faaliyetini açıkça istediği durumlar içindir; kurumunuza özgü yükümlülükler için resmi metne ve uyum ekibinize başvurun.",
+    "legend": "Tablo açıklaması",
+    "caption": "Regülasyon ve standartlara göre gerekli test türleri",
+    "colHeader": "Regülasyon / Standart",
+    "noRelation": "İlişki yok",
+    "scope": "Kapsamı",
+    "expects": "Bankalardan ve ödeme kuruluşlarından beklenenler",
+    "tests": "Hangi test türleriyle doğrulanır?",
+    "ctaTitle": "{{title}} uyumunu test süreçlerinize nasıl yansıtırsınız?"
+  },
+  "method": {
+    "crumb": "Test Yaklaşımı",
+    "eyebrow": "Metodoloji",
+    "title": "Bankalar için uçtan uca test yaklaşımı",
+    "subtitle": "Risk bazlı önceliklendirme, erken test (shift-left), CI/CD’ye entegre otomasyon ve kontrollü test verisi: sürdürülebilir kalitenin dört temel taşı.",
+    "stage": "Aşama {{n}}",
+    "pipelineLabel": "CI/CD aşamalarına göre testler",
+    "riskTitle": "Örnek risk değerlendirmesi",
+    "riskCaption": "Bankacılık iş alanlarına göre örnek risk değerlendirmesi",
+    "cols": { "area": "İş alanı", "impact": "Etki", "likelihood": "Olasılık", "focus": "Test odağı" },
+    "checklistTitle": "Sürüm öncesi kontrol listesi",
+    "checklistText": "Canlıya çıkış kararından önce gözden geçirilecek başlıklar. İşaretler yalnızca bu sayfada tutulur, hiçbir yere gönderilmez.",
+    "checked": "{{done}} / {{total}} madde işaretlendi",
+    "print": "Yazdır",
+    "clear": "Temizle",
+    "related": "İlgili test türleri",
+    "ctaTitle": "Test stratejinizi birlikte değerlendirelim"
+  },
+  "partner": {
+    "crumb": "Çözüm Ortağı",
+    "pageTitle": "Çözüm Ortağımız",
+    "eyebrow": "Çözüm Ortağı (Solution Partner)",
+    "request": "Toplantı talep et",
+    "expertiseTitle": "Uzmanlık alanları",
+    "expertise": [
+      "Bankacılık ve ödeme sistemlerinde risk bazlı test stratejisi ve uyum odaklı test planlaması",
+      "Performans, yük ve DDoS dayanıklılık testlerinin planlanması, koşulması ve raporlanması",
+      "Web, mobil ve API otomasyonunun CI/CD süreçlerine entegrasyonu",
+      "Gerçek cihazlarda mobil bankacılık testi ve WCAG 2.2 erişilebilirlik denetimi",
+      "Mambu ve Fimple tabanlı dijital bankacılık altyapılarında ürün, entegrasyon ve migrasyon testleri",
+      "Gereksinim kalitesi analizi ve yönetime raporlanabilir kalite metrikleri"
+    ],
+    "solutionsTitle": "Çözümler",
+    "guide": "Rehber: {{title}}",
+    "productSite": "Ürün sitesi",
+    "coreTitle": "Core banking deneyimi: Mambu ve Fimple",
+    "mambuText": "Bulut tabanlı (cloud-native), API öncelikli bir SaaS bankacılık altyapısı. Ürünler kodla değil yapılandırmayla tanımlanır ve platform sık sürüm alır; bu da parametrik ürün testlerini ve sürekli regresyonu kritik hale getirir. Ekibimiz Mambu üzerinde çalışan canlı bankacılık projelerinde test deneyimine sahiptir.",
+    "fimpleText": "Türkiye çıkışlı, bulut tabanlı dijital bankacılık altyapısı. Modüler yapısı nedeniyle entegrasyon, yapılandırma ve sürüm geçişi testleri, altyapıyı kullanan kurumların kalite sürecinin merkezinde yer alır.",
+    "coreLink": "Core banking testleri rehberini okuyun",
+    "ctaTitle": "Kurumunuzun test ihtiyaçlarını konuşalım"
+  },
+  "meeting": {
+    "crumb": "Toplantı Talebi",
+    "eyebrow": "İletişim",
+    "title": "Toplantı talep edin",
+    "subtitle": "Regülatif uyumluluk testleri ve test süreçleriniz hakkında {{partner}} uzmanlarıyla görüşmek için formu doldurun.",
+    "requiredNote": "ile işaretli alanlar zorunludur.",
+    "fields": {
+      "adSoyad": "Ad Soyad",
+      "kurum": "Kurum",
+      "unvan": "Unvan",
+      "eposta": "E-posta",
+      "telefon": "Telefon",
+      "tarih": "Tercih edilen toplantı tarihi"
+    },
+    "topicsLegend": "İlgilenilen konu",
+    "topicsHint": "(birden fazla seçebilirsiniz)",
+    "message": "Mesajınız",
+    "messageHint": "Mevcut durumunuzu ve beklentilerinizi kısaca yazabilirsiniz. En fazla 2000 karakter.",
+    "kvkkTitle": "KVKK aydınlatma metni",
+    "kvkkText": "Bu formda paylaştığınız ad soyad, kurum, unvan, e-posta ve telefon bilgileri; toplantı talebinizin değerlendirilmesi ve sizinle iletişime geçilmesi amacıyla, 6698 sayılı Kişisel Verilerin Korunması Kanunu kapsamında {{partner}} tarafından işlenir. Verileriniz bu amaç dışında kullanılmaz ve üçüncü kişilerle paylaşılmaz. Kanun’un 11. maddesindeki haklarınızı kullanmak için {{email}} adresine başvurabilirsiniz.",
+    "kvkkConsent": "KVKK aydınlatma metnini okudum ve kişisel verilerimin bu kapsamda işlenmesini onaylıyorum.",
+    "errors": {
+      "summary": "Formda {{count}} alan düzeltilmeli:",
+      "required": "{{field}} alanı zorunludur.",
+      "email": "Geçerli bir e-posta adresi girin (ör. ad.soyad@kurum.com).",
+      "topics": "En az bir konu seçin.",
+      "kvkk": "Devam etmek için KVKK aydınlatma metnini onaylayın."
+    },
+    "noteApi": "Talebiniz doğrudan ekibimize iletilir.",
+    "noteMail": "Gönder’e bastığınızda e-posta uygulamanızda {{email}} adresine hazır bir taslak açılır.",
+    "submit": "Toplantı talebini gönder",
+    "doneTitle": "Talebiniz hazır",
+    "doneApi": "Talebiniz iletildi. En kısa sürede sizinle iletişime geçeceğiz.",
+    "doneMail": "E-posta uygulamanızda {{email}} adresine hazır bir taslak açıldı. Göndermek için taslağı onaylamanız yeterli.",
+    "doneFallback": "Taslak açılmadıysa aşağıdaki bağlantıyı kullanın veya metni kopyalayıp e-posta ile iletin.",
+    "openDraft": "E-posta taslağını aç",
+    "bodyLabel": "E-posta metni",
+    "mail": {
+      "subject": "Toplantı talebi: {{topics}} — {{org}}",
+      "general": "Genel",
+      "topics": "İlgilenilen konular",
+      "consent": "KVKK aydınlatma metnini okudum ve onaylıyorum.",
+      "subjectLabel": "Konu"
+    }
+  },
+  "notFound": {
+    "title": "Sayfa bulunamadı",
+    "text": "Aradığınız sayfa taşınmış ya da kaldırılmış olabilir.",
+    "back": "Ana sayfaya dön"
+  }
+}
