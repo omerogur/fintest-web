@@ -57,6 +57,11 @@ export default {
       level: 'supporting',
       why: 'Fachinhalte zu Barrierefreiheitstests schärfen das Bewusstsein der Teams in diesem Bereich.',
     },
+    {
+      slug: 'kullanici-kabul-testi',
+      level: 'supporting',
+      why: 'Der Benutzerabnahmetest ist eine der Teststufen im ISTQB-Lehrplan.',
+    },
   ],
   officialSource: {
     label: 'ISTQB — International Software Testing Qualifications Board, Lehrpläne und Glossar der Testbegriffe',

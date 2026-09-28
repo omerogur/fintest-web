@@ -55,6 +55,11 @@ export default {
       level: 'supporting',
       why: 'Contributes to validating service-disruption scenarios when treating availability and business continuity risks.',
     },
+    {
+      slug: 'is-surekliligi-felaket-kurtarma-testi',
+      level: 'expected',
+      why: 'Controls for maintaining information security during disruption are verified through business continuity testing.',
+    },
   ],
   officialSource: {
     label: 'ISO / IEC — ISO/IEC 27001:2022 Information security, cybersecurity and privacy protection — Information security management systems — Requirements',

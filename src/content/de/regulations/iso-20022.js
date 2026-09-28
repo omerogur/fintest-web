@@ -53,6 +53,16 @@ export default {
       level: 'supporting',
       why: 'Abdeckung je Nachrichtentyp, Quoten abgewiesener Nachrichten und Feststellungen zu Kürzungen helfen, die Migrationsbereitschaft zu verfolgen.',
     },
+    {
+      slug: 'odeme-kart-sertifikasyon-testi',
+      level: 'expected',
+      why: 'Nachrichtenvalidierung, Feldzuordnung und Kürzungsszenarien stehen im Mittelpunkt der Zahlungssystemtests.',
+    },
+    {
+      slug: 'veri-raporlama-testi',
+      level: 'supporting',
+      why: 'Prüft, dass die umfangreichen Nachrichtendaten korrekt in Reporting- und Data-Warehouse-Prozesse fließen.',
+    },
   ],
   officialSource: {
     label: 'ISO — ISO 20022 Finanzdienstleistungen — Universelles Nachrichtenschema für die Finanzindustrie; Nachrichtenkatalog auf iso20022.org',

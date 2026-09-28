@@ -5,8 +5,8 @@ import { LEVEL_RANK } from '../content';
 
 export const ORG_TYPES = ['bank', 'payment', 'fintech'];
 export const REGIONS = ['tr', 'eu', 'both'];
-export const CHANNELS = ['mobile', 'web', 'openApi', 'cards', 'payments'];
-export const INITIATIVES = ['coreMigration', 'thirdParty', 'frequentReleases'];
+export const CHANNELS = ['mobile', 'web', 'openApi', 'cards', 'payments', 'remoteOnboarding'];
+export const INITIATIVES = ['coreMigration', 'thirdParty', 'frequentReleases', 'aiModels'];
 
 const REG_TOPIC = {
   psd2: 'psd2',
@@ -17,6 +17,8 @@ const REG_TOPIC = {
   'wcag-22': 'wcag',
   eaa: 'wcag',
   'turkiye-erisilebilirlik': 'wcag',
+  'masak-aml': 'amlkyc',
+  'ai-act': 'ai',
 };
 const TEST_TOPIC = {
   'performans-yuk-testi': 'performans',
@@ -25,6 +27,12 @@ const TEST_TOPIC = {
   'api-acik-bankacilik-testi': 'otomasyon',
   'mobil-uygulama-testi': 'mobil',
   'core-banking-testleri': 'corebanking',
+  'is-surekliligi-felaket-kurtarma-testi': 'bcpdr',
+  'odeme-kart-sertifikasyon-testi': 'odeme',
+  'kullanici-kabul-testi': 'uat',
+  'aml-kyc-dolandiricilik-testi': 'amlkyc',
+  'yapay-zeka-model-testi': 'ai',
+  'veri-raporlama-testi': 'veri',
 };
 
 export function assess({ org, region, channels = [], initiatives = [] }, regulationBySlug) {
@@ -44,6 +52,7 @@ export function assess({ org, region, channels = [], initiatives = [] }, regulat
   if (inTR && org === 'payment') addReg('odeme-hizmetleri-6493', 'trPayment');
   if (inTR && regulated && has('openApi')) addReg('acik-bankacilik-ohvps', 'trOpenBanking');
   if (inTR) addReg('kvkk', 'trData');
+  if (inTR && regulated) addReg('masak-aml', 'trAml');
   if (inTR && consumerChannels) addReg('turkiye-erisilebilirlik', 'trAccessibility');
   if (inEU && regulated) addReg('psd2', 'euPayments');
   if (inEU && regulated) addReg('dora', 'euDora');
@@ -53,6 +62,7 @@ export function assess({ org, region, channels = [], initiatives = [] }, regulat
   if (consumerChannels) addReg('wcag-22', 'channelsWcag');
   if (has('cards')) addReg('pci-dss', 'cards');
   if (has('payments')) addReg('iso-20022', 'payments');
+  if (inEU && initiatives.includes('aiModels')) addReg('ai-act', 'euAi');
   if (initiatives.includes('thirdParty') && inTR && org === 'bank') addReg('bddk-bilgi-sistemleri', 'thirdParty');
   addReg('iso-27001', 'baseline');
 
@@ -73,6 +83,10 @@ export function assess({ org, region, channels = [], initiatives = [] }, regulat
   if (consumerChannels) addTest('erisilebilirlik-testi', 'expected', 'ch:web');
   if (has('openApi')) addTest('api-acik-bankacilik-testi', 'expected', 'ch:openApi');
   if (has('cards')) addTest('guvenlik-testi', 'expected', 'ch:cards');
+  if (has('cards') || has('payments')) addTest('odeme-kart-sertifikasyon-testi', 'expected', has('cards') ? 'ch:cards' : 'ch:payments');
+  if (has('remoteOnboarding')) addTest('aml-kyc-dolandiricilik-testi', 'expected', 'ch:remoteOnboarding');
+  if (consumerChannels) addTest('uyumluluk-capraz-tarayici-testi', 'expected', 'ch:web');
+  if (initiatives.includes('aiModels')) addTest('yapay-zeka-model-testi', 'expected', 'in:aiModels');
   if (initiatives.includes('coreMigration')) addTest('core-banking-testleri', 'expected', 'in:coreMigration');
   if (initiatives.includes('frequentReleases')) addTest('test-otomasyonu', 'expected', 'in:frequentReleases');
   addTest('test-analizi-kalite-metrikleri', 'supporting', 'baseline');

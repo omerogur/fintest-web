@@ -43,6 +43,21 @@
       "name": "Core-Banking-Testexpertise",
       "kind": "Tests für Mambu- und Fimple-Plattformen",
       "summary": "Parametrische Produkt-, Integrations-, Migrations- und Regressionstests auf Mambu- und Fimple-basierten digitalen Bankplattformen. Unser Team verfügt über Testerfahrung aus produktiven Bankprojekten auf Mambu."
+    },
+    "testmanagement": {
+      "name": "RabbitQA TestPilot & CaseWriter",
+      "kind": "Testmanagement und Abnahmetests",
+      "summary": "CaseWriter erzeugt mit KI Testfälle aus Anforderungsdokumenten und verwaltet sie in einem gemeinsamen Test-Repository. TestPilot steuert Testpläne und -läufe: schrittweise Durchführung, Nachweisanhänge, Fehlererfassung in Jira / Azure DevOps und PDF-Berichte. Die Auswirkungsanalyse leitet aus Dokumentänderungen ein priorisiertes Regressionsset ab."
+    },
+    "datacrate": {
+      "name": "RabbitQA DataCrate",
+      "kind": "Synthetische Testdaten und Service-Virtualisierung",
+      "summary": "Erzeugt realistische synthetische Testdaten ohne Produktionsdaten: Regeln, Wertebibliotheken, Vorlagen und Hochskalieren aus Stichproben. Stellt Mock-Services für REST, SOAP und gRPC bereit, damit Tests beginnen können, bevor abhängige Systeme verfügbar sind."
+    },
+    "browserhub": {
+      "name": "RabbitQA BrowserHub",
+      "kind": "Cross-Browser-Tests",
+      "summary": "Führt entfernte Live- und automatisierte Testsitzungen in verschiedenen Browsern und Versionen durch; Sitzungsaufzeichnungen, Dateien und Berichte liegen an einem Ort. Arbeitet mit AutoRunner-Automatisierungen zusammen."
     }
   },
   "topics": {
@@ -55,6 +70,12 @@
     "otomasyon": "Testautomatisierung",
     "mobil": "Mobile Tests",
     "corebanking": "Core Banking – Mambu / Fimple",
+    "bcpdr": "Business Continuity / Disaster Recovery",
+    "odeme": "Zahlungs- und Kartentests",
+    "uat": "Abnahmetests (UAT)",
+    "amlkyc": "AML / KYC / Betrug",
+    "ai": "KI-Modelltests",
+    "veri": "Daten- und Reporting-Tests",
     "diger": "Sonstiges"
   },
   "nav": {
@@ -425,13 +446,15 @@
       "web": "Online-Banking / Webkanal",
       "openApi": "Open-Banking-APIs",
       "cards": "Kartentransaktionen (Verarbeitung von Kartendaten)",
-      "payments": "Zahlungen und Überweisungen (EFT, FAST, SEPA usw.)"
+      "payments": "Zahlungen und Überweisungen (EFT, FAST, SEPA usw.)",
+      "remoteOnboarding": "Kunden-Onboarding aus der Ferne (Video- / NFC-Identifizierung)"
     },
     "initiativesTitle": "Was steht bei Ihnen an?",
     "initiative": {
       "coreMigration": "Core-Banking-Migration oder neue digitale Bankplattform",
       "thirdParty": "Auslagerung / Cloud-Anbieter für kritische Dienste",
-      "frequentReleases": "Häufige Releases und wachsender Regressionsaufwand"
+      "frequentReleases": "Häufige Releases und wachsender Regressionsaufwand",
+      "aiModels": "Kredit-Scoring, Betrugserkennung oder andere KI-Modelle"
     },
     "disclaimer": "Dieses Werkzeug liefert eine Ersteinschätzung auf Basis allgemeiner Regeln und ist keine Rechtsberatung. Prüfen Sie die für Ihr Haus geltenden Pflichten anhand der amtlichen Texte und mit Ihrem Compliance-Team.",
     "resultTitle": "Ergebnis",
@@ -463,12 +486,17 @@
         "mobile": "Mobiler Kanal",
         "web": "Barrierefreiheit Web und Mobile",
         "openApi": "Open-Banking-APIs",
-        "cards": "Sicherheit von Kartendaten"
+        "cards": "Sicherheit von Kartendaten",
+        "payments": "Zahlungen und Überweisungen",
+        "remoteOnboarding": "Fern-Onboarding (eKYC)"
       },
       "initiative": {
         "coreMigration": "Core-Banking-Migration",
-        "frequentReleases": "Häufige Releases und Regression"
-      }
+        "frequentReleases": "Häufige Releases und Regression",
+        "aiModels": "KI- / ML-Modelle"
+      },
+      "trAml": "Verpflichtete Einrichtung in der Türkei (AML/KYC)",
+      "euAi": "KI-Systeme in der EU"
     }
   }
 }

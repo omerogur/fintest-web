@@ -28,8 +28,11 @@ export const SITE = {
     analyzer: {},
     accessibility: {},
     corebanking: {},
+    testmanagement: {},
+    datacrate: {},
+    browserhub: {},
   },
 };
 
 // Toplantı formundaki konu seçenekleri; etiketler locales → topics.<id>. Sayfalar ?konu=<id> ile önceden seçili getirir.
-export const TOPIC_IDS = ['psd2', 'dora', 'bddk', 'wcag', 'performans', 'ddos', 'otomasyon', 'mobil', 'corebanking', 'diger'];
+export const TOPIC_IDS = ['psd2', 'dora', 'bddk', 'wcag', 'performans', 'ddos', 'otomasyon', 'mobil', 'corebanking', 'bcpdr', 'odeme', 'uat', 'amlkyc', 'ai', 'veri', 'diger'];

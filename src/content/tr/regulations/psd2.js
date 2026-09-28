@@ -60,6 +60,16 @@ export default {
       level: 'supporting',
       why: 'Arayüz erişilebilirliği, hata oranları ve test kapsamı gibi göstergeler denetim ve raporlama için kanıt üretir.',
     },
+    {
+      slug: 'aml-kyc-dolandiricilik-testi',
+      level: 'expected',
+      why: 'Güçlü müşteri doğrulaması teknik standardı, dolandırıcılığı tespit eden işlem izleme mekanizmalarını öngörür; bu kuralların doğru çalıştığı test edilmelidir.',
+    },
+    {
+      slug: 'odeme-kart-sertifikasyon-testi',
+      level: 'supporting',
+      why: 'Ödeme başlatma ve kart ödemesi akışları ödeme sistemi entegrasyon testleriyle doğrulanır.',
+    },
   ],
   officialSource: {
     label:

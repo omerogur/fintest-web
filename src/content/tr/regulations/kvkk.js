@@ -48,6 +48,11 @@ export default {
       level: 'supporting',
       why: 'Hangi testin hangi veri sınıfını kullandığının izlenmesi, uyum kanıtı üretmeyi kolaylaştırır.',
     },
+    {
+      slug: 'veri-raporlama-testi',
+      level: 'expected',
+      why: 'Test ortamlarında kişisel veri yerine maskelenmiş veya sentetik veri kullanımı, veri minimizasyonu ilkesinin pratik karşılığıdır.',
+    },
   ],
   officialSource: {
     label: 'Kişisel Verileri Koruma Kurumu — 6698 sayılı Kişisel Verilerin Korunması Kanunu ve ikincil düzenlemeler',

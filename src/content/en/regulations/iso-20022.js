@@ -53,6 +53,16 @@ export default {
       level: 'supporting',
       why: 'Coverage per message type, rejected-message rates and truncation findings help track migration readiness.',
     },
+    {
+      slug: 'odeme-kart-sertifikasyon-testi',
+      level: 'expected',
+      why: 'Message validation, field mapping and truncation scenarios are central to payment-system testing.',
+    },
+    {
+      slug: 'veri-raporlama-testi',
+      level: 'supporting',
+      why: 'Verifies that rich message data flows correctly into reporting and data-warehouse processes.',
+    },
   ],
   officialSource: {
     label: 'ISO — ISO 20022 Financial services — Universal financial industry message scheme; iso20022.org message catalogue',

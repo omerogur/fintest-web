@@ -60,6 +60,21 @@ export default {
       level: 'supporting',
       why: 'The service continuity expectation also covers the resilience of internet-facing payment channels against denial-of-service attacks.',
     },
+    {
+      slug: 'is-surekliligi-felaket-kurtarma-testi',
+      level: 'required',
+      why: 'The CBRT communiqué requires the information systems continuity plan to be tested at least yearly, including running one full business day from the secondary site (refer to the current text).',
+    },
+    {
+      slug: 'aml-kyc-dolandiricilik-testi',
+      level: 'expected',
+      why: 'Under the CBRT communiqué, remote identification and customer onboarding processes must be tested at least twice a year.',
+    },
+    {
+      slug: 'odeme-kart-sertifikasyon-testi',
+      level: 'expected',
+      why: 'Integration of payment services with payment systems and card infrastructure must be verified end to end.',
+    },
   ],
   officialSource: {
     label:

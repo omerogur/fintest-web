@@ -51,6 +51,11 @@ export default {
       level: 'supporting',
       why: 'Kriter bazında bulgu takibi, uyum beyanı ve iyileştirme planı için izlenebilir veri sağlar.',
     },
+    {
+      slug: 'uyumluluk-capraz-tarayici-testi',
+      level: 'supporting',
+      why: 'Erişilebilirlik, farklı tarayıcılar ve yardımcı teknolojilerle uyumlu çalışmayı gerektirir.',
+    },
   ],
   officialSource: {
     label: 'W3C — Web Content Accessibility Guidelines (WCAG) 2.2, W3C Recommendation',

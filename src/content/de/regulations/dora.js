@@ -65,6 +65,16 @@ export default {
       level: 'supporting',
       why: 'Liefert nachvollziehbare Daten für die Klassifizierung von Feststellungen, die Verfolgung der Behebung und die Berichterstattung an das Leitungsorgan.',
     },
+    {
+      slug: 'is-surekliligi-felaket-kurtarma-testi',
+      level: 'required',
+      why: 'Artikel 11 und 12: IKT-Geschäftsfortführungs- und Wiederherstellungspläne sind mindestens jährlich, Sicherungs- und Wiederherstellungsverfahren regelmäßig zu testen, einschließlich Umschaltung auf redundante Infrastruktur.',
+    },
+    {
+      slug: 'uyumluluk-capraz-tarayici-testi',
+      level: 'expected',
+      why: 'Artikel 25 Abs. 1 nennt Kompatibilitätstests ausdrücklich unter den Tests des Resilienztestprogramms.',
+    },
   ],
   officialSource: {
     label:

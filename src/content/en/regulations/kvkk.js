@@ -48,6 +48,11 @@ export default {
       level: 'supporting',
       why: 'Tracking which test uses which data class makes it easier to produce compliance evidence.',
     },
+    {
+      slug: 'veri-raporlama-testi',
+      level: 'expected',
+      why: 'Using masked or synthetic data instead of personal data in test environments is the practical application of data minimisation.',
+    },
   ],
   officialSource: {
     label: 'Personal Data Protection Authority (Kişisel Verileri Koruma Kurumu) — Law No. 6698 on the Protection of Personal Data and secondary legislation',

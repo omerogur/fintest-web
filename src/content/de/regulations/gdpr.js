@@ -58,6 +58,16 @@ export default {
       level: 'supporting',
       why: 'Der Grundsatz der Rechenschaftspflicht erfordert Nachweise, dass durchgeführte Kontrollen und Testergebnisse dokumentiert werden.',
     },
+    {
+      slug: 'veri-raporlama-testi',
+      level: 'expected',
+      why: 'Maskierte oder synthetische Testdaten sind eine praktische Umsetzung von Datenschutz durch Technikgestaltung.',
+    },
+    {
+      slug: 'yapay-zeka-model-testi',
+      level: 'supporting',
+      why: 'Bei Modellen, die mit personenbezogenen Daten trainiert werden, sind Datenqualität und automatisierte Entscheidungen zu testen.',
+    },
   ],
   officialSource: {
     label: 'Europäisches Parlament und Rat — Verordnung (EU) 2016/679 (Datenschutz-Grundverordnung)',

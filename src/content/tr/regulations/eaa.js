@@ -49,6 +49,11 @@ export default {
       level: 'supporting',
       why: 'Erişilebilirlik bilgisinin kamuya açıklanması ve piyasa gözetimine yanıt için izlenebilir uyum kayıtları gerekir.',
     },
+    {
+      slug: 'uyumluluk-capraz-tarayici-testi',
+      level: 'supporting',
+      why: 'Hizmetin farklı cihaz, tarayıcı ve yardımcı teknolojilerde erişilebilir kalması uyumluluk testleriyle doğrulanır.',
+    },
   ],
   officialSource: {
     label: 'Avrupa Parlamentosu ve Konseyi — Direktif (AB) 2019/882 (Ürün ve hizmetlere ilişkin erişilebilirlik gereksinimleri)',

@@ -10,6 +10,13 @@ export const TEST_TYPE_IMAGES = {
   'api-acik-bankacilik-testi': '/images/api.webp',
   'core-banking-testleri': '/images/bankacilik.webp',
   'test-analizi-kalite-metrikleri': '/images/analiz.webp',
+  'is-surekliligi-felaket-kurtarma-testi': '/images/bcp-dr.webp',
+  'odeme-kart-sertifikasyon-testi': '/images/odeme-kart.webp',
+  'kullanici-kabul-testi': '/images/uat.webp',
+  'aml-kyc-dolandiricilik-testi': '/images/aml-kyc.webp',
+  'yapay-zeka-model-testi': '/images/yapay-zeka.webp',
+  'veri-raporlama-testi': '/images/veri-raporlama.webp',
+  'uyumluluk-capraz-tarayici-testi': '/images/uyumluluk.webp',
 };
 
 export const REGION_IMAGES = {

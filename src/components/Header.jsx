@@ -22,7 +22,7 @@ function useNav() {
         label: t('nav.regulations'),
         to: '/regulasyonlar',
         items: [
-          ...REGULATIONS.map((r) => ({ label: r.title, to: `/regulasyonlar/${r.slug}`, group: r.region })),
+          ...REGULATIONS.map((r) => ({ label: r.shortTitle || r.title, to: `/regulasyonlar/${r.slug}`, group: r.region })),
           { label: t('nav.matrix'), to: '/regulasyonlar#matris', group: 'matrix' },
         ],
       },
@@ -170,6 +170,8 @@ function Dropdown({ item }) {
       ]
     : [{ title: null, items: item.items }];
   const matrix = item.items.find((i) => i.group === 'matrix');
+  // Uzun tek listeler (ör. 16 test türü) iki sütuna bölünür.
+  const wide = grouped.length === 1 && item.items.length > 10;
 
   return (
     <li ref={ref} className="relative" onBlur={(e) => !ref.current?.contains(e.relatedTarget) && setOpen(false)}>
@@ -187,7 +189,7 @@ function Dropdown({ item }) {
         <ChevronDown className={cn('size-4 transition-transform', open && 'rotate-180')} aria-hidden="true" />
       </button>
       {open && (
-        <div id={id} className={cn('card absolute top-full left-0 z-50 mt-2 p-3 shadow-xl', grouped.length > 1 ? 'w-[520px]' : 'w-[340px]')}>
+        <div id={id} className={cn('card absolute top-full left-0 z-50 mt-2 p-3 shadow-xl', grouped.length > 1 || wide ? 'w-[560px]' : 'w-[340px]')}>
           {item.seeAll !== false && (
             <Link to={item.to} className="mb-2 block rounded-lg px-3 py-2 text-sm font-semibold text-accent hover:bg-surface-2">
               {t('nav.seeAll')}
@@ -197,7 +199,7 @@ function Dropdown({ item }) {
             {grouped.map((g) => (
               <div key={g.title || 'all'}>
                 {g.title && <p className="px-3 pb-1 text-xs font-semibold tracking-wide text-muted uppercase">{g.title}</p>}
-                <ul>
+                <ul className={cn(wide && 'grid grid-cols-2 gap-x-2')}>
                   {g.items.map((i) => (
                     <li key={i.to}>
                       <Link to={i.to} className="block rounded-lg px-3 py-2 text-sm text-fg hover:bg-surface-2">

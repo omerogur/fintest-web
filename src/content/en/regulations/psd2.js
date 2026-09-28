@@ -60,6 +60,16 @@ export default {
       level: 'supporting',
       why: 'Indicators such as interface availability, error rates and test coverage produce evidence for audits and reporting.',
     },
+    {
+      slug: 'aml-kyc-dolandiricilik-testi',
+      level: 'expected',
+      why: 'The SCA technical standard provides for transaction monitoring mechanisms to detect fraud; these rules need to be tested.',
+    },
+    {
+      slug: 'odeme-kart-sertifikasyon-testi',
+      level: 'supporting',
+      why: 'Payment initiation and card payment flows are verified through payment-system integration testing.',
+    },
   ],
   officialSource: {
     label:

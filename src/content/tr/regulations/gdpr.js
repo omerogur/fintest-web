@@ -52,6 +52,16 @@ export default {
       level: 'supporting',
       why: 'Hesap verebilirlik ilkesi, yapılan kontrollerin ve test sonuçlarının kayıt altında tutulmasını destekleyen kanıtlar gerektirir.',
     },
+    {
+      slug: 'veri-raporlama-testi',
+      level: 'expected',
+      why: 'Test ortamlarında maskelenmiş veya sentetik veri kullanımı, tasarımdan itibaren veri korumanın pratik karşılığıdır.',
+    },
+    {
+      slug: 'yapay-zeka-model-testi',
+      level: 'supporting',
+      why: 'Kişisel veriyle eğitilen modellerde veri kalitesi ve otomatik karar süreçleri test edilmelidir.',
+    },
   ],
   officialSource: {
     label: 'Avrupa Parlamentosu ve Konseyi — Tüzük (AB) 2016/679 (Genel Veri Koruma Tüzüğü)',

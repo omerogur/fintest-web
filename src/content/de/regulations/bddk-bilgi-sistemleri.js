@@ -65,6 +65,21 @@ export default {
       level: 'supporting',
       why: 'Testabdeckung und Qualitätskennzahlen liefern nachvollziehbare Nachweise für Änderungsfreigaben und Prüfungen.',
     },
+    {
+      slug: 'is-surekliligi-felaket-kurtarma-testi',
+      level: 'required',
+      why: 'Regelmäßige Wiederherstellungstests der Sicherungen und mindestens jährlich ein Katastrophenszenario-Test mit Betrieb aus dem Ausweichrechenzentrum werden erwartet (aktuellen Text heranziehen).',
+    },
+    {
+      slug: 'kullanici-kabul-testi',
+      level: 'expected',
+      why: 'Änderungen sollen anhand geeigneter Testpläne getestet und anschließend von Nutzern und zuständigen Einheiten freigegeben werden.',
+    },
+    {
+      slug: 'veri-raporlama-testi',
+      level: 'expected',
+      why: 'Testdaten sollen den Produktionsbetrieb abbilden und frei von Kundendaten aus der Produktion sein.',
+    },
   ],
   officialSource: {
     label:

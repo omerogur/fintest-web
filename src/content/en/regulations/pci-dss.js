@@ -56,6 +56,11 @@ export default {
       level: 'supporting',
       why: 'Remediation times for findings and retest results are used as evidence during the assessment.',
     },
+    {
+      slug: 'odeme-kart-sertifikasyon-testi',
+      level: 'expected',
+      why: 'Payment flows, terminals and integrations in the cardholder data environment must be verified after changes.',
+    },
   ],
   officialSource: {
     label: 'PCI Security Standards Council — PCI DSS v4.0.1 (Requirements and Testing Procedures)',

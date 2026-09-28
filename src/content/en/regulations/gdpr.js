@@ -58,6 +58,16 @@ export default {
       level: 'supporting',
       why: 'The accountability principle requires evidence showing that controls performed and test results are kept on record.',
     },
+    {
+      slug: 'veri-raporlama-testi',
+      level: 'expected',
+      why: 'Masked or synthetic data in test environments is a practical form of data protection by design.',
+    },
+    {
+      slug: 'yapay-zeka-model-testi',
+      level: 'supporting',
+      why: 'Models trained on personal data require testing of data quality and automated decision-making.',
+    },
   ],
   officialSource: {
     label: 'European Parliament and Council — Regulation (EU) 2016/679 (General Data Protection Regulation)',

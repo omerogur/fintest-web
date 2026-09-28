@@ -52,6 +52,11 @@ export default {
       level: 'supporting',
       why: 'Helps bring non-functional testing into the same planning and reporting framework.',
     },
+    {
+      slug: 'kullanici-kabul-testi',
+      level: 'expected',
+      why: 'Acceptance testing is one of the test levels the standard describes.',
+    },
   ],
   officialSource: {
     label: 'ISO / IEC / IEEE — ISO/IEC/IEEE 29119 Software and systems engineering — Software testing (Parts 1–5 and related documents)',

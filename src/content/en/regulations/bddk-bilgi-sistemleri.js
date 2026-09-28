@@ -65,6 +65,21 @@ export default {
       level: 'supporting',
       why: 'Test coverage and quality metrics provide traceable evidence for change approvals and audits.',
     },
+    {
+      slug: 'is-surekliligi-felaket-kurtarma-testi',
+      level: 'required',
+      why: 'Regular restore tests of backup data and at least a yearly disaster scenario test run from the secondary site are expected (refer to the current text).',
+    },
+    {
+      slug: 'kullanici-kabul-testi',
+      level: 'expected',
+      why: 'Changes are expected to be tested against appropriate test plans and then approved by users and the relevant units.',
+    },
+    {
+      slug: 'veri-raporlama-testi',
+      level: 'expected',
+      why: 'Test data is expected to represent production operations and to be free of customer production data.',
+    },
   ],
   officialSource: {
     label:

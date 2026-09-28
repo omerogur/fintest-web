@@ -43,6 +43,21 @@
       "name": "Core Banking Test Uzmanlığı",
       "kind": "Mambu ve Fimple altyapı testleri",
       "summary": "Mambu ve Fimple tabanlı dijital bankacılık altyapılarında parametrik ürün, entegrasyon, migrasyon ve regresyon testleri. Ekibimiz Mambu altyapısı üzerinde canlı bankacılık projelerinde test deneyimine sahiptir."
+    },
+    "testmanagement": {
+      "name": "RabbitQA TestPilot & CaseWriter",
+      "kind": "Test yönetimi ve kabul testi",
+      "summary": "CaseWriter, gereksinim dokümanlarından yapay zekâ ile test senaryoları üretir ve ortak bir test deposunda tutar. TestPilot test planlarını ve koşumları yönetir: adım adım yürütme, kanıt ekleri, Jira / Azure DevOps’a hata kaydı ve PDF raporlar. Etki analizi, doküman değişikliklerinden önceliklendirilmiş regresyon seti çıkarır."
+    },
+    "datacrate": {
+      "name": "RabbitQA DataCrate",
+      "kind": "Sentetik test verisi ve servis sanallaştırma",
+      "summary": "Üretim verisi kullanmadan gerçekçi sentetik test verisi üretir: kurallar, değer kütüphaneleri, şablonlar ve örnekten veri çoğaltma. REST, SOAP ve gRPC için sahte (mock) servisler kurarak bağımlı sistemler hazır olmadan test yapılmasını sağlar."
+    },
+    "browserhub": {
+      "name": "RabbitQA BrowserHub",
+      "kind": "Çapraz tarayıcı testi",
+      "summary": "Farklı tarayıcı ve sürümlerde uzaktan canlı ve otomatik test oturumları açar; oturum kayıtları, dosyalar ve raporlar tek yerde tutulur. AutoRunner otomasyonlarıyla birlikte çalışır."
     }
   },
   "topics": {
@@ -55,6 +70,12 @@
     "otomasyon": "Test otomasyonu",
     "mobil": "Mobil test",
     "corebanking": "Core Banking – Mambu / Fimple",
+    "bcpdr": "İş sürekliliği / felaket kurtarma",
+    "odeme": "Ödeme ve kart testleri",
+    "uat": "Kullanıcı kabul testi",
+    "amlkyc": "AML / KYC / dolandırıcılık",
+    "ai": "Yapay zekâ model testi",
+    "veri": "Veri ve raporlama testi",
     "diger": "Diğer"
   },
   "nav": {
@@ -425,13 +446,15 @@
       "web": "İnternet bankacılığı / web kanalı",
       "openApi": "Açık bankacılık API’leri",
       "cards": "Kart işlemleri (kart verisi işleme)",
-      "payments": "Ödeme ve transfer işlemleri (EFT, FAST, SEPA vb.)"
+      "payments": "Ödeme ve transfer işlemleri (EFT, FAST, SEPA vb.)",
+      "remoteOnboarding": "Uzaktan müşteri edinimi (görüntülü / NFC ile kimlik doğrulama)"
     },
     "initiativesTitle": "Gündeminizde neler var?",
     "initiative": {
       "coreMigration": "Core banking geçişi veya yeni dijital bankacılık altyapısı",
       "thirdParty": "Kritik hizmetlerde dış hizmet / bulut sağlayıcı kullanımı",
-      "frequentReleases": "Sık sürüm çıkarma ve regresyon yükü"
+      "frequentReleases": "Sık sürüm çıkarma ve regresyon yükü",
+      "aiModels": "Kredi skorlama, dolandırıcılık tespiti veya yapay zekâ modelleri"
     },
     "disclaimer": "Bu araç genel kurallara dayalı bir ön değerlendirmedir; hukuki görüş değildir. Kurumunuza uygulanan yükümlülükleri resmi metinler ve uyum ekibinizle doğrulayın.",
     "resultTitle": "Sonuç",
@@ -463,12 +486,17 @@
         "mobile": "Mobil kanal",
         "web": "Web ve mobil erişilebilirlik",
         "openApi": "Açık bankacılık API’leri",
-        "cards": "Kart verisi güvenliği"
+        "cards": "Kart verisi güvenliği",
+        "payments": "Ödeme ve transfer işlemleri",
+        "remoteOnboarding": "Uzaktan müşteri edinimi (eKYC)"
       },
       "initiative": {
         "coreMigration": "Core banking geçişi",
-        "frequentReleases": "Sık sürüm ve regresyon"
-      }
+        "frequentReleases": "Sık sürüm ve regresyon",
+        "aiModels": "Yapay zekâ / ML modelleri"
+      },
+      "trAml": "Türkiye’de yükümlü kuruluş (AML/KYC)",
+      "euAi": "AB’de yapay zekâ sistemi kullanımı"
     }
   }
 }

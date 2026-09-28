@@ -48,6 +48,11 @@ export default {
       level: 'supporting',
       why: 'Die Nachverfolgung, welcher Test welche Datenklasse verwendet, erleichtert die Erstellung von Compliance-Nachweisen.',
     },
+    {
+      slug: 'veri-raporlama-testi',
+      level: 'expected',
+      why: 'Maskierte oder synthetische Daten statt personenbezogener Daten in Testumgebungen setzen die Datenminimierung praktisch um.',
+    },
   ],
   officialSource: {
     label: 'Türkische Datenschutzbehörde (Kişisel Verileri Koruma Kurumu) — Gesetz Nr. 6698 zum Schutz personenbezogener Daten und Sekundärvorschriften',

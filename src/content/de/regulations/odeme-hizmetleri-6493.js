@@ -60,6 +60,21 @@ export default {
       level: 'supporting',
       why: 'Die Erwartung an die Dienstkontinuität umfasst auch die Widerstandsfähigkeit internetseitiger Zahlungskanäle gegenüber Denial-of-Service-Angriffen.',
     },
+    {
+      slug: 'is-surekliligi-felaket-kurtarma-testi',
+      level: 'required',
+      why: 'Das TCMB-Kommuniqué verlangt mindestens jährliche Tests des IT-Kontinuitätsplans einschließlich eines vollen Geschäftstags aus dem Ausweichstandort (aktuellen Text heranziehen).',
+    },
+    {
+      slug: 'aml-kyc-dolandiricilik-testi',
+      level: 'expected',
+      why: 'Nach dem TCMB-Kommuniqué sind Fernidentifizierung und Kunden-Onboarding mindestens zweimal jährlich zu testen.',
+    },
+    {
+      slug: 'odeme-kart-sertifikasyon-testi',
+      level: 'expected',
+      why: 'Die Anbindung der Zahlungsdienste an Zahlungssysteme und Karteninfrastruktur ist durchgängig zu prüfen.',
+    },
   ],
   officialSource: {
     label:

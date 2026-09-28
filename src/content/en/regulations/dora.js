@@ -65,6 +65,16 @@ export default {
       level: 'supporting',
       why: 'Provides traceable data for classifying findings, tracking remediation and reporting to the management body.',
     },
+    {
+      slug: 'is-surekliligi-felaket-kurtarma-testi',
+      level: 'required',
+      why: 'Articles 11 and 12: ICT business continuity and recovery plans must be tested at least yearly, and backup and restoration procedures periodically, including switchover to redundant infrastructure.',
+    },
+    {
+      slug: 'uyumluluk-capraz-tarayici-testi',
+      level: 'expected',
+      why: 'Article 25(1) explicitly lists compatibility testing among the tests of the resilience testing programme.',
+    },
   ],
   officialSource: {
     label:

@@ -55,6 +55,11 @@ export default {
       level: 'supporting',
       why: 'Erişilebilirlik ve iş sürekliliği risklerinin işlenmesinde hizmet kesintisi senaryolarının doğrulanmasına katkı sağlar.',
     },
+    {
+      slug: 'is-surekliligi-felaket-kurtarma-testi',
+      level: 'expected',
+      why: 'Kesinti sırasında bilgi güvenliğinin sürdürülmesine yönelik kontroller, iş sürekliliği testleriyle doğrulanır.',
+    },
   ],
   officialSource: {
     label: 'ISO / IEC — ISO/IEC 27001:2022 Information security, cybersecurity and privacy protection — Information security management systems — Requirements',

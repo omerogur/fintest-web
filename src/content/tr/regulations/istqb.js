@@ -57,6 +57,11 @@ export default {
       level: 'supporting',
       why: 'Erişilebilirlik testine ilişkin uzmanlık içeriği, ekiplerin bu alandaki farkındalığını artırır.',
     },
+    {
+      slug: 'kullanici-kabul-testi',
+      level: 'supporting',
+      why: 'Kullanıcı kabul testi, ISTQB müfredatındaki test seviyelerinden biridir.',
+    },
   ],
   officialSource: {
     label: 'ISTQB — International Software Testing Qualifications Board, müfredatlar ve test terimleri sözlüğü',

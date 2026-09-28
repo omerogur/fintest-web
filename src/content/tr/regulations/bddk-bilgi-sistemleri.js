@@ -64,6 +64,21 @@ export default {
       level: 'supporting',
       why: 'Test kapsamı ve kalite metrikleri, değişiklik onaylarına ve denetimlere izlenebilir kanıt sağlar.',
     },
+    {
+      slug: 'is-surekliligi-felaket-kurtarma-testi',
+      level: 'required',
+      why: 'Yedek verilerin geri yükleme yapılarak düzenli test edilmesi ve en az yılda bir, işlemlerin ikincil merkezden yürütüldüğü felaket senaryosu testi beklenir (güncel metne başvurun).',
+    },
+    {
+      slug: 'kullanici-kabul-testi',
+      level: 'expected',
+      why: 'Değişikliklerin uygun test planlarıyla test edilmesi ve ardından kullanıcı ve ilgili birim onaylarının alınması beklenir.',
+    },
+    {
+      slug: 'veri-raporlama-testi',
+      level: 'expected',
+      why: 'Test verisinin üretim işlemlerini temsil etmesi ve müşteri üretim verisinden arındırılmış olması beklenir.',
+    },
   ],
   officialSource: {
     label:

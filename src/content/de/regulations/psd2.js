@@ -60,6 +60,16 @@ export default {
       level: 'supporting',
       why: 'Kennzahlen wie Schnittstellenverfügbarkeit, Fehlerquoten und Testabdeckung liefern Nachweise für Prüfungen und Berichte.',
     },
+    {
+      slug: 'aml-kyc-dolandiricilik-testi',
+      level: 'expected',
+      why: 'Der technische Standard zur starken Kundenauthentifizierung sieht Transaktionsüberwachung zur Betrugserkennung vor; diese Regeln sind zu testen.',
+    },
+    {
+      slug: 'odeme-kart-sertifikasyon-testi',
+      level: 'supporting',
+      why: 'Zahlungsauslösung und Kartenzahlungsabläufe werden durch Integrationstests mit Zahlungssystemen geprüft.',
+    },
   ],
   officialSource: {
     label:

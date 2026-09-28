@@ -52,6 +52,11 @@ export default {
       level: 'supporting',
       why: 'Hilft, nicht-funktionale Tests in denselben Planungs- und Berichtsrahmen einzubinden.',
     },
+    {
+      slug: 'kullanici-kabul-testi',
+      level: 'expected',
+      why: 'Abnahmetests gehören zu den im Standard beschriebenen Teststufen.',
+    },
   ],
   officialSource: {
     label: 'ISO / IEC / IEEE — ISO/IEC/IEEE 29119 Software- und Systemtechnik — Softwaretest (Teile 1–5 und zugehörige Dokumente)',

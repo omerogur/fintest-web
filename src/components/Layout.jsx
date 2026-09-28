@@ -62,62 +62,90 @@ function BackToTop() {
   );
 }
 
+function FooterList({ title, items }) {
+  return (
+    <nav aria-label={title}>
+      <h2 className="text-sm font-semibold text-white">{title}</h2>
+      <ul className="mt-4 space-y-2.5 text-sm leading-snug">
+        {items.map((i) => (
+          <li key={i.to}>
+            <Link to={i.to} className="text-white/75 hover:text-white hover:underline">
+              {i.label}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  );
+}
+
 function Footer() {
   const { t } = useTranslation();
   const { TEST_TYPES, REGULATIONS } = useContent();
-  const linkCls = 'text-white/75 hover:text-white hover:underline';
   return (
     <footer className="mt-24 bg-navy text-white">
-      <div className="container-x grid gap-10 py-14 md:grid-cols-4">
-        <div>
+      <div className="container-x grid gap-x-8 gap-y-12 py-16 sm:grid-cols-2 lg:grid-cols-12">
+        <div className="sm:col-span-2 lg:col-span-3">
           <p className="font-display text-lg font-bold">{t('site.name')}</p>
-          <p className="mt-2 text-sm text-white/75">{t('site.tagline')}</p>
+          <p className="mt-2 max-w-xs text-sm text-white/75">{t('site.tagline')}</p>
+          <Link to="/toplanti-talebi" className="btn mt-6 bg-white text-[#0a2540] hover:bg-[#e8effc]">
+            {t('nav.meeting')}
+          </Link>
+          <p className="mt-4 text-sm">
+            <a href={`mailto:${SITE.contactEmail}`} className="break-all text-white/75 underline hover:text-white">
+              {SITE.contactEmail}
+            </a>
+          </p>
         </div>
-        <nav aria-label={t('nav.testTypes')}>
-          <h2 className="text-sm font-semibold">{t('nav.testTypes')}</h2>
-          <ul className="mt-3 space-y-2 text-sm">
-            {TEST_TYPES.map((x) => (
-              <li key={x.slug}>
-                <Link to={`/test-turleri/${x.slug}`} className={linkCls}>{x.title}</Link>
-              </li>
+        <div className="lg:col-span-3">
+          <FooterList title={t('nav.testTypes')} items={TEST_TYPES.map((x) => ({ to: `/test-turleri/${x.slug}`, label: x.title }))} />
+        </div>
+        <nav aria-label={t('nav.regulationsFull')} className="sm:col-span-2 lg:col-span-4">
+          <h2 className="text-sm font-semibold text-white">{t('nav.regulationsFull')}</h2>
+          <div className="mt-4 grid grid-cols-2 gap-x-8">
+            {['intl', 'tr'].map((region) => (
+              <div key={region}>
+                <p className="text-xs font-semibold tracking-wide text-white/55 uppercase">{t(`region.${region}`)}</p>
+                <ul className="mt-2.5 space-y-2.5 text-sm leading-snug">
+                  {REGULATIONS.filter((r) => r.region === region).map((r) => (
+                    <li key={r.slug}>
+                      <Link to={`/regulasyonlar/${r.slug}`} className="text-white/75 hover:text-white hover:underline">
+                        {r.shortTitle || r.title}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             ))}
-          </ul>
+          </div>
         </nav>
-        <nav aria-label={t('nav.regulationsFull')}>
-          <h2 className="text-sm font-semibold">{t('nav.regulationsFull')}</h2>
-          <ul className="mt-3 grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
-            {REGULATIONS.map((r) => (
-              <li key={r.slug}>
-                <Link to={`/regulasyonlar/${r.slug}`} className={linkCls}>{r.title}</Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
-        <nav aria-label={t('nav.guide')}>
-          <h2 className="text-sm font-semibold">{t('nav.guide')}</h2>
-          <ul className="mt-3 space-y-2 text-sm">
-            <li><Link to="/uyum-kontrolu" className={linkCls}>{t('nav.assessment')}</Link></li>
-            <li><Link to="/test-yaklasimi" className={linkCls}>{t('nav.approach')}</Link></li>
-            <li><Link to="/sozluk" className={linkCls}>{t('glossary.title')}</Link></li>
-            <li><Link to="/sss" className={linkCls}>{t('faq.title')}</Link></li>
-            <li><Link to="/cozum-ortagi" className={linkCls}>{t('nav.partner')}</Link></li>
-            <li><Link to="/toplanti-talebi" className={linkCls}>{t('nav.meetingPage')}</Link></li>
-          </ul>
-        </nav>
+        <div className="lg:col-span-2">
+          <FooterList
+            title={t('nav.guide')}
+            items={[
+              { to: '/uyum-kontrolu', label: t('nav.assessment') },
+              { to: '/regulasyonlar#matris', label: t('nav.matrix') },
+              { to: '/test-yaklasimi', label: t('nav.approach') },
+              { to: '/sozluk', label: t('glossary.title') },
+              { to: '/sss', label: t('faq.title') },
+              { to: '/cozum-ortagi', label: t('nav.partner') },
+            ]}
+          />
+        </div>
       </div>
       <div className="border-t border-white/15">
-        <div className="container-x flex flex-col gap-2 py-6 text-xs text-white/70 md:flex-row md:justify-between">
-          <p>{t('footer.disclaimer', { date: t('site.lastReviewed') })}</p>
-          <p className="flex flex-wrap gap-x-4 gap-y-1">
-            <Link to="/erisilebilirlik-beyani" className="underline hover:text-white">{t('footer.accessibility')}</Link>
-            <Link to="/gizlilik" className="underline hover:text-white">{t('footer.privacy')}</Link>
-            <span>
-            {t('footer.partner')}{' '}
-            <a href={SITE.partner.url} className="underline hover:text-white" target="_blank" rel="noreferrer">
-              {SITE.partner.name}
-            </a>
-            </span>
-          </p>
+        <div className="container-x flex flex-col gap-4 py-6 text-xs text-white/70 lg:flex-row lg:items-center lg:justify-between lg:gap-10">
+          <p className="max-w-3xl">{t('footer.disclaimer', { date: t('site.lastReviewed') })}</p>
+          <ul className="flex flex-shrink-0 flex-wrap gap-x-5 gap-y-2">
+            <li><Link to="/erisilebilirlik-beyani" className="underline hover:text-white">{t('footer.accessibility')}</Link></li>
+            <li><Link to="/gizlilik" className="underline hover:text-white">{t('footer.privacy')}</Link></li>
+            <li>
+              {t('footer.partner')}{' '}
+              <a href={SITE.partner.url} className="underline hover:text-white" target="_blank" rel="noreferrer">
+                {SITE.partner.name}
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </footer>

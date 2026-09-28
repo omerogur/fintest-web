@@ -52,6 +52,11 @@ export default {
       level: 'supporting',
       why: 'İşlevsel olmayan testlerin de planlama ve raporlama süreçlerine aynı çerçevede dahil edilmesine yardımcı olur.',
     },
+    {
+      slug: 'kullanici-kabul-testi',
+      level: 'expected',
+      why: 'Kabul testi, standardın tanımladığı test seviyeleri arasında yer alır.',
+    },
   ],
   officialSource: {
     label: 'ISO / IEC / IEEE — ISO/IEC/IEEE 29119 Software and systems engineering — Software testing (Bölüm 1–5 ve ilgili belgeler)',

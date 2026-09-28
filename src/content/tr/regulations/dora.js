@@ -65,6 +65,16 @@ export default {
       level: 'supporting',
       why: 'Bulguların sınıflandırılması, giderilme takibi ve yönetim organına raporlama için izlenebilir veri sağlar.',
     },
+    {
+      slug: 'is-surekliligi-felaket-kurtarma-testi',
+      level: 'required',
+      why: 'Madde 11 ve 12: iş sürekliliği ve kurtarma planları en az yılda bir, yedekleme ve geri yükleme prosedürleri düzenli olarak test edilmelidir; yedek altyapıya geçiş senaryoları dahildir.',
+    },
+    {
+      slug: 'uyumluluk-capraz-tarayici-testi',
+      level: 'expected',
+      why: 'Madde 25 (1) dayanıklılık testi programında sayılan testler arasında uyumluluk testi açıkça yer alır.',
+    },
   ],
   officialSource: {
     label:

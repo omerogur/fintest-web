@@ -53,6 +53,16 @@ export default {
       level: 'supporting',
       why: 'Mesaj türü bazında kapsam, reddedilen mesaj oranları ve kırpılma bulguları geçiş hazırlığının izlenmesine yardımcı olur.',
     },
+    {
+      slug: 'odeme-kart-sertifikasyon-testi',
+      level: 'expected',
+      why: 'Mesaj doğrulama, alan eşlemesi ve kesilme (truncation) senaryoları ödeme sistemi testlerinin merkezindedir.',
+    },
+    {
+      slug: 'veri-raporlama-testi',
+      level: 'supporting',
+      why: 'Zengin mesaj verisinin raporlama ve veri ambarı süreçlerine doğru aktarıldığı doğrulanır.',
+    },
   ],
   officialSource: {
     label: 'ISO — ISO 20022 Financial services — Universal financial industry message scheme; iso20022.org mesaj kataloğu',

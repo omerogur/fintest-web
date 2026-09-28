@@ -51,6 +51,11 @@ export default {
       level: 'supporting',
       why: 'Criterion-level tracking of findings provides traceable data for the accessibility statement and the remediation plan.',
     },
+    {
+      slug: 'uyumluluk-capraz-tarayici-testi',
+      level: 'supporting',
+      why: 'Accessibility depends on working compatibly across browsers and assistive technologies.',
+    },
   ],
   officialSource: {
     label: 'W3C — Web Content Accessibility Guidelines (WCAG) 2.2, W3C Recommendation',

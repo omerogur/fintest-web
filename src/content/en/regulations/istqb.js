@@ -57,6 +57,11 @@ export default {
       level: 'supporting',
       why: 'Specialist content on accessibility testing raises teams’ awareness in this area.',
     },
+    {
+      slug: 'kullanici-kabul-testi',
+      level: 'supporting',
+      why: 'User acceptance testing is one of the test levels in the ISTQB syllabus.',
+    },
   ],
   officialSource: {
     label: 'ISTQB — International Software Testing Qualifications Board, syllabi and glossary of testing terms',

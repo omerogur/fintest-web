@@ -43,6 +43,21 @@
       "name": "Core Banking Testing Expertise",
       "kind": "Mambu and Fimple platform testing",
       "summary": "Parametric product, integration, migration and regression testing on Mambu- and Fimple-based digital banking platforms. Our team has testing experience in live banking projects running on Mambu."
+    },
+    "testmanagement": {
+      "name": "RabbitQA TestPilot & CaseWriter",
+      "kind": "Test management and acceptance testing",
+      "summary": "CaseWriter uses AI to generate test cases from requirement documents and keeps them in a shared test repository. TestPilot manages test plans and runs: step-by-step execution, evidence attachments, defect logging to Jira / Azure DevOps and PDF reports. Its impact analysis derives a prioritised regression set from document changes."
+    },
+    "datacrate": {
+      "name": "RabbitQA DataCrate",
+      "kind": "Synthetic test data and service virtualisation",
+      "summary": "Generates realistic synthetic test data without using production data: rules, value libraries, templates and scaling up from a sample. Builds mock services for REST, SOAP and gRPC so testing can start before dependent systems are ready."
+    },
+    "browserhub": {
+      "name": "RabbitQA BrowserHub",
+      "kind": "Cross-browser testing",
+      "summary": "Runs remote live and automated test sessions across different browsers and versions; session recordings, files and reports are kept in one place. Works together with AutoRunner automations."
     }
   },
   "topics": {
@@ -55,6 +70,12 @@
     "otomasyon": "Test automation",
     "mobil": "Mobile testing",
     "corebanking": "Core Banking – Mambu / Fimple",
+    "bcpdr": "Business continuity / disaster recovery",
+    "odeme": "Payment and card testing",
+    "uat": "User acceptance testing",
+    "amlkyc": "AML / KYC / fraud",
+    "ai": "AI model testing",
+    "veri": "Data and reporting testing",
     "diger": "Other"
   },
   "nav": {
@@ -425,13 +446,15 @@
       "web": "Internet banking / web channel",
       "openApi": "Open banking APIs",
       "cards": "Card transactions (processing card data)",
-      "payments": "Payments and transfers (EFT, FAST, SEPA etc.)"
+      "payments": "Payments and transfers (EFT, FAST, SEPA etc.)",
+      "remoteOnboarding": "Remote customer onboarding (video / NFC identity verification)"
     },
     "initiativesTitle": "What is on your agenda?",
     "initiative": {
       "coreMigration": "Core banking migration or a new digital banking platform",
       "thirdParty": "Using outsourcing / cloud providers for critical services",
-      "frequentReleases": "Frequent releases and a growing regression burden"
+      "frequentReleases": "Frequent releases and a growing regression burden",
+      "aiModels": "Credit scoring, fraud detection or other AI models"
     },
     "disclaimer": "This tool is a preliminary assessment based on general rules; it is not legal advice. Confirm the obligations that apply to your organisation with the official texts and your compliance team.",
     "resultTitle": "Result",
@@ -463,12 +486,17 @@
         "mobile": "Mobile channel",
         "web": "Web and mobile accessibility",
         "openApi": "Open banking APIs",
-        "cards": "Card data security"
+        "cards": "Card data security",
+        "payments": "Payments and transfers",
+        "remoteOnboarding": "Remote onboarding (eKYC)"
       },
       "initiative": {
         "coreMigration": "Core banking migration",
-        "frequentReleases": "Frequent releases and regression"
-      }
+        "frequentReleases": "Frequent releases and regression",
+        "aiModels": "AI / ML models"
+      },
+      "trAml": "Obliged entity in Türkiye (AML/KYC)",
+      "euAi": "AI systems used in the EU"
     }
   }
 }

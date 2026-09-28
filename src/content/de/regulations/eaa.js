@@ -49,6 +49,11 @@ export default {
       level: 'supporting',
       why: 'Nachvollziehbare Konformitätsaufzeichnungen werden für die öffentlichen Informationen zur Barrierefreiheit und für die Beantwortung von Anfragen der Marktüberwachung benötigt.',
     },
+    {
+      slug: 'uyumluluk-capraz-tarayici-testi',
+      level: 'supporting',
+      why: 'Kompatibilitätstests prüfen, dass der Dienst auf verschiedenen Geräten, Browsern und assistiven Technologien barrierefrei bleibt.',
+    },
   ],
   officialSource: {
     label:

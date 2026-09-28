@@ -9,6 +9,12 @@ npm run dev      # geliştirme sunucusu
 npm run build    # dist/ (Vercel'e hazır, vercel.json dahil)
 ```
 
+## Dokümanlar
+
+- [`docs/SITE_ANALIZI.md`](docs/SITE_ANALIZI.md) — mevcut durum: sayfalar, içerik hacmi, özellikler, teknik altyapı, eksikler
+- [`docs/BENCHMARK_ANALIZI.md`](docs/BENCHMARK_ANALIZI.md) — ~40 sitelik benchmark ve önceliklendirilmiş yol haritası
+- [`YAYIN_KONTROL_LISTESI.md`](YAYIN_KONTROL_LISTESI.md) — sunum modundan yayına geçiş adımları
+
 ## Diller (i18n)
 
 Site **i18next + react-i18next** ile Türkçe ve İngilizce yayınlanır. Adresler dil önekiyle başlar:
@@ -21,8 +27,8 @@ diğer dildeki sürümüne geçer.
 | Ne                                                        | Dosya                                            |
 | --------------------------------------------------------- | ------------------------------------------------ |
 | Arayüz metinleri, ürün açıklamaları, konu adları, sloganlar | `src/locales/<dil>/common.json`                  |
-| Test türü içerikleri (9)                                  | `src/content/<dil>/testTypes/*.js`               |
-| Regülasyon / standart içerikleri (15)                     | `src/content/<dil>/regulations/*.js`             |
+| Test türü içerikleri (16)                                  | `src/content/<dil>/testTypes/*.js`               |
+| Regülasyon / standart içerikleri (17)                     | `src/content/<dil>/regulations/*.js`             |
 | Test yaklaşımı, risk tablosu, kontrol listesi             | `src/content/<dil>/methodology.js`               |
 | E-posta, form servisi, ürün linkleri, Akbank notu aç/kapa | `src/config/site.config.js` (dilden bağımsız)    |
 | Görseller                                                 | `src/config/images.js`                           |
@@ -42,7 +48,7 @@ regülasyon → test türü tablosu içerik dosyalarından otomatik oluşur.
 
 ## Sayfalar
 
-Ana sayfa · Test türleri (9) · Regülasyonlar (15) + eşleştirme tablosu · Test yaklaşımı ·
+Ana sayfa · Test türleri (16) · Regülasyonlar (17) + eşleştirme tablosu · Test yaklaşımı ·
 **Uyum kontrolü** (`/uyum-kontrolu`: kurum tipi, bölge, kanal ve gündeme göre öne çıkan regülasyon ve
 test türleri; cevaplar adreste tutulur, sonuç paylaşılabilir) · Sözlük · SSS · Çözüm ortağı ·
 Toplantı talebi · Erişilebilirlik beyanı · Gizlilik.

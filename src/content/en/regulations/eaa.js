@@ -49,6 +49,11 @@ export default {
       level: 'supporting',
       why: 'Traceable conformity records are needed for public accessibility information and for responding to market surveillance.',
     },
+    {
+      slug: 'uyumluluk-capraz-tarayici-testi',
+      level: 'supporting',
+      why: 'Compatibility testing verifies that the service stays accessible across devices, browsers and assistive technologies.',
+    },
   ],
   officialSource: {
     label:

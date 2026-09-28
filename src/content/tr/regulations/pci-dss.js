@@ -56,6 +56,11 @@ export default {
       level: 'supporting',
       why: 'Bulguların giderilme süreleri ve tekrar test sonuçları, değerlendirme (assessment) sırasında kanıt olarak kullanılır.',
     },
+    {
+      slug: 'odeme-kart-sertifikasyon-testi',
+      level: 'expected',
+      why: 'Kart verisi ortamındaki ödeme akışları, terminaller ve entegrasyonlar değişikliklerden sonra doğrulanmalıdır.',
+    },
   ],
   officialSource: {
     label: 'PCI Security Standards Council — PCI DSS v4.0.1 (Requirements and Testing Procedures)',

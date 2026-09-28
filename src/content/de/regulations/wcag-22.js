@@ -51,6 +51,11 @@ export default {
       level: 'supporting',
       why: 'Die Verfolgung der Feststellungen auf Kriterienebene liefert nachvollziehbare Daten für die Erklärung zur Barrierefreiheit und den Maßnahmenplan.',
     },
+    {
+      slug: 'uyumluluk-capraz-tarayici-testi',
+      level: 'supporting',
+      why: 'Barrierefreiheit setzt die Kompatibilität mit Browsern und assistiven Technologien voraus.',
+    },
   ],
   officialSource: {
     label: 'W3C — Web Content Accessibility Guidelines (WCAG) 2.2, W3C-Empfehlung',

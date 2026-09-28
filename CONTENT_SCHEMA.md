@@ -69,14 +69,16 @@ export default {
 
 Test türleri: `performans-yuk-testi`, `ddos-dayaniklilik-testi`, `test-otomasyonu`,
 `mobil-uygulama-testi`, `erisilebilirlik-testi`, `guvenlik-testi`, `api-acik-bankacilik-testi`,
-`core-banking-testleri`, `test-analizi-kalite-metrikleri`
+`core-banking-testleri`, `test-analizi-kalite-metrikleri`, `is-surekliligi-felaket-kurtarma-testi`,
+`odeme-kart-sertifikasyon-testi`, `kullanici-kabul-testi`, `aml-kyc-dolandiricilik-testi`,
+`yapay-zeka-model-testi`, `veri-raporlama-testi`, `uyumluluk-capraz-tarayici-testi`
 
 Regülasyonlar (intl): `psd2`, `dora`, `pci-dss`, `iso-27001`, `iso-29119`, `istqb`, `gdpr`,
-`wcag-22`, `eaa`, `iso-20022`
+`wcag-22`, `eaa`, `iso-20022`, `ai-act`
 Regülasyonlar (tr): `bddk-bilgi-sistemleri`, `odeme-hizmetleri-6493`, `acik-bankacilik-ohvps`,
-`kvkk`, `turkiye-erisilebilirlik`
+`kvkk`, `turkiye-erisilebilirlik`, `masak-aml`
 
 Ürün anahtarları: `ddos`, `performance`, `automation`, `mobilehub`, `analyzer`, `accessibility`,
-`corebanking`, `null`
+`corebanking`, `testmanagement`, `datacrate`, `browserhub`, `null`
 Konu id'leri: `psd2`, `dora`, `bddk`, `wcag`, `performans`, `ddos`, `otomasyon`, `mobil`,
-`corebanking`, `diger`
+`corebanking`, `bcpdr`, `odeme`, `uat`, `amlkyc`, `ai`, `veri`, `diger`

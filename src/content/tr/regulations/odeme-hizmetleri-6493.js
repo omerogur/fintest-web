@@ -60,6 +60,21 @@ export default {
       level: 'supporting',
       why: 'Hizmet sürekliliği beklentisi, dışa açık ödeme kanallarının hizmet dışı bırakma saldırılarına dayanıklılığını da kapsar.',
     },
+    {
+      slug: 'is-surekliligi-felaket-kurtarma-testi',
+      level: 'required',
+      why: 'TCMB tebliği, bilgi sistemleri süreklilik planının en az yılda bir test edilmesini ve bir tam iş gününün ikincil merkezden yürütülmesini öngörür (güncel metne başvurun).',
+    },
+    {
+      slug: 'aml-kyc-dolandiricilik-testi',
+      level: 'expected',
+      why: 'TCMB tebliğine göre uzaktan kimlik tespiti ve müşteri edinimi süreçleri en az yılda iki kez test edilmelidir.',
+    },
+    {
+      slug: 'odeme-kart-sertifikasyon-testi',
+      level: 'expected',
+      why: 'Ödeme hizmetlerinin ödeme sistemleri ve kart altyapılarıyla entegrasyonu uçtan uca doğrulanmalıdır.',
+    },
   ],
   officialSource: {
     label:

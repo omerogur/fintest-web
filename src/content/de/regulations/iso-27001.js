@@ -55,6 +55,11 @@ export default {
       level: 'supporting',
       why: 'Trägt bei der Behandlung von Verfügbarkeits- und Geschäftskontinuitätsrisiken zur Validierung von Szenarien der Dienstunterbrechung bei.',
     },
+    {
+      slug: 'is-surekliligi-felaket-kurtarma-testi',
+      level: 'expected',
+      why: 'Maßnahmen zur Aufrechterhaltung der Informationssicherheit bei Störungen werden durch Kontinuitätstests überprüft.',
+    },
   ],
   officialSource: {
     label: 'ISO / IEC — ISO/IEC 27001:2022 Informationssicherheit, Cybersicherheit und Datenschutz — Informationssicherheitsmanagementsysteme — Anforderungen',

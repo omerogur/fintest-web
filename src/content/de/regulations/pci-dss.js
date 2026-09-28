@@ -56,6 +56,11 @@ export default {
       level: 'supporting',
       why: 'Behebungszeiten von Feststellungen und Ergebnisse von Nachtests dienen bei der Bewertung als Nachweis.',
     },
+    {
+      slug: 'odeme-kart-sertifikasyon-testi',
+      level: 'expected',
+      why: 'Zahlungsabläufe, Terminals und Schnittstellen in der Karteninhaberdaten-Umgebung sind nach Änderungen zu prüfen.',
+    },
   ],
   officialSource: {
     label: 'PCI Security Standards Council — PCI DSS v4.0.1 (Anforderungen und Testverfahren)',
